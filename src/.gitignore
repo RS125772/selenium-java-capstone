@@ -1,0 +1,17 @@
+# Maven
+target/
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Test reports
+reports/
+screenshots/
