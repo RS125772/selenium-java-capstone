@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-10T17:08:46 IST" name="Automation Suite" finished-at="2026-04-10T17:08:52 IST" duration-ms="5153">
+  <suite started-at="2026-04-15T12:16:08 IST" name="Automation Suite" finished-at="2026-04-15T12:16:24 IST" duration-ms="15600">
     <groups>
     </groups>
-    <test started-at="2026-04-10T17:08:46 IST" name="UI Tests" finished-at="2026-04-10T17:08:52 IST" duration-ms="5153">
-      <class name="com.automation.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@780cb77]" started-at="2026-04-10T17:08:46 IST" name="setUp" finished-at="2026-04-10T17:08:50 IST" duration-ms="4061" status="PASS">
+    <test started-at="2026-04-15T12:16:08 IST" name="UI Tests" finished-at="2026-04-15T12:16:24 IST" duration-ms="15600">
+      <class name="com.automation.tests.RegistrationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.RegistrationTest@17c1bced]" started-at="2026-04-15T12:16:18 IST" name="setUp" finished-at="2026-04-15T12:16:21 IST" duration-ms="2860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLogin()[pri:0, instance:com.automation.tests.LoginTest@780cb77]" started-at="2026-04-10T17:08:50 IST" name="testLogin" finished-at="2026-04-10T17:08:51 IST" duration-ms="835" status="PASS">
+        <test-method signature="verifyUserRegistration()[pri:0, instance:com.automation.tests.RegistrationTest@17c1bced]" started-at="2026-04-15T12:16:21 IST" name="verifyUserRegistration" finished-at="2026-04-15T12:16:23 IST" duration-ms="2268" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@780cb77]" started-at="2026-04-10T17:08:51 IST" name="tearDown" finished-at="2026-04-10T17:08:52 IST" duration-ms="229" status="PASS">
+        </test-method> <!-- verifyUserRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.RegistrationTest@17c1bced]" started-at="2026-04-15T12:16:23 IST" name="tearDown" finished-at="2026-04-15T12:16:24 IST" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.tests.RegistrationTest -->
+      <class name="com.automation.tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@161b062a]" started-at="2026-04-15T12:16:08 IST" name="setUp" finished-at="2026-04-15T12:16:12 IST" duration-ms="3743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyInvalidLogin()[pri:0, instance:com.automation.tests.LoginTest@161b062a]" started-at="2026-04-15T12:16:12 IST" name="verifyInvalidLogin" description="Invalid Login Test" finished-at="2026-04-15T12:16:13 IST" duration-ms="853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@161b062a]" started-at="2026-04-15T12:16:13 IST" name="tearDown" finished-at="2026-04-15T12:16:13 IST" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@161b062a]" started-at="2026-04-15T12:16:13 IST" name="setUp" finished-at="2026-04-15T12:16:16 IST" duration-ms="2776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyValidLogin()[pri:0, instance:com.automation.tests.LoginTest@161b062a]" started-at="2026-04-15T12:16:16 IST" name="verifyValidLogin" description="Valid Login Test" finished-at="2026-04-15T12:16:18 IST" duration-ms="2348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@161b062a]" started-at="2026-04-15T12:16:18 IST" name="tearDown" finished-at="2026-04-15T12:16:18 IST" duration-ms="239" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

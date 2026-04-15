@@ -3,11 +3,11 @@ package com.automation.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class RegisterPage {
+public class RegistrationPage {
 
     private WebDriver driver;
 
-    public RegisterPage(WebDriver driver) {
+    public RegistrationPage(WebDriver driver) {
         this.driver = driver;
     }
 

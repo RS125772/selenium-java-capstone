@@ -1,6 +1,9 @@
+com\automation\pages\HomePage.class
 com\automation\base\BaseTest.class
-com\automation\constants\FrameworkConstants.class
-com\automation\utils\WaitUtils.class
 com\automation\config\ConfigReader.class
+com\automation\config\TestDataReader.class
 com\automation\pages\LoginPage.class
+com\automation\pages\RegistrationPage.class
+com\automation\utils\CommonUtils.class
+com\automation\utils\WaitUtils.class
 com\automation\drivers\DriverFactory.class

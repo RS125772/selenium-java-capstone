@@ -2,11 +2,11 @@ package com.automation.tests;
 
 import com.automation.base.BaseTest;
 import com.automation.pages.HomePage;
-import com.automation.pages.RegisterPage;
+import com.automation.pages.RegistrationPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class RegisterTest extends BaseTest {
+public class RegistrationTest extends BaseTest {
 
     @Test
     public void verifyUserRegistration() {
@@ -14,7 +14,7 @@ public class RegisterTest extends BaseTest {
         HomePage homePage = new HomePage(driver);
         homePage.clickOnRegisterButton();
 
-        RegisterPage registerPage = new RegisterPage(driver);
+        RegistrationPage registerPage = new RegistrationPage(driver);
 
         String email = "test" + System.currentTimeMillis() + "@gmail.com";
 
