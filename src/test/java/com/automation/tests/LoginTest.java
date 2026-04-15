@@ -1,7 +1,6 @@
 package com.automation.tests;
 
 import com.automation.base.BaseTest;
-import com.automation.drivers.DriverFactory;
 import com.automation.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -24,7 +23,7 @@ public class LoginTest extends BaseTest {
     @Test(description = "Invalid Login Test")
     public void verifyInvalidLogin() {
 
-        LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
+        LoginPage loginPage = new LoginPage(driver);
 
         loginPage.login(
                 testData.getProperty("invalidUsername"),
