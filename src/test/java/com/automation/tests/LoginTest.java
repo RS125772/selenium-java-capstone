@@ -13,8 +13,8 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
 
         loginPage.login(
-                config.getProperty("validUsername"),
-                config.getProperty("validPassword")
+                testData.getProperty("validUsername"),
+                testData.getProperty("validPassword")
         );
 
         Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed!");
@@ -26,8 +26,8 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
 
         loginPage.login(
-                config.getProperty("invalidUsername"),
-                config.getProperty("invalidPassword")
+                testData.getProperty("invalidUsername"),
+                testData.getProperty("invalidPassword")
         );
 
         String error = loginPage.getErrorMessage();
