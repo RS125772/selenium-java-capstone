@@ -16,32 +16,25 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() {
 
-        // Load config (environment)
         config = new ConfigReader();
-
-        // Load test data
         testData = new TestDataReader();
 
-        // Get browser from config.properties
         String browser = config.getProperty("browser");
 
         // Initialize driver
         DriverFactory.initDriver(browser);
 
-        // Get driver from ThreadLocal
+        // Assign thread-safe driver to instance variable
         driver = DriverFactory.getDriver();
 
-        // Maximize window (recommended)
         driver.manage().window().maximize();
-
-        // Launch application URL
         driver.get(config.getProperty("url"));
+
+        System.out.println("Thread ID: " + Thread.currentThread().getId());
     }
 
     @AfterMethod
     public void tearDown() {
-
-        // Quit driver safely
         DriverFactory.quitDriver();
     }
 }

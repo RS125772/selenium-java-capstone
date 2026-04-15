@@ -50,6 +50,7 @@ public class RegistrationPage {
         driver.findElement(registerBtn).click();
     }
 
+    //Validations
     public String getSuccessMessage() {
         return driver.findElement(successMsg).getText();
     }

@@ -1,6 +1,7 @@
 package com.automation.tests;
 
 import com.automation.base.BaseTest;
+import com.automation.drivers.DriverFactory;
 import com.automation.pages.HomePage;
 import com.automation.pages.RegistrationPage;
 import org.testng.Assert;
