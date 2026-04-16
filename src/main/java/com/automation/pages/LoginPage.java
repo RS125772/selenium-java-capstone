@@ -13,7 +13,6 @@ public class LoginPage {
     private By emailField = By.id("Email");
     private By passwordField = By.id("Password");
     private By loginButton = By.cssSelector("input.login-button");
-
     private By logoutLink = By.className("ico-logout");
     private By errorMessage = By.cssSelector(".validation-summary-errors");
 

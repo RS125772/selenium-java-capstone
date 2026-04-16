@@ -2,7 +2,6 @@ package com.automation.tests;
 
 import com.automation.base.BaseTest;
 import com.automation.pages.HomePage;
-import com.automation.utils.ExtentTestManager;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -50,16 +49,13 @@ public class HomePageTest extends BaseTest {
     @Test(description = "Verify Search Functionality")
     public void verifyValidSearchFunctionality() {
         HomePage homePage = new HomePage(driver);
-
         homePage.searchProduct(testData.getProperty("searchProduct"));
-        ExtentTestManager.getTest().info("Validating search results page");
         Assert.assertTrue(homePage.isSearchResultsDisplayed(), "Search results are not displayed");
     }
 
     @Test(description = "Verify Invalid Search")
     public void verifyInvalidSearchFunctionality() {
         HomePage homePage = new HomePage(driver);
-
         homePage.searchProduct(testData.getProperty("invalidSearchProduct"));
         Assert.assertTrue(homePage.isNoSearchResultDisplayed(),"No result message is not displayed for invalid search");
     }

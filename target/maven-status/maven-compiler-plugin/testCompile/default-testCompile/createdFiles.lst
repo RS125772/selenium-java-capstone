@@ -1,3 +1,4 @@
+com\automation\listeners\ExtentListener.class
 com\automation\tests\RegistrationTest.class
 com\automation\tests\LoginTest.class
 com\automation\tests\HomePageTest.class

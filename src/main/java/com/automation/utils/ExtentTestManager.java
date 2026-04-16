@@ -13,4 +13,12 @@ public class ExtentTestManager {
     public static ExtentTest getTest() {
         return test.get();
     }
+
+    public static void logInfo(String message) {
+    if (getTest() != null) {
+        getTest().info(message);
+    } else {
+        System.out.println("ExtentTest is NULL → " + message);
+    }
+}
 }

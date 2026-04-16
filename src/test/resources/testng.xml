@@ -1,13 +1,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Demo Web Shop Automation Suite">
 
-<suite name="Automation Suite">
-
-    <!-- Add listeners here -->
     <listeners>
         <listener class-name="com.automation.listeners.ExtentListener"/>
     </listeners>
 
-    <test name="UI Tests" parallel="tests" thread-count="3">
+    <test name="Demo Web Shop UI Tests">
         <classes>
             <class name="com.automation.tests.LoginTest"/>
             <class name="com.automation.tests.RegistrationTest"/>

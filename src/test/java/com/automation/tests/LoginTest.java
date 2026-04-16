@@ -1,6 +1,7 @@
 package com.automation.tests;
 
 import com.automation.base.BaseTest;
+import com.automation.pages.HomePage;
 import com.automation.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,6 +11,9 @@ public class LoginTest extends BaseTest {
 
     @Test(description = "Valid Login Test")
     public void verifyValidLogin() {
+
+        HomePage homePage = new HomePage(driver);
+        homePage.clickOnLogin();
 
         LoginPage loginPage = new LoginPage(driver);
         CommonUtils commonUtils = new CommonUtils(driver);
@@ -23,6 +27,9 @@ public class LoginTest extends BaseTest {
 
     @Test(description = "Invalid Login Test")
     public void verifyInvalidLogin() {
+
+        HomePage homePage = new HomePage(driver);
+        homePage.clickOnLogin();
 
         LoginPage loginPage = new LoginPage(driver);
         CommonUtils commonUtils = new CommonUtils(driver);

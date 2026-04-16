@@ -80,16 +80,14 @@ public class HomePage {
 
     //Business Method
     public void searchProduct(String product) {
-        ExtentTestManager.getTest().info("Entering search product: " + product);
         enterSearchText(product);
-        ExtentTestManager.getTest().info("Clicking search button");
         clickSearch();
     }
 
     // ================= NAVIGATION ACTIONS =================
 
     public void clickBooks() {
-        ExtentTestManager.getTest().info("Clicking on Books category");
+        ExtentTestManager.logInfo("Clicking on Books category");
         WaitUtils.waitForClickable(driver, booksMenu).click();
     }
 
