@@ -22,7 +22,6 @@ public class RegistrationPage {
     private By successMsg = By.className("result");
 
     private By confirmPasswordError = By.xpath("//span[@data-valmsg-for='ConfirmPassword']");
-    private By validationSummary = By.cssSelector(".validation-summary-errors");
 
     // Actions
     public void selectGenderMale() {
@@ -58,6 +57,10 @@ public class RegistrationPage {
         return driver.findElement(successMsg).getText();
     }
 
+    public String getConfirmPasswordError() {
+        return driver.findElement(confirmPasswordError).getText();
+    }
+
     // ACTION METHOD
     public void registerUser(String fname, String lname, String mail, String pwd) {
         selectGenderMale();
@@ -67,10 +70,6 @@ public class RegistrationPage {
         enterPassword(pwd);
         enterConfirmPassword(pwd);
         clickRegister();
-    }
-
-    public String getConfirmPasswordError() {
-        return driver.findElement(confirmPasswordError).getText();
     }
 
     public void registerUserWithDifferentPasswords(String fname, String lname, String mail, String pwd, String confirmPwd) {
