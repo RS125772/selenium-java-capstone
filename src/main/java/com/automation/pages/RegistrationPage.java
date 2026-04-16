@@ -55,7 +55,7 @@ public class RegistrationPage {
         return driver.findElement(successMsg).getText();
     }
 
-    // Business Method (Best Practice 🔥)
+    // ACTION METHOD
     public void registerUser(String fname, String lname, String mail, String pwd) {
         selectGenderMale();
         enterFirstName(fname);

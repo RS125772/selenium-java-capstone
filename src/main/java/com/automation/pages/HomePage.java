@@ -112,7 +112,7 @@ public class HomePage {
         WaitUtils.waitForClickable(driver, giftCardsMenu).click();
     }
 
-    // ================= VALIDATIONS =================
+    // ================= VALIDATION METHODS=================
 
     public boolean isBooksPageDisplayed() {
         return WaitUtils.waitForVisibility(driver, booksPageTitle).isDisplayed();
