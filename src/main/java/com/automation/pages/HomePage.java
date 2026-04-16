@@ -20,6 +20,7 @@ public class HomePage {
     // Search Locators
     private By searchBox = By.id("small-searchterms");
     private By searchBtn = By.xpath("//input[@value='Search']");
+    private By noSearchResultMsg = By.xpath("//strong[contains(text(),'No products were found that matched your criteria.')]");
 
     // Navigation Menu categories
     private By booksMenu = By.xpath("//a[contains(text(),'Books')]");
@@ -76,7 +77,7 @@ public class HomePage {
         WaitUtils.waitForClickable(driver, searchBtn).click();
     }
 
-    // 🔥 Business Method (Best Practice)
+    //Business Method
     public void searchProduct(String product) {
         enterSearchText(product);
         clickSearch();
@@ -149,4 +150,8 @@ public class HomePage {
     public boolean isGiftCardsPageDisplayed() {
         return WaitUtils.waitForVisibility(driver, giftCardsTitle).isDisplayed();
     }
+
+    public boolean isNoSearchResultDisplayed() {
+    return WaitUtils.waitForVisibility(driver, noSearchResultMsg).isDisplayed();
+}
 }
