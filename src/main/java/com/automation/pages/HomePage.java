@@ -11,19 +11,17 @@ public class HomePage {
 
     // ================= LOCATORS =================
 
-    private By registerBtn = By.xpath("//a[contains(text(),'Register')]");
-    // ================= LOCATORS =================
-
     // Header links
+    private By registerBtn = By.xpath("//a[contains(text(),'Register')]");
     private By loginBtn = By.xpath("//a[contains(text(),'Log in')]");
     private By shoppingCart = By.xpath("//span[contains(text(),'Shopping cart')]");
     private By wishlist = By.xpath("//span[contains(text(),'Wishlist')]");
 
-    // Search
+    // Search Locators
     private By searchBox = By.id("small-searchterms");
     private By searchBtn = By.xpath("//input[@value='Search']");
 
-    // Navigation Menu
+    // Navigation Menu categories
     private By booksMenu = By.xpath("//a[contains(text(),'Books')]");
     private By computersMenu = By.xpath("//a[contains(text(),'Computers')]");
     private By electronicsMenu = By.xpath("//a[contains(text(),'Electronics')]");
@@ -32,8 +30,19 @@ public class HomePage {
     private By jewelryMenu = By.xpath("//a[contains(text(),'Jewelry')]");
     private By giftCardsMenu = By.xpath("//a[contains(text(),'Gift Cards')]");
 
-    // ================= CONSTRUCTOR =================
+    //Page Validation locators
+    private By booksPageTitle = By.xpath("//h1[contains(text(),'Books')]");
+    private By registerTitle = By.xpath("//h1[contains(text(),'Register')]");
+    private By computersPageTitle = By.xpath("//h1[contains(text(),'Computers')]");
+    private By electronicsPageTitle = By.xpath("//h1[contains(text(),'Electronics')]");
+    private By apparelPageTitle = By.xpath("//h1[contains(text(),'Apparel')]");
+    private By searchResultsTitle = By.xpath("//h1[contains(text(),'Search')]");
+    private By digitalDownloadsTitle = By.xpath("//h1[contains(text(),'Digital downloads')]");
+    private By jewelryTitle = By.xpath("//h1[contains(text(),'Jewelry')]");
+    private By giftCardsTitle = By.xpath("//h1[contains(text(),'Gift Cards')]");
 
+    // ================= CONSTRUCTOR =================
+    
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -103,4 +112,41 @@ public class HomePage {
         WaitUtils.waitForClickable(driver, giftCardsMenu).click();
     }
 
+    // ================= VALIDATIONS =================
+
+    public boolean isBooksPageDisplayed() {
+        return WaitUtils.waitForVisibility(driver, booksPageTitle).isDisplayed();
+    }
+
+    public boolean isRegisterPageDisplayed() {
+        return driver.findElement(registerTitle).isDisplayed();
+    }
+
+    public boolean isComputersPageDisplayed() {
+        return WaitUtils.waitForVisibility(driver, computersPageTitle).isDisplayed();
+    }
+
+    public boolean isElectronicsPageDisplayed() {
+        return WaitUtils.waitForVisibility(driver, electronicsPageTitle).isDisplayed();
+    }
+
+    public boolean isApparelPageDisplayed() {
+        return WaitUtils.waitForVisibility(driver, apparelPageTitle).isDisplayed();
+    }
+
+    public boolean isSearchResultsDisplayed() {
+        return WaitUtils.waitForVisibility(driver, searchResultsTitle).isDisplayed();
+    }
+
+    public boolean isDigitalDownloadsPageDisplayed() {
+        return WaitUtils.waitForVisibility(driver, digitalDownloadsTitle).isDisplayed();
+    }
+
+    public boolean isJewelryPageDisplayed() {
+        return WaitUtils.waitForVisibility(driver, jewelryTitle).isDisplayed();
+    }
+
+    public boolean isGiftCardsPageDisplayed() {
+        return WaitUtils.waitForVisibility(driver, giftCardsTitle).isDisplayed();
+    }
 }
