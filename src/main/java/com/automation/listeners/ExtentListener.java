@@ -30,20 +30,25 @@ public class ExtentListener implements ITestListener {
     }
 
     @Override
-    public void onTestFailure(ITestResult result) {
+public void onTestFailure(ITestResult result) {
 
-        ExtentTestManager.getTest().log(Status.FAIL, result.getThrowable());
+    ExtentTestManager.getTest().fail(result.getThrowable());
 
-        String screenshotPath = ScreenshotUtils.captureScreenshot(
-                DriverFactory.getDriver(),
-                result.getMethod().getMethodName()
-        );
+    String screenshotPath = ScreenshotUtils.captureScreenshot(
+            DriverFactory.getDriver(),
+            result.getMethod().getMethodName()
+    );
 
+    try {
         if (screenshotPath != null) {
-            ExtentTestManager.getTest().addScreenCaptureFromPath(screenshotPath);
+            ExtentTestManager.getTest()
+                    .fail("Screenshot on failure")
+                    .addScreenCaptureFromPath(screenshotPath);
         }
+    } catch (Exception e) {
+        e.printStackTrace();
     }
-
+}
     @Override
     public void onTestSkipped(ITestResult result) {
         ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped");
