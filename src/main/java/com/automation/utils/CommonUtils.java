@@ -19,11 +19,11 @@ public class CommonUtils {
     // ================= SCREENSHOT =================
     public void takeScreenshot(String fileName) {
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File dest = new File("screenshots/" + fileName + ".png");
+        File dest = new File("reports/screenshots/" + fileName + ".png");
         dest.getParentFile().mkdirs();
         try {
             FileHandler.copy(src, dest);
-            // Attach screenshot to Extent report
+            // Attach screenshot to Extent report with correct relative path
             String relativePath = "screenshots/" + fileName + ".png";
             ExtentTestManager.attachScreenshot(relativePath, "Screenshot: " + fileName);
         } catch (IOException e) {

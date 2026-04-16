@@ -52,34 +52,41 @@ public class HomePage {
     // ================= ACTIONS =================
 
     public void clickOnRegisterButton() {
+        ExtentTestManager.logInfo("Clicking on Register button");
         WaitUtils.waitForClickable(driver, registerBtn).click();
     }
 
     public void clickOnLogin() {
+        ExtentTestManager.logInfo("Clicking on Login button");
         WaitUtils.waitForClickable(driver, loginBtn).click();
     }
 
     public void clickOnShoppingCart() {
+        ExtentTestManager.logInfo("Clicking on Shopping Cart");
         WaitUtils.waitForClickable(driver, shoppingCart).click();
     }
 
     public void clickOnWishlist() {
+        ExtentTestManager.logInfo("Clicking on Wishlist");
         WaitUtils.waitForClickable(driver, wishlist).click();
     }
 
     // ================= SEARCH FUNCTIONALITY =================
 
     public void enterSearchText(String product) {
+        ExtentTestManager.logInfo("Entering search text: " + product);
         WaitUtils.waitForVisibility(driver, searchBox).clear();
         driver.findElement(searchBox).sendKeys(product);
     }
 
     public void clickSearch() {
+        ExtentTestManager.logInfo("Clicking on Search button");
         WaitUtils.waitForClickable(driver, searchBtn).click();
     }
 
     //Business Method
     public void searchProduct(String product) {
+        ExtentTestManager.logInfo("Searching for product: " + product);
         enterSearchText(product);
         clickSearch();
     }
@@ -92,68 +99,84 @@ public class HomePage {
     }
 
     public void clickComputers() {
+        ExtentTestManager.logInfo("Clicking on Computers category");
         WaitUtils.waitForClickable(driver, computersMenu).click();
     }
 
     public void clickElectronics() {
+        ExtentTestManager.logInfo("Clicking on Electronics category");
         WaitUtils.waitForClickable(driver, electronicsMenu).click();
     }
 
     public void clickApparel() {
+        ExtentTestManager.logInfo("Clicking on Apparel & Shoes category");
         WaitUtils.waitForClickable(driver, apparelMenu).click();
     }
 
     public void clickDigitalDownloads() {
+        ExtentTestManager.logInfo("Clicking on Digital Downloads category");
         WaitUtils.waitForClickable(driver, digitalDownloadsMenu).click();
     }
 
     public void clickJewelry() {
+        ExtentTestManager.logInfo("Clicking on Jewelry category");
         WaitUtils.waitForClickable(driver, jewelryMenu).click();
     }
 
     public void clickGiftCards() {
+        ExtentTestManager.logInfo("Clicking on Gift Cards category");
         WaitUtils.waitForClickable(driver, giftCardsMenu).click();
     }
 
     // ================= VALIDATION METHODS=================
 
     public boolean isBooksPageDisplayed() {
+        ExtentTestManager.logInfo("Verifying Books page is displayed");
         return WaitUtils.waitForVisibility(driver, booksPageTitle).isDisplayed();
     }
 
     public boolean isRegisterPageDisplayed() {
-        return driver.findElement(registerTitle).isDisplayed();
+        ExtentTestManager.logInfo("Verifying Register page is displayed");
+        return WaitUtils.waitForVisibility(driver, registerTitle).isDisplayed();
     }
 
     public boolean isComputersPageDisplayed() {
+        ExtentTestManager.logInfo("Verifying Computers page is displayed");
         return WaitUtils.waitForVisibility(driver, computersPageTitle).isDisplayed();
     }
 
     public boolean isElectronicsPageDisplayed() {
+        ExtentTestManager.logInfo("Verifying Electronics page is displayed");
         return WaitUtils.waitForVisibility(driver, electronicsPageTitle).isDisplayed();
     }
 
     public boolean isApparelPageDisplayed() {
+        ExtentTestManager.logInfo("Verifying Apparel page is displayed");
         return WaitUtils.waitForVisibility(driver, apparelPageTitle).isDisplayed();
     }
 
     public boolean isSearchResultsDisplayed() {
+        ExtentTestManager.logInfo("Verifying search results page is displayed");
         return WaitUtils.waitForVisibility(driver, searchResultsTitle).isDisplayed();
     }
 
     public boolean isDigitalDownloadsPageDisplayed() {
+        ExtentTestManager.logInfo("Verifying Digital Downloads page is displayed");
         return WaitUtils.waitForVisibility(driver, digitalDownloadsTitle).isDisplayed();
     }
 
     public boolean isJewelryPageDisplayed() {
+        ExtentTestManager.logInfo("Verifying Jewelry page is displayed");
         return WaitUtils.waitForVisibility(driver, jewelryTitle).isDisplayed();
     }
 
     public boolean isGiftCardsPageDisplayed() {
+        ExtentTestManager.logInfo("Verifying Gift Cards page is displayed");
         return WaitUtils.waitForVisibility(driver, giftCardsTitle).isDisplayed();
     }
 
     public boolean isNoSearchResultDisplayed() {
-    return WaitUtils.waitForVisibility(driver, noSearchResultMsg).isDisplayed();
-}
+        ExtentTestManager.logInfo("Verifying no search results message is displayed");
+        return WaitUtils.waitForVisibility(driver, noSearchResultMsg).isDisplayed();
+    }
 }

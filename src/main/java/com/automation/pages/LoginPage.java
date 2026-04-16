@@ -3,6 +3,7 @@ package com.automation.pages;
 import com.automation.utils.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import com.automation.utils.ExtentTestManager;
 
 public class LoginPage {
 
@@ -25,9 +26,13 @@ public class LoginPage {
     // ================= ACTIONS =================
 
     public void login(String email, String password) {
+        ExtentTestManager.logInfo("Logging in with email: " + email);
         WaitUtils.waitForVisibility(driver, emailField).sendKeys(email);
+        ExtentTestManager.logInfo("Entered email: " + email);
         WaitUtils.waitForVisibility(driver, passwordField).sendKeys(password);
+        ExtentTestManager.logInfo("Entered password");
         WaitUtils.waitForClickable(driver, loginButton).click();
+        ExtentTestManager.logInfo("Clicked on Login button");
     }
 
     // ================= VALIDATIONS =================

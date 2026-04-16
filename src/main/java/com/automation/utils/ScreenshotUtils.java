@@ -20,6 +20,7 @@ public class ScreenshotUtils {
             dest.getParentFile().mkdirs(); // create folder if not exists
             FileHandler.copy(src, dest);
 
+            // Return relative path from report HTML location
             return "screenshots/" + testName + "_" + timestamp + ".png";
 
         } catch (Exception e) {
