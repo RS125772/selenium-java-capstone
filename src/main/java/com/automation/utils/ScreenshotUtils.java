@@ -3,7 +3,6 @@ package com.automation.utils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
 import java.io.File;
 import org.openqa.selenium.io.FileHandler;
 
@@ -13,7 +12,6 @@ public class ScreenshotUtils {
 
         String timestamp = String.valueOf(System.currentTimeMillis());
         String reportPath = "reports/screenshots/" + testName + "_" + timestamp + ".png";
-        String relativePath = "screenshots/" + testName + "_" + timestamp + ".png";
 
         try {
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
