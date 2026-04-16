@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Demo Web Shop UI Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 16 16:39:43 IST 2026</td>
+<td>Started on:</td><td>Thu Apr 16 17:00:14 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>41 seconds (41539 ms)</td>
+<tr><td>Total time:</td><td>41 seconds (41780 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,57 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.automation.tests.LoginTest.verifyInvalidLogin()'><b>verifyInvalidLogin</b><br>Test class: com.automation.tests.LoginTest<br>Test method: Invalid Login Test</td>
-<td><div><pre>java.lang.AssertionError: Failed Test Case
-	at com.automation.tests.LoginTest.verifyInvalidLogin(LoginTest.java:45)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1878225987", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1878225987'><pre>java.lang.AssertionError: Failed Test Case
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.automation.tests.LoginTest.verifyInvalidLogin(LoginTest.java:45)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>1</td>
-<td>com.automation.tests.LoginTest@7b36aa0c</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -127,34 +76,39 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.automation.tests.LoginTest.verifyInvalidLogin()'><b>verifyInvalidLogin</b><br>Test class: com.automation.tests.LoginTest<br>Test method: Invalid Login Test</td>
+<td></td>
+<td>1</td>
+<td>com.automation.tests.LoginTest@7b36aa0c</td></tr>
+<tr>
 <td title='com.automation.tests.RegistrationTest.verifyInvalidUserRegistration()'><b>verifyInvalidUserRegistration</b><br>Test class: com.automation.tests.RegistrationTest<br>Test method: Verify user registration fails when passwords do not match</td>
 <td></td>
 <td>1</td>
 <td>com.automation.tests.RegistrationTest@76a4ebf2</td></tr>
+<tr>
+<td title='com.automation.tests.LoginTest.verifyValidLogin()'><b>verifyValidLogin</b><br>Test class: com.automation.tests.LoginTest<br>Test method: Valid Login Test</td>
+<td></td>
+<td>2</td>
+<td>com.automation.tests.LoginTest@7b36aa0c</td></tr>
+<tr>
+<td title='com.automation.tests.RegistrationTest.verifyUserRegistration()'><b>verifyUserRegistration</b><br>Test class: com.automation.tests.RegistrationTest<br>Test method: Verify successful user registration</td>
+<td></td>
+<td>2</td>
+<td>com.automation.tests.RegistrationTest@76a4ebf2</td></tr>
+<tr>
+<td title='com.automation.tests.HomePageTest.verifyInvalidSearchFunctionality()'><b>verifyInvalidSearchFunctionality</b><br>Test class: com.automation.tests.HomePageTest<br>Test method: Verify Invalid Search</td>
+<td></td>
+<td>1</td>
+<td>com.automation.tests.HomePageTest@2e8c1c9b</td></tr>
 <tr>
 <td title='com.automation.tests.HomePageTest.verifyValidSearchFunctionality()'><b>verifyValidSearchFunctionality</b><br>Test class: com.automation.tests.HomePageTest<br>Test method: Verify Search Functionality</td>
 <td></td>
 <td>1</td>
 <td>com.automation.tests.HomePageTest@2e8c1c9b</td></tr>
 <tr>
-<td title='com.automation.tests.RegistrationTest.verifyUserRegistration()'><b>verifyUserRegistration</b><br>Test class: com.automation.tests.RegistrationTest<br>Test method: Verify successful user registration</td>
-<td></td>
-<td>3</td>
-<td>com.automation.tests.RegistrationTest@76a4ebf2</td></tr>
-<tr>
 <td title='com.automation.tests.HomePageTest.verifyCategoryNavigationFunctionality()'><b>verifyCategoryNavigationFunctionality</b><br>Test class: com.automation.tests.HomePageTest<br>Test method: Verify page navigation on each category</td>
 <td></td>
 <td>6</td>
-<td>com.automation.tests.HomePageTest@2e8c1c9b</td></tr>
-<tr>
-<td title='com.automation.tests.LoginTest.verifyValidLogin()'><b>verifyValidLogin</b><br>Test class: com.automation.tests.LoginTest<br>Test method: Valid Login Test</td>
-<td></td>
-<td>1</td>
-<td>com.automation.tests.LoginTest@7b36aa0c</td></tr>
-<tr>
-<td title='com.automation.tests.HomePageTest.verifyInvalidSearchFunctionality()'><b>verifyInvalidSearchFunctionality</b><br>Test class: com.automation.tests.HomePageTest<br>Test method: Verify Invalid Search</td>
-<td></td>
-<td>1</td>
 <td>com.automation.tests.HomePageTest@2e8c1c9b</td></tr>
 </table><p>
 </body>

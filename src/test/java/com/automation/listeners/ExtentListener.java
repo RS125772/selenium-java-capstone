@@ -27,7 +27,23 @@ public class ExtentListener implements ITestListener {
     public void onTestSuccess(ITestResult result) {
         ExtentTest test = ExtentTestManager.getTest();
         if (test != null) {
-            test.log(Status.PASS, "Test Passed");
+            // Take screenshot on success for validation
+            WebDriver driver = DriverFactory.getDriver();
+            if (driver != null) {
+                String screenshotPath = ScreenshotUtils.captureScreenshot(driver, result.getMethod().getMethodName() + "_PASSED");
+                if (screenshotPath != null) {
+                    try {
+                        test.pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        test.log(Status.PASS, "Test Passed");
+                    }
+                } else {
+                    test.log(Status.PASS, "Test Passed");
+                }
+            } else {
+                test.log(Status.PASS, "Test Passed");
+            }
         }
     }
 

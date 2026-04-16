@@ -23,6 +23,9 @@ public class CommonUtils {
         dest.getParentFile().mkdirs();
         try {
             FileHandler.copy(src, dest);
+            // Attach screenshot to Extent report
+            String relativePath = "screenshots/" + fileName + ".png";
+            ExtentTestManager.attachScreenshot(relativePath, "Screenshot: " + fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }
