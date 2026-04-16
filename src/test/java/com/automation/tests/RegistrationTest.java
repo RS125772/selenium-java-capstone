@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class RegistrationTest extends BaseTest {
 
-    @Test
+    @Test(description = "Verify successful user registration")
     public void verifyUserRegistration() {
 
         HomePage homePage = new HomePage(driver);
@@ -24,4 +24,23 @@ public class RegistrationTest extends BaseTest {
 
         Assert.assertTrue(message.contains("Your registration completed"));
     }
+
+    @Test(description = "Verify user registration fails when passwords do not match")
+public void verifyInvalidUserRegistration() {
+
+    HomePage homePage = new HomePage(driver);
+    homePage.clickOnRegisterButton();
+
+    RegistrationPage registerPage = new RegistrationPage(driver);
+
+    String email = "test" + System.currentTimeMillis() + "@gmail.com";
+
+    registerPage.registerUserWithDifferentPasswords(
+            testData.getProperty("firstName"), testData.getProperty("lastName"), 
+            email, testData.getProperty("password"), testData.getProperty("confirmPassword")) ;
+
+    Assert.assertTrue(registerPage.getConfirmPasswordError().contains("The password and confirmation password do not match"),
+            "Error message not displayed for mismatched passwords"
+    );
+}
 }

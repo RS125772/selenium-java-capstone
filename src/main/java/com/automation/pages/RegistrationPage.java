@@ -21,6 +21,9 @@ public class RegistrationPage {
     private By registerBtn = By.id("register-button");
     private By successMsg = By.className("result");
 
+    private By confirmPasswordError = By.xpath("//span[@data-valmsg-for='ConfirmPassword']");
+    private By validationSummary = By.cssSelector(".validation-summary-errors");
+
     // Actions
     public void selectGenderMale() {
         driver.findElement(genderMale).click();
@@ -50,7 +53,7 @@ public class RegistrationPage {
         driver.findElement(registerBtn).click();
     }
 
-    //Validations
+    // Validations
     public String getSuccessMessage() {
         return driver.findElement(successMsg).getText();
     }
@@ -65,4 +68,18 @@ public class RegistrationPage {
         enterConfirmPassword(pwd);
         clickRegister();
     }
+
+    public String getConfirmPasswordError() {
+        return driver.findElement(confirmPasswordError).getText();
+    }
+
+    public void registerUserWithDifferentPasswords(String fname, String lname, String mail, String pwd, String confirmPwd) {
+    selectGenderMale();
+    enterFirstName(fname);
+    enterLastName(lname);
+    enterEmail(mail);
+    enterPassword(pwd);
+    enterConfirmPassword(confirmPwd);
+    clickRegister();
+}
 }

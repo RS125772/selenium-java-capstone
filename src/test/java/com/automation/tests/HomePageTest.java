@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class HomePageTest extends BaseTest {
 
-    @Test
+    @Test(description = "Verify page navigation on each category")
     public void verifyCategoryNavigationFunctionality() {
 
         HomePage homePage = new HomePage(driver);
@@ -45,7 +45,7 @@ public class HomePageTest extends BaseTest {
         Assert.assertTrue(homePage.isRegisterPageDisplayed(), "Register page is not displayed");
     }
 
-    @Test
+    @Test(description = "Verify Search Functionality")
     public void verifyValidSearchFunctionality() {
         HomePage homePage = new HomePage(driver);
 
@@ -53,7 +53,7 @@ public class HomePageTest extends BaseTest {
         Assert.assertTrue(homePage.isSearchResultsDisplayed(), "Search results are not displayed");
     }
 
-    @Test
+    @Test(description = "Verify Invalid Search")
     public void verifyInvalidSearchFunctionality() {
         HomePage homePage = new HomePage(driver);
 
