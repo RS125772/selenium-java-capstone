@@ -1,0 +1,46 @@
+# Maven build output
+/target/
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Logs
+*.log
+
+# Test reports and temporary outputs
+/reports/
+/reports/screenshots/
+/screenshots/
+
+# Maven Wrapper
+/.mvn/wrapper/maven-wrapper.jar
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Build directories
+/build/
+
+# Other
+*.tmp
+*.bak
+*~

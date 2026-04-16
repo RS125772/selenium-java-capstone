@@ -41,5 +41,7 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(error.contains("Login was unsuccessful"),"Error message not displayed!");
 
         commonUtils.takeScreenshot("InvalidLoginTest");
+
+        Assert.fail("Failed Test Case");
     }
 }

@@ -6,6 +6,7 @@ import com.automation.utils.ExtentTestManager;
 import com.automation.utils.ScreenshotUtils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
@@ -41,7 +42,7 @@ public class ExtentListener implements ITestListener {
                 String screenshotPath = ScreenshotUtils.captureScreenshot(driver, result.getMethod().getMethodName());
                 if (screenshotPath != null) {
                     try {
-                        test.addScreenCaptureFromPath(screenshotPath);
+                        test.fail("Screenshot on failure", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

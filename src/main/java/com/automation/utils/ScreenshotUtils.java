@@ -11,21 +11,22 @@ public class ScreenshotUtils {
 
     public static String captureScreenshot(WebDriver driver, String testName) {
 
-    String timestamp = String.valueOf(System.currentTimeMillis());
-    String path = "reports/screenshots/" + testName + "_" + timestamp + ".png";
+        String timestamp = String.valueOf(System.currentTimeMillis());
+        String reportPath = "reports/screenshots/" + testName + "_" + timestamp + ".png";
+        String relativePath = "screenshots/" + testName + "_" + timestamp + ".png";
 
-    try {
-        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File dest = new File(path);
+        try {
+            File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            File dest = new File(reportPath);
 
-        dest.getParentFile().mkdirs(); // create folder if not exists
-        FileHandler.copy(src, dest);
+            dest.getParentFile().mkdirs(); // create folder if not exists
+            FileHandler.copy(src, dest);
 
-        return path;
+            return "screenshots/" + testName + "_" + timestamp + ".png";
 
-    } catch (Exception e) {
-        e.printStackTrace();
-        return null;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
-}
 }

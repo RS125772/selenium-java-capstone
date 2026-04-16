@@ -19,8 +19,10 @@ public class CommonUtils {
     // ================= SCREENSHOT =================
     public void takeScreenshot(String fileName) {
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File dest = new File("screenshots/" + fileName + ".png");
+        dest.getParentFile().mkdirs();
         try {
-            FileHandler.copy(src, new File("screenshots/" + fileName + ".png"));
+            FileHandler.copy(src, dest);
         } catch (IOException e) {
             e.printStackTrace();
         }
