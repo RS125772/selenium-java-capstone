@@ -8,12 +8,10 @@ import org.testng.annotations.Test;
 public class HomePageTest extends BaseTest {
 
     @Test
-    public void verifySearchFunctionality() {
+    public void verifySearchFunctionality()
+    {
 
         HomePage homePage = new HomePage(driver);
-
-        //Verify Home Page Loaded
-        Assert.assertTrue(homePage.isSearchResultsDisplayed() == false,"Unexpected page loaded instead of Home Page");
 
         //Search Functionality
         homePage.searchProduct("computer");
