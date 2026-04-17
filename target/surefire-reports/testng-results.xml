@@ -2,96 +2,96 @@
 <testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-17T14:59:05 IST" name="Demo Web Shop Automation Suite" finished-at="2026-04-17T14:59:41 IST" duration-ms="35941">
+  <suite started-at="2026-04-17T15:02:59 IST" name="Demo Web Shop Automation Suite" finished-at="2026-04-17T15:03:35 IST" duration-ms="35746">
     <groups>
     </groups>
-    <test started-at="2026-04-17T14:59:05 IST" name="Demo Web Shop UI Tests" finished-at="2026-04-17T14:59:41 IST" duration-ms="35941">
+    <test started-at="2026-04-17T15:02:59 IST" name="Demo Web Shop UI Tests" finished-at="2026-04-17T15:03:35 IST" duration-ms="35746">
       <class name="com.automation.tests.RegistrationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T14:59:15 IST" name="setUp" finished-at="2026-04-17T14:59:18 IST" duration-ms="3052" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T15:03:09 IST" name="setUp" finished-at="2026-04-17T15:03:12 IST" duration-ms="2866" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyInvalidUserRegistration()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T14:59:18 IST" name="verifyInvalidUserRegistration" description="Verify user registration fails when passwords do not match" finished-at="2026-04-17T14:59:19 IST" duration-ms="919" status="PASS">
+        <test-method signature="verifyInvalidUserRegistration()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T15:03:12 IST" name="verifyInvalidUserRegistration" description="Verify user registration fails when passwords do not match" finished-at="2026-04-17T15:03:13 IST" duration-ms="944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidUserRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T14:59:19 IST" name="tearDown" finished-at="2026-04-17T14:59:19 IST" duration-ms="129" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T15:03:13 IST" name="tearDown" finished-at="2026-04-17T15:03:13 IST" duration-ms="126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T14:59:19 IST" name="setUp" finished-at="2026-04-17T14:59:22 IST" duration-ms="2868" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T15:03:13 IST" name="setUp" finished-at="2026-04-17T15:03:16 IST" duration-ms="2903" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyUserRegistration()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T14:59:22 IST" name="verifyUserRegistration" description="Verify successful user registration" finished-at="2026-04-17T14:59:23 IST" duration-ms="1693" status="PASS">
+        <test-method signature="verifyUserRegistration()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T15:03:16 IST" name="verifyUserRegistration" description="Verify successful user registration" finished-at="2026-04-17T15:03:17 IST" duration-ms="1858" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T14:59:23 IST" name="tearDown" finished-at="2026-04-17T14:59:24 IST" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.RegistrationTest@76a4ebf2]" started-at="2026-04-17T15:03:17 IST" name="tearDown" finished-at="2026-04-17T15:03:18 IST" duration-ms="135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.automation.tests.RegistrationTest -->
       <class name="com.automation.tests.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T14:59:24 IST" name="setUp" finished-at="2026-04-17T14:59:26 IST" duration-ms="2888" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T15:03:18 IST" name="setUp" finished-at="2026-04-17T15:03:21 IST" duration-ms="2890" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCategoryNavigationFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T14:59:26 IST" name="verifyCategoryNavigationFunctionality" description="Verify page navigation on each category" finished-at="2026-04-17T14:59:32 IST" duration-ms="5973" status="PASS">
+        <test-method signature="verifyCategoryNavigationFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T15:03:21 IST" name="verifyCategoryNavigationFunctionality" description="Verify page navigation on each category" finished-at="2026-04-17T15:03:27 IST" duration-ms="6245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCategoryNavigationFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T14:59:32 IST" name="tearDown" finished-at="2026-04-17T14:59:33 IST" duration-ms="130" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T15:03:27 IST" name="tearDown" finished-at="2026-04-17T15:03:27 IST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T14:59:33 IST" name="setUp" finished-at="2026-04-17T14:59:36 IST" duration-ms="3015" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T15:03:27 IST" name="setUp" finished-at="2026-04-17T15:03:30 IST" duration-ms="2865" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyInvalidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T14:59:36 IST" name="verifyInvalidSearchFunctionality" description="Verify Invalid Search" finished-at="2026-04-17T14:59:37 IST" duration-ms="1058" status="PASS">
+        <test-method signature="verifyInvalidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T15:03:30 IST" name="verifyInvalidSearchFunctionality" description="Verify Invalid Search" finished-at="2026-04-17T15:03:31 IST" duration-ms="931" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidSearchFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T14:59:37 IST" name="tearDown" finished-at="2026-04-17T14:59:37 IST" duration-ms="165" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T15:03:31 IST" name="tearDown" finished-at="2026-04-17T15:03:31 IST" duration-ms="146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T14:59:37 IST" name="setUp" finished-at="2026-04-17T14:59:40 IST" duration-ms="3041" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T15:03:31 IST" name="setUp" finished-at="2026-04-17T15:03:34 IST" duration-ms="2931" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyValidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T14:59:40 IST" name="verifyValidSearchFunctionality" description="Verify Search Functionality" finished-at="2026-04-17T14:59:41 IST" duration-ms="1021" status="PASS">
+        <test-method signature="verifyValidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T15:03:34 IST" name="verifyValidSearchFunctionality" description="Verify Search Functionality" finished-at="2026-04-17T15:03:35 IST" duration-ms="992" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidSearchFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T14:59:41 IST" name="tearDown" finished-at="2026-04-17T14:59:41 IST" duration-ms="120" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2e8c1c9b]" started-at="2026-04-17T15:03:35 IST" name="tearDown" finished-at="2026-04-17T15:03:35 IST" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.automation.tests.HomePageTest -->
       <class name="com.automation.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T14:59:05 IST" name="setUp" finished-at="2026-04-17T14:59:09 IST" duration-ms="3775" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T15:02:59 IST" name="setUp" finished-at="2026-04-17T15:03:03 IST" duration-ms="3762" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyInvalidLogin()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T14:59:09 IST" name="verifyInvalidLogin" description="Invalid Login Test" finished-at="2026-04-17T14:59:10 IST" duration-ms="1085" status="PASS">
+        <test-method signature="verifyInvalidLogin()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T15:03:03 IST" name="verifyInvalidLogin" description="Invalid Login Test" finished-at="2026-04-17T15:03:04 IST" duration-ms="1096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T14:59:10 IST" name="tearDown" finished-at="2026-04-17T14:59:10 IST" duration-ms="163" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T15:03:04 IST" name="tearDown" finished-at="2026-04-17T15:03:04 IST" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T14:59:10 IST" name="setUp" finished-at="2026-04-17T14:59:13 IST" duration-ms="2966" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T15:03:04 IST" name="setUp" finished-at="2026-04-17T15:03:07 IST" duration-ms="2964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyValidLogin()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T14:59:13 IST" name="verifyValidLogin" description="Valid Login Test" finished-at="2026-04-17T14:59:15 IST" duration-ms="1505" status="PASS">
+        <test-method signature="verifyValidLogin()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T15:03:07 IST" name="verifyValidLogin" description="Valid Login Test" finished-at="2026-04-17T15:03:09 IST" duration-ms="1512" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T14:59:15 IST" name="tearDown" finished-at="2026-04-17T14:59:15 IST" duration-ms="163" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@7b36aa0c]" started-at="2026-04-17T15:03:09 IST" name="tearDown" finished-at="2026-04-17T15:03:09 IST" duration-ms="140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
