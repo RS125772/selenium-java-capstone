@@ -59,13 +59,26 @@ public class ExtentListener implements ITestListener {
         }
     }
 
-    @Override
-    public void onStart(ITestContext context) {
-        // Optional: Log suite start
+    @Override public void onStart(ITestContext context) 
+    { // Optional: Log suite start 
+        System.out.println("Starting Test Suite: " + context.getName());
     }
 
     @Override
-    public void onFinish(ITestContext context) {
-        extent.flush();
-    }
+public void onFinish(ITestContext context) {
+
+    int passed = context.getPassedTests().size();
+    int failed = context.getFailedTests().size();
+    int skipped = context.getSkippedTests().size();
+    int total = context.getAllTestMethods().length;
+
+    System.out.println("\n================ TEST EXECUTION SUMMARY ================");
+    System.out.println("TOTAL TESTS : " + total);
+    System.out.println("PASSED      : " + passed);
+    System.out.println("FAILED      : " + failed);
+    System.out.println("SKIPPED     : " + skipped);
+    System.out.println("=======================================================\n");
+
+    extent.flush();
+}
 }
