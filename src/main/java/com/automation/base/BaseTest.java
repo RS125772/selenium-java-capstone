@@ -9,32 +9,34 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
-    protected WebDriver driver;
-    protected ConfigReader config;
-    protected TestDataReader testData;
+    protected WebDriver driver; // WebDriver instance used across test classes
+    protected ConfigReader config; // Object to read configuration properties (like: browser, URL, etc.)
+    protected TestDataReader testData; // Object to read test data (like: username, password, etc.)
 
+    // This method runs before every test method
     @BeforeMethod
     public void setUp() {
 
-        config = new ConfigReader();
-        testData = new TestDataReader();
+        config = new ConfigReader(); // Initialize config reader to load environment-related properties
+        testData = new TestDataReader(); // Initialize test data reader to load test-specific data
 
-        String browser = config.getProperty("browser");
+        String browser = config.getProperty("browser"); // Fetch browser name from config.properties (e.g., chrome, edge)
 
-        // Initialize driver
+        // Initialize driver based on the specified browser type in the configuration
         DriverFactory.initDriver(browser);
 
-        // Assign thread-safe driver to instance variable
+        // Get the thread-safe WebDriver instance from DriverFactory
         driver = DriverFactory.getDriver();
 
         driver.manage().window().maximize();
-        driver.get(config.getProperty("url"));
+        driver.get(config.getProperty("url")); // Launch application URL from config file
 
         System.out.println("Thread ID: " + Thread.currentThread().getId());
     }
 
+    // This method runs after every test method
     @AfterMethod
     public void tearDown() {
-        DriverFactory.quitDriver();
+        DriverFactory.quitDriver(); // Quit browser and remove driver instance from ThreadLocal
     }
 }
