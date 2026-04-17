@@ -13,15 +13,15 @@ public class ExtentManager {
 
             ExtentSparkReporter spark = new ExtentSparkReporter("reports/ExtentReport.html");
 
-            spark.config().setReportName("Automation Test Report");
-            spark.config().setDocumentTitle("Selenium Test Results");
+            spark.config().setReportName("Demo Web Shop Automation Test Report");
+            spark.config().setDocumentTitle("Demo Web ShopSelenium Test Results");
 
             extent = new ExtentReports();
             extent.attachReporter(spark);
 
             // System info
-            extent.setSystemInfo("Tester", "Rachit");
-            extent.setSystemInfo("Environment", "QA");
+            extent.setSystemInfo("Testers", "Rachit, Rahul, Vinay, Sahil");
+            extent.setSystemInfo("Environment", "Test");
         }
 
         return extent;
