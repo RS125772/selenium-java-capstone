@@ -59,8 +59,9 @@ public class ExtentListener implements ITestListener {
         }
     }
 
-    @Override public void onStart(ITestContext context) 
-    { // Optional: Log suite start 
+    @Override
+    public void onStart(ITestContext context) {
+        // Optional: Log suite start
         System.out.println("Starting Test Suite: " + context.getName());
     }
 

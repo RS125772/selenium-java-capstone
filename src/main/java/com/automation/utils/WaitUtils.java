@@ -3,12 +3,14 @@ package com.automation.utils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
 
+import com.automation.config.ConfigReader;
+
 import java.time.Duration;
 import java.util.List;
 
 public class WaitUtils {
 
-    private static final int TIMEOUT = 15;
+    private static final int TIMEOUT = new ConfigReader().getIntProperty("timeout");
 
     private static WebDriverWait wait(WebDriver driver) {
         return new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
