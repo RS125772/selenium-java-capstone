@@ -21,6 +21,22 @@ pipeline {
             }
         }
 
+        stage('Publish Test Results') {
+            steps {
+                junit '**/surefire-reports/*.xml'
+            }
+        }
+
+        stage('Publish Extent Report') {
+            steps {
+                publishHTML([
+                    reportDir: 'reports',
+                    reportFiles: 'ExtentReport.html',
+                    reportName: 'Extent Test Report'
+                ])
+            }
+        }
+
         stage('Archive Reports') {
             steps {
                 archiveArtifacts artifacts: 'reports/**', fingerprint: true
