@@ -53,22 +53,22 @@ public class HomePage {
 
     public void clickOnRegisterButton() {
         ExtentTestManager.logInfo("Clicking on Register button");
-        WaitUtils.waitForClickable(driver, registerBtn).click();
+        WaitUtils.clickWhenReady(driver, registerBtn);
     }
 
     public void clickOnLogin() {
         ExtentTestManager.logInfo("Clicking on Login button");
-        WaitUtils.waitForClickable(driver, loginBtn).click();
+        WaitUtils.clickWhenReady(driver, loginBtn);
     }
 
     public void clickOnShoppingCart() {
         ExtentTestManager.logInfo("Clicking on Shopping Cart");
-        WaitUtils.waitForClickable(driver, shoppingCart).click();
+        WaitUtils.clickWhenReady(driver, shoppingCart);
     }
 
     public void clickOnWishlist() {
         ExtentTestManager.logInfo("Clicking on Wishlist");
-        WaitUtils.waitForClickable(driver, wishlist).click();
+        WaitUtils.clickWhenReady(driver, wishlist);
     }
 
     // ================= SEARCH FUNCTIONALITY =================
@@ -95,37 +95,37 @@ public class HomePage {
 
     public void clickBooks() {
         ExtentTestManager.logInfo("Clicking on Books category");
-        WaitUtils.waitForClickable(driver, booksMenu).click();
+        WaitUtils.clickWhenReady(driver, booksMenu);
     }
 
     public void clickComputers() {
         ExtentTestManager.logInfo("Clicking on Computers category");
-        WaitUtils.waitForClickable(driver, computersMenu).click();
+        WaitUtils.clickWhenReady(driver, computersMenu);
     }
 
     public void clickElectronics() {
         ExtentTestManager.logInfo("Clicking on Electronics category");
-        WaitUtils.waitForClickable(driver, electronicsMenu).click();
+        WaitUtils.clickWhenReady(driver, electronicsMenu);
     }
 
     public void clickApparel() {
         ExtentTestManager.logInfo("Clicking on Apparel & Shoes category");
-        WaitUtils.waitForClickable(driver, apparelMenu).click();
+        WaitUtils.clickWhenReady(driver, apparelMenu);
     }
 
     public void clickDigitalDownloads() {
         ExtentTestManager.logInfo("Clicking on Digital Downloads category");
-        WaitUtils.waitForClickable(driver, digitalDownloadsMenu).click();
+        WaitUtils.clickWhenReady(driver, digitalDownloadsMenu);
     }
 
     public void clickJewelry() {
         ExtentTestManager.logInfo("Clicking on Jewelry category");
-        WaitUtils.waitForClickable(driver, jewelryMenu).click();
+        WaitUtils.clickWhenReady(driver, jewelryMenu);
     }
 
     public void clickGiftCards() {
         ExtentTestManager.logInfo("Clicking on Gift Cards category");
-        WaitUtils.waitForClickable(driver, giftCardsMenu).click();
+        WaitUtils.clickWhenReady(driver, giftCardsMenu);
     }
 
     // ================= VALIDATION METHODS=================

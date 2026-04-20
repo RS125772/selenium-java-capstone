@@ -31,7 +31,7 @@ public class LoginPage {
         ExtentTestManager.logInfo("Entered email: " + email);
         WaitUtils.waitForVisibility(driver, passwordField).sendKeys(password);
         ExtentTestManager.logInfo("Entered password");
-        WaitUtils.waitForClickable(driver, loginButton).click();
+        WaitUtils.clickWhenReady(driver, loginButton);
         ExtentTestManager.logInfo("Clicked on Login button");
     }
 

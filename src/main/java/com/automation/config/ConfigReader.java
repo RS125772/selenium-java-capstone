@@ -40,6 +40,12 @@ public class ConfigReader {
         return value.trim();
     }
 
+    // Method to fetch value using key with default fallback
+    public String getProperty(String key, String defaultValue) {
+        String value = prop.getProperty(key);
+        return value == null ? defaultValue : value.trim();
+    }
+
     // Helper method to directly get integer values (useful for timeout, etc.)
     public int getIntProperty(String key) {
         return Integer.parseInt(getProperty(key)); // Convert string value to integer

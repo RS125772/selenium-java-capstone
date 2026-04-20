@@ -20,7 +20,19 @@ public class BaseTest {
         config = new ConfigReader(); // Initialize config reader to load environment-related properties
         testData = new TestDataReader(); // Initialize test data reader to load test-specific data
 
-        String browser = config.getProperty("browser"); // Fetch browser name from config.properties (e.g., chrome, edge)
+        String browser = System.getProperty("browser");
+        if (browser == null || browser.isEmpty()) {
+            browser = config.getProperty("browser"); // Fetch browser name from config.properties (e.g., chrome, edge)
+        }
+
+        String headless = System.getProperty("headless");
+        if (headless == null || headless.isEmpty()) {
+            headless = config.getProperty("headless", "false");
+        }
+
+        if (headless.equalsIgnoreCase("true") && "chrome".equalsIgnoreCase(browser)) {
+            browser = "chrome-headless";
+        }
 
         // Initialize driver based on the specified browser type in the configuration
         DriverFactory.initDriver(browser);

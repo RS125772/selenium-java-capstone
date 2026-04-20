@@ -69,6 +69,21 @@ public class WaitUtils {
         select.selectByVisibleText(value);
     }
 
+    public static void clickWhenReady(WebDriver driver, By locator) {
+        int attempts = 0;
+        while (attempts < 3) {
+            try {
+                waitForClickable(driver, locator).click();
+                return;
+            } catch (StaleElementReferenceException e) {
+                attempts++;
+                if (attempts == 3) {
+                    throw e;
+                }
+            }
+        }
+    }
+
     // ================= LIST / PRODUCT GRID =================
 
     public static List<WebElement> waitForProductList(WebDriver driver, By locator) {

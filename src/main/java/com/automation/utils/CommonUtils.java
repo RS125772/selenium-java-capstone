@@ -18,13 +18,15 @@ public class CommonUtils {
 
     // ================= SCREENSHOT =================
     public void takeScreenshot(String fileName) {
+        String timestamp = String.valueOf(System.currentTimeMillis());
+        String uniqueName = fileName + "_" + Thread.currentThread().getId() + "_" + timestamp;
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File dest = new File("reports/screenshots/" + fileName + ".png");
+        File dest = new File("reports/screenshots/" + uniqueName + ".png");
         dest.getParentFile().mkdirs();
         try {
             FileHandler.copy(src, dest);
             // Attach screenshot to Extent report with correct relative path
-            String relativePath = "screenshots/" + fileName + ".png";
+            String relativePath = "screenshots/" + uniqueName + ".png";
             ExtentTestManager.attachScreenshot(relativePath, "Screenshot: " + fileName);
         } catch (IOException e) {
             e.printStackTrace();
