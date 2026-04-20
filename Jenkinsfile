@@ -9,10 +9,11 @@ pipeline {
     stages {
 
         stage('Checkout Code') {
-            steps {
-                git 'https://github.com/RS125772/selenium-java-capstone.git'
-            }
-        }
+    steps {
+        git branch: 'feature_rachit13042026', 
+            url: 'https://github.com/RS125772/selenium-java-capstone.git'
+    }
+}
 
         stage('Build & Test') {
             steps {
