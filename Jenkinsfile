@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/<your-repo>.git'
+                git 'https://github.com/RS125772/selenium-java-capstone.git'
             }
         }
 
