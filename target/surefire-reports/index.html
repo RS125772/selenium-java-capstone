@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">9 methods,   9 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -119,6 +119,16 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" title="com.automation.tests.RegistrationTest" class="method navigator-link" hash-for-method="verifyInvalidUserRegistration">verifyInvalidUserRegistration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" title="com.automation.tests.LoginTest" class="method navigator-link" hash-for-method="verifyLogoutFunctionality">verifyLogoutFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" title="com.automation.tests.HomePageTest" class="method navigator-link" hash-for-method="verifySearchWithBlankInput">verifySearchWithBlankInput</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -161,6 +171,15 @@
                   <span class="method-name">verifyInvalidLogin</span>
                   <em>
 (Invalid Login Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogoutFunctionality">
+                  </a> <!-- verifyLogoutFunctionality -->
+                  <span class="method-name">verifyLogoutFunctionality</span>
+                  <em>
+(Verify Logout functionality)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -222,6 +241,15 @@
                   <span class="method-name">verifyInvalidSearchFunctionality</span>
                   <em>
 (Verify Invalid Search)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchWithBlankInput">
+                  </a> <!-- verifySearchWithBlankInput -->
+                  <span class="method-name">verifySearchWithBlankInput</span>
+                  <em>
+(Verify search with blank input shows alert)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -292,35 +320,43 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyCategoryNavigationFunctionality')
 data.setCell(0, 2, 'com.automation.tests.HomePageTest')
-data.setCell(0, 3, 7342);
+data.setCell(0, 3, 7267);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserRegistration')
-data.setCell(1, 2, 'com.automation.tests.RegistrationTest')
-data.setCell(1, 3, 2251);
+data.setCell(1, 1, 'verifyLogoutFunctionality')
+data.setCell(1, 2, 'com.automation.tests.LoginTest')
+data.setCell(1, 3, 2382);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyValidLogin')
-data.setCell(2, 2, 'com.automation.tests.LoginTest')
-data.setCell(2, 3, 1839);
+data.setCell(2, 1, 'verifyUserRegistration')
+data.setCell(2, 2, 'com.automation.tests.RegistrationTest')
+data.setCell(2, 3, 1773);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyInvalidLogin')
+data.setCell(3, 1, 'verifyValidLogin')
 data.setCell(3, 2, 'com.automation.tests.LoginTest')
-data.setCell(3, 3, 1624);
+data.setCell(3, 3, 1617);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyInvalidUserRegistration')
-data.setCell(4, 2, 'com.automation.tests.RegistrationTest')
-data.setCell(4, 3, 1483);
+data.setCell(4, 1, 'verifyInvalidLogin')
+data.setCell(4, 2, 'com.automation.tests.LoginTest')
+data.setCell(4, 3, 1095);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyValidSearchFunctionality')
 data.setCell(5, 2, 'com.automation.tests.HomePageTest')
-data.setCell(5, 3, 1315);
+data.setCell(5, 3, 1083);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyInvalidSearchFunctionality')
 data.setCell(6, 2, 'com.automation.tests.HomePageTest')
-data.setCell(6, 3, 1260);
+data.setCell(6, 3, 972);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyInvalidUserRegistration')
+data.setCell(7, 2, 'com.automation.tests.RegistrationTest')
+data.setCell(7, 3, 952);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifySearchWithBlankInput')
+data.setCell(8, 2, 'com.automation.tests.HomePageTest')
+data.setCell(8, 3, 326);
 window.suiteTableData['Demo_Web_Shop_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Demo_Web_Shop_Automation_Suite'}
 return data;
 }
@@ -358,89 +394,113 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyInvalidLogin</span>
-                <span class="method-start">4631 ms</span>
+                <span class="method-start">3722 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">6259 ms</span>
+                <span class="method-start">4820 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">6507 ms</span>
+                <span class="method-start">4952 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyValidLogin</span>
-                <span class="method-start">9580 ms</span>
+                <span class="method-name">verifyLogoutFunctionality</span>
+                <span class="method-start">8329 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11420 ms</span>
+                <span class="method-start">10712 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">10831 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyValidLogin</span>
+                <span class="method-start">13856 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">15473 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.automation.tests.RegistrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">11610 ms</span>
+                <span class="method-start">15615 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyInvalidUserRegistration</span>
-                <span class="method-start">14855 ms</span>
+                <span class="method-start">18799 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">16339 ms</span>
+                <span class="method-start">19751 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">16494 ms</span>
+                <span class="method-start">19878 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserRegistration</span>
-                <span class="method-start">19515 ms</span>
+                <span class="method-start">23138 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">21766 ms</span>
+                <span class="method-start">24912 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.automation.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">21921 ms</span>
+                <span class="method-start">25040 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCategoryNavigationFunctionality</span>
-                <span class="method-start">24933 ms</span>
+                <span class="method-start">28381 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">32276 ms</span>
+                <span class="method-start">35649 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">32569 ms</span>
+                <span class="method-start">35778 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyInvalidSearchFunctionality</span>
-                <span class="method-start">35758 ms</span>
+                <span class="method-start">39990 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">37019 ms</span>
+                <span class="method-start">40962 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">37215 ms</span>
+                <span class="method-start">41095 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyValidSearchFunctionality</span>
-                <span class="method-start">40394 ms</span>
+                <span class="method-name">verifySearchWithBlankInput</span>
+                <span class="method-start">45660 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">41710 ms</span>
+                <span class="method-start">45987 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">46127 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyValidSearchFunctionality</span>
+                <span class="method-start">56576 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">57659 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

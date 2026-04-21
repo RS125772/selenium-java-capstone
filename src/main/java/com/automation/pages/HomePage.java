@@ -92,10 +92,12 @@ public class HomePage {
     }
 
     public void searchWithBlankInput() {
-        ExtentTestManager.logInfo("Performing blank search");
-        WaitUtils.waitForVisibility(driver, searchBox).clear();
-        clickSearch();
-    }
+    ExtentTestManager.logInfo("Performing blank search");
+    WaitUtils.waitForVisibility(driver, searchBox).clear();
+
+    ExtentTestManager.logInfo("Clicking on Search button");
+    WaitUtils.waitForClickable(driver, searchBtn).click();
+}
 
     // ================= NAVIGATION ACTIONS =================
 

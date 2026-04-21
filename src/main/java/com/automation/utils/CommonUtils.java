@@ -3,9 +3,6 @@ package com.automation.utils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Set;
@@ -48,16 +45,16 @@ public class CommonUtils {
 
     // ================= ALERT =================
     public void acceptAlert() {
-        driver.switchTo().alert().accept();
-    }
+    WaitUtils.waitForAlert(driver).accept();
+}
 
     public void dismissAlert() {
         driver.switchTo().alert().dismiss();
     }
 
     public String getAlertText() {
-        return driver.switchTo().alert().getText();
-    }
+    return WaitUtils.waitForAlert(driver).getText();
+}
 
     // ================= WINDOW =================
     public void switchToNewWindow() {

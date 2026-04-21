@@ -3,6 +3,7 @@ package com.automation.tests;
 import com.automation.base.BaseTest;
 import com.automation.pages.HomePage;
 import com.automation.utils.CommonUtils;
+import com.automation.utils.WaitUtils;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -70,7 +71,8 @@ public class HomePageTest extends BaseTest {
         CommonUtils commonUtils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
         homePage.searchProduct(testData.getProperty("invalidSearchProduct"));
-        Assert.assertTrue(homePage.isNoSearchResultDisplayed(),"No result message is not displayed for invalid search");
+        Assert.assertTrue(homePage.isNoSearchResultDisplayed(),
+                "No result message is not displayed for invalid search");
         commonUtils.takeScreenshot("InvalidSearchTest");
     }
 
@@ -83,18 +85,17 @@ public void verifySearchWithBlankInput() {
     // Step 1: Perform blank search
     homePage.searchWithBlankInput();
 
-    // Step 2: Get alert text
-    String alertMsg = commonUtils.getAlertText();
+    // Step 2: Wait + switch to alert (CRITICAL)
+    String alertMsg = WaitUtils.waitForAlert(driver).getText();
 
     // Step 3: Validate alert
-    Assert.assertEquals(alertMsg, "Please enter some search keyword",
-            "Alert message mismatch!");
+    Assert.assertEquals(alertMsg,"Please enter some search keyword","Alert message mismatch!");
 
     // Step 4: Accept alert
-    commonUtils.acceptAlert();
+    WaitUtils.waitForAlert(driver).accept();
 
-    // Step 5: Screenshot
-    commonUtils.takeScreenshot("BlankSearchAlert");
+    // Step 5: Screenshot BEFORE accepting alert
+    commonUtils.takeScreenshot("BlankSearch_Alert");
 }
 
 }
