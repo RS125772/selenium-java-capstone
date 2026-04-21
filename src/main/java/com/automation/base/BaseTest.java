@@ -3,26 +3,34 @@ package com.automation.base;
 import com.automation.config.ConfigReader;
 import com.automation.config.TestDataReader;
 import com.automation.drivers.DriverFactory;
+import com.automation.pages.HomePage;
+import com.automation.pages.LoginPage;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
+import java.util.Arrays;
 
 public class BaseTest {
 
-    protected WebDriver driver; // WebDriver instance used across test classes
-    protected ConfigReader config; // Object to read configuration properties (like: browser, URL, etc.)
-    protected TestDataReader testData; // Object to read test data (like: username, password, etc.)
+    protected WebDriver driver;
+    protected ConfigReader config;
+    protected TestDataReader testData;
 
-    // This method runs before every test method
+    // ================= SETUP =================
+
     @BeforeMethod
-    public void setUp() {
+    public void setUp(Method method) {
 
-        config = new ConfigReader(); // Initialize config reader to load environment-related properties
-        testData = new TestDataReader(); // Initialize test data reader to load test-specific data
+        config = new ConfigReader();
+        testData = new TestDataReader();
 
         String browser = System.getProperty("browser");
         if (browser == null || browser.isEmpty()) {
-            browser = config.getProperty("browser"); // Fetch browser name from config.properties (e.g., chrome, edge)
+            browser = config.getProperty("browser");
         }
 
         String headless = System.getProperty("headless");
@@ -34,21 +42,50 @@ public class BaseTest {
             browser = "chrome-headless";
         }
 
-        // Initialize driver based on the specified browser type in the configuration
+        // Initialize driver
         DriverFactory.initDriver(browser);
-
-        // Get the thread-safe WebDriver instance from DriverFactory
         driver = DriverFactory.getDriver();
 
         driver.manage().window().maximize();
-        driver.get(config.getProperty("url")); // Launch application URL from config file
+        driver.get(config.getProperty("url"));
 
         System.out.println("Thread ID: " + Thread.currentThread().getId());
+
+        // ================= LOGIN CONTROL =================
+
+        if (method.isAnnotationPresent(Test.class)) {
+            Test test = method.getAnnotation(Test.class);
+
+            if (Arrays.asList(test.groups()).contains("requiresLogin")) {
+                loginToApplication();
+            }
+        }
     }
 
-    // This method runs after every test method
+    // ================= LOGIN METHOD =================
+
+    protected void loginToApplication() {
+
+        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+
+        homePage.clickOnLogin();
+
+        loginPage.login(
+                testData.getProperty("validUsername"),
+                testData.getProperty("validPassword")
+        );
+
+        // Validation to ensure login success
+        if (!loginPage.isLoginSuccessful()) {
+            throw new RuntimeException("Login failed in setup!");
+        }
+    }
+
+    // ================= TEARDOWN =================
+
     @AfterMethod
     public void tearDown() {
-        DriverFactory.quitDriver(); // Quit browser and remove driver instance from ThreadLocal
+        DriverFactory.quitDriver();
     }
 }
