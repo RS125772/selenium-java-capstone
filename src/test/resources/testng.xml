@@ -12,5 +12,4 @@
             <class name="com.automation.tests.HomePageTest"/>
         </classes>
     </test>
-    
 </suite>

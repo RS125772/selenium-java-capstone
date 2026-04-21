@@ -43,4 +43,33 @@ public class LoginTest extends BaseTest {
         commonUtils.takeScreenshot("InvalidLoginTest");
         
     }
+
+    @Test(description = "Verify Logout functionality")
+public void verifyLogoutFunctionality() {
+
+    HomePage homePage = new HomePage(driver);
+    LoginPage loginPage = new LoginPage(driver);
+    CommonUtils commonUtils = new CommonUtils(driver);
+
+    // Step 1: Navigate to Login
+    homePage.clickOnLogin();
+
+    // Step 2: Login
+    loginPage.login(
+        testData.getProperty("validUsername"),
+        testData.getProperty("validPassword")
+    );
+
+    // Step 3: Verify login success
+    Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed!");
+
+    // Step 4: Logout
+    loginPage.clickLogout();
+
+    // Step 5: Verify logout
+    Assert.assertTrue(loginPage.isLogoutSuccessful(), "Logout failed!");
+
+    // Step 6: Screenshot
+    commonUtils.takeScreenshot("LogoutTest");
+}
 }

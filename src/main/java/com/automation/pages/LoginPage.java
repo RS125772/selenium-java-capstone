@@ -35,6 +35,11 @@ public class LoginPage {
         ExtentTestManager.logInfo("Clicked on Login button");
     }
 
+    public void clickLogout() {
+    ExtentTestManager.logInfo("Clicking on Logout");
+    WaitUtils.clickWhenReady(driver, logoutLink);
+}
+
     // ================= VALIDATIONS =================
 
     public boolean isLoginSuccessful() {
@@ -44,4 +49,10 @@ public class LoginPage {
     public String getErrorMessage() {
         return WaitUtils.waitForVisibility(driver, errorMessage).getText();
     }
+
+    public boolean isLogoutSuccessful() {
+    ExtentTestManager.logInfo("Verifying logout successful (Login button visible)");
+    return driver.findElement(By.className("ico-login")).isDisplayed();
+}
+
 }

@@ -91,6 +91,12 @@ public class HomePage {
         clickSearch();
     }
 
+    public void searchWithBlankInput() {
+        ExtentTestManager.logInfo("Performing blank search");
+        WaitUtils.waitForVisibility(driver, searchBox).clear();
+        clickSearch();
+    }
+
     // ================= NAVIGATION ACTIONS =================
 
     public void clickBooks() {

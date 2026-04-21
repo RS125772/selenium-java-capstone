@@ -74,4 +74,27 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("InvalidSearchTest");
     }
 
+    @Test(description = "Verify search with blank input shows alert")
+public void verifySearchWithBlankInput() {
+
+    HomePage homePage = new HomePage(driver);
+    CommonUtils commonUtils = new CommonUtils(driver);
+
+    // Step 1: Perform blank search
+    homePage.searchWithBlankInput();
+
+    // Step 2: Get alert text
+    String alertMsg = commonUtils.getAlertText();
+
+    // Step 3: Validate alert
+    Assert.assertEquals(alertMsg, "Please enter some search keyword",
+            "Alert message mismatch!");
+
+    // Step 4: Accept alert
+    commonUtils.acceptAlert();
+
+    // Step 5: Screenshot
+    commonUtils.takeScreenshot("BlankSearchAlert");
+}
+
 }
