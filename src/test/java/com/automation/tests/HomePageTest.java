@@ -77,25 +77,25 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(description = "Verify search with blank input shows alert")
-public void verifySearchWithBlankInput() {
+    public void verifySearchWithBlankInput() {
 
-    HomePage homePage = new HomePage(driver);
-    CommonUtils commonUtils = new CommonUtils(driver);
+        HomePage homePage = new HomePage(driver);
+        CommonUtils commonUtils = new CommonUtils(driver);
 
-    // Step 1: Perform blank search
-    homePage.searchWithBlankInput();
+        // Step 1: Perform blank search
+        homePage.searchWithBlankInput();
 
-    // Step 2: Wait + switch to alert (CRITICAL)
-    String alertMsg = WaitUtils.waitForAlert(driver).getText();
+        // Step 2: Wait + switch to alert (CRITICAL)
+        String alertMsg = WaitUtils.waitForAlert(driver).getText();
 
-    // Step 3: Validate alert
-    Assert.assertEquals(alertMsg,"Please enter some search keyword","Alert message mismatch!");
+        // Step 3: Validate alert
+        Assert.assertEquals(alertMsg, "Please enter some search keyword", "Alert message mismatch!");
 
-    // Step 4: Accept alert
-    WaitUtils.waitForAlert(driver).accept();
+        // Step 4: Accept alert
+        WaitUtils.waitForAlert(driver).accept();
 
-    // Step 5: Screenshot BEFORE accepting alert
-    commonUtils.takeScreenshot("BlankSearch_Alert");
-}
+        // Step 5: Screenshot BEFORE accepting alert
+        commonUtils.takeScreenshot("BlankSearch_Alert");
+    }
 
 }

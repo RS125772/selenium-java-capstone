@@ -10,7 +10,12 @@ import java.util.List;
 
 public class WaitUtils {
 
-    private static final int TIMEOUT = new ConfigReader().getIntProperty("timeout");
+    private static final int TIMEOUT;
+
+    static {
+        ConfigReader config = new ConfigReader();
+        TIMEOUT = config.getIntProperty("timeout");
+    }
 
     private static WebDriverWait wait(WebDriver driver) {
         return new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
