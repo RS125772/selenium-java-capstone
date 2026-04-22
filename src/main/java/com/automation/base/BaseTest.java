@@ -46,7 +46,6 @@ public class BaseTest {
         DriverFactory.initDriver(browser);
         driver = DriverFactory.getDriver();
 
-        driver.manage().window().maximize();
         driver.get(config.getProperty("url"));
 
         System.out.println("Thread ID: " + Thread.currentThread().getId());
@@ -71,9 +70,7 @@ public class BaseTest {
 
         homePage.clickOnLogin();
 
-        loginPage.login(
-                testData.getProperty("validUsername"),
-                testData.getProperty("validPassword")
+        loginPage.login(testData.getProperty("validUsername"),testData.getProperty("validPassword")
         );
 
         // Validation to ensure login success

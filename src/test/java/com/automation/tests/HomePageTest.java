@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class HomePageTest extends BaseTest {
 
-    @Test(description = "Verify page navigation on each category")
+    @Test(description = "Verify page navigation on each category", groups = {"smoke"})
     public void verifyCategoryNavigationFunctionality() {
 
         HomePage homePage = new HomePage(driver);
@@ -57,7 +57,7 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("RegisterPage");
     }
 
-    @Test(description = "Verify Search Functionality")
+    @Test(description = "Verify Search Functionality", groups = {"smoke"})
     public void verifyValidSearchFunctionality() {
         CommonUtils commonUtils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -66,7 +66,7 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("ValidSearchTest");
     }
 
-    @Test(description = "Verify Invalid Search")
+    @Test(description = "Verify Invalid Search", groups = {"smoke"})
     public void verifyInvalidSearchFunctionality() {
         CommonUtils commonUtils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -76,7 +76,7 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("InvalidSearchTest");
     }
 
-    @Test(description = "Verify search with blank input shows alert")
+@Test(description = "Verify search with blank input shows alert", groups = {"smoke"})
     public void verifySearchWithBlankInput() {
 
         HomePage homePage = new HomePage(driver);

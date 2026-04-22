@@ -36,9 +36,9 @@ public class LoginPage {
     }
 
     public void clickLogout() {
-    ExtentTestManager.logInfo("Clicking on Logout");
-    WaitUtils.clickWhenReady(driver, logoutLink);
-}
+        ExtentTestManager.logInfo("Clicking on Logout");
+        WaitUtils.clickWhenReady(driver, logoutLink);
+    }
 
     // ================= VALIDATIONS =================
 
@@ -51,8 +51,8 @@ public class LoginPage {
     }
 
     public boolean isLogoutSuccessful() {
-    ExtentTestManager.logInfo("Verifying logout successful (Login button visible)");
-    return driver.findElement(By.className("ico-login")).isDisplayed();
+        ExtentTestManager.logInfo("Verifying logout successful (Login button visible)");
+        return WaitUtils.waitForVisibility(driver, By.className("ico-login")).isDisplayed();
 }
 
 }

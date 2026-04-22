@@ -9,7 +9,7 @@ import com.automation.utils.CommonUtils;
 
 public class LoginTest extends BaseTest {
 
-    @Test(description = "Valid Login Test")
+    @Test(description = "Valid Login Test", groups = {"smoke"})
     public void verifyValidLogin() {
 
         HomePage homePage = new HomePage(driver);
@@ -25,7 +25,7 @@ public class LoginTest extends BaseTest {
         commonUtils.takeScreenshot("ValidLoginTest");
     }
 
-    @Test(description = "Invalid Login Test")
+    @Test(description = "Invalid Login Test", groups = {"smoke"})
     public void verifyInvalidLogin() {
 
         HomePage homePage = new HomePage(driver);
@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest {
 
     }
 
-    @Test(description = "Verify Logout functionality")
+@Test(description = "Verify Logout functionality", groups = {"smoke"})
     public void verifyLogoutFunctionality() {
 
         HomePage homePage = new HomePage(driver);

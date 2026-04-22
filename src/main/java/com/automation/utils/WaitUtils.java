@@ -100,14 +100,4 @@ public class WaitUtils {
     public static Alert waitForAlert(WebDriver driver) {
         return wait(driver).until(ExpectedConditions.alertIsPresent());
     }
-
-    // ================= CUSTOM =================
-
-    public static void hardWait(int seconds) {
-        try {
-            Thread.sleep(seconds * 1000L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }
