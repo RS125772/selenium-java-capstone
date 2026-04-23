@@ -51,7 +51,7 @@ public void addProductToCart(String productName) {
     WaitUtils.waitForVisibility(driver, successMessage);
 }
 
-// ================= CART VALIDATIONS =================
+// ================= CART VALIDATIONS METHODS=================
 
 public boolean isProductAddedSuccessMessageDisplayed() {
     String msg = WaitUtils.waitForVisibility(driver, successMessage).getText();
@@ -84,7 +84,7 @@ public boolean areMultipleProductsPresentInCart(String products) {
     return true;
 }
 
-// ================= REMOVE =================
+// ================= REMOVE METHODS=================
 
 public void removeProductFromCart(String productName) {
     String xpath = String.format(removeCheckboxByproduct, productName);
@@ -121,7 +121,7 @@ public void clearCartIfNotEmpty() {
     }
 }
 
-// ================= QUANTITY =================
+// ================= QUANTITY METHODS=================
 
 public void updateProductQuantity(String productName, int quantity) {
 

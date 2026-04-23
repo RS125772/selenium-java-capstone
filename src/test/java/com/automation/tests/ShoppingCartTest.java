@@ -19,7 +19,7 @@ public void verifyRemoveSingleProductFromCart() {
     String productName = testData.getProperty("productName");
 
     homePage.searchProduct(productName);
-    homePage.waitForSearchResults(); // 🔥 REQUIRED
+    homePage.waitForSearchResults();
 
     cartPage.addProductToCart(productName);
 
