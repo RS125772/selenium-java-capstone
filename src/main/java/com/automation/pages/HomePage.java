@@ -187,4 +187,9 @@ public class HomePage {
         ExtentTestManager.logInfo("Verifying no search results message is displayed");
         return WaitUtils.waitForVisibility(driver, noSearchResultMsg).isDisplayed();
     }
+
+    public void waitForSearchResults() {
+    By productGrid = By.cssSelector(".product-grid");
+    WaitUtils.waitForVisibility(driver, productGrid);
+}
 }

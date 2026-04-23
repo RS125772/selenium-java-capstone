@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-23T11:38:30 IST" name="Demo Web Shop Automation Suite" finished-at="2026-04-23T11:39:57 IST" duration-ms="86970">
+  <suite started-at="2026-04-23T13:51:51 IST" name="Demo Web Shop Automation Suite" finished-at="2026-04-23T13:53:15 IST" duration-ms="83218">
     <groups>
-      <group name="requiresLogin">
-        <method signature="ShoppingCartTest.verifyProductPriceInCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" name="verifyProductPriceInCart" class="com.automation.tests.ShoppingCartTest"/>
-        <method signature="ShoppingCartTest.verifyRemoveMultipleProductsFromCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" name="verifyRemoveMultipleProductsFromCart" class="com.automation.tests.ShoppingCartTest"/>
-        <method signature="ShoppingCartTest.verifyRemoveSingleProductFromCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" name="verifyRemoveSingleProductFromCart" class="com.automation.tests.ShoppingCartTest"/>
-        <method signature="ShoppingCartTest.verifyUpdateProductQuantityInCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" name="verifyUpdateProductQuantityInCart" class="com.automation.tests.ShoppingCartTest"/>
-      </group> <!-- requiresLogin -->
       <group name="regression">
-        <method signature="RegistrationTest.verifyInvalidUserRegistration()[pri:0, instance:com.automation.tests.RegistrationTest@1ca3b418]" name="verifyInvalidUserRegistration" class="com.automation.tests.RegistrationTest"/>
-        <method signature="RegistrationTest.verifyUserRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.tests.RegistrationTest@1ca3b418]" name="verifyUserRegistration" class="com.automation.tests.RegistrationTest"/>
+        <method signature="RegistrationTest.verifyInvalidUserRegistration()[pri:0, instance:com.automation.tests.RegistrationTest@58cbafc2]" name="verifyInvalidUserRegistration" class="com.automation.tests.RegistrationTest"/>
+        <method signature="RegistrationTest.verifyUserRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.tests.RegistrationTest@58cbafc2]" name="verifyUserRegistration" class="com.automation.tests.RegistrationTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="HomePageTest.verifyCategoryNavigationFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" name="verifyCategoryNavigationFunctionality" class="com.automation.tests.HomePageTest"/>
-        <method signature="HomePageTest.verifyInvalidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" name="verifyInvalidSearchFunctionality" class="com.automation.tests.HomePageTest"/>
-        <method signature="HomePageTest.verifySearchWithBlankInput()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" name="verifySearchWithBlankInput" class="com.automation.tests.HomePageTest"/>
-        <method signature="HomePageTest.verifyValidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" name="verifyValidSearchFunctionality" class="com.automation.tests.HomePageTest"/>
-        <method signature="LoginTest.verifyInvalidLogin()[pri:0, instance:com.automation.tests.LoginTest@2892d68]" name="verifyInvalidLogin" class="com.automation.tests.LoginTest"/>
-        <method signature="LoginTest.verifyLogoutFunctionality()[pri:0, instance:com.automation.tests.LoginTest@2892d68]" name="verifyLogoutFunctionality" class="com.automation.tests.LoginTest"/>
-        <method signature="LoginTest.verifyValidLogin()[pri:0, instance:com.automation.tests.LoginTest@2892d68]" name="verifyValidLogin" class="com.automation.tests.LoginTest"/>
+        <method signature="HomePageTest.verifyCategoryNavigationFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" name="verifyCategoryNavigationFunctionality" class="com.automation.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyInvalidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" name="verifyInvalidSearchFunctionality" class="com.automation.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifySearchWithBlankInput()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" name="verifySearchWithBlankInput" class="com.automation.tests.HomePageTest"/>
+        <method signature="HomePageTest.verifyValidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" name="verifyValidSearchFunctionality" class="com.automation.tests.HomePageTest"/>
+        <method signature="LoginTest.verifyInvalidLogin()[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" name="verifyInvalidLogin" class="com.automation.tests.LoginTest"/>
+        <method signature="LoginTest.verifyLogoutFunctionality()[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" name="verifyLogoutFunctionality" class="com.automation.tests.LoginTest"/>
+        <method signature="LoginTest.verifyValidLogin()[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" name="verifyValidLogin" class="com.automation.tests.LoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-04-23T11:38:30 IST" name="Demo Web Shop UI Tests" finished-at="2026-04-23T11:39:57 IST" duration-ms="86970">
+    <test started-at="2026-04-23T13:51:51 IST" name="Demo Web Shop UI Tests" finished-at="2026-04-23T13:53:15 IST" duration-ms="83218">
       <class name="com.automation.tests.RegistrationTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.RegistrationTest@1ca3b418]" started-at="2026-04-23T11:38:46 IST" name="setUp" finished-at="2026-04-23T11:38:49 IST" duration-ms="3156" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.RegistrationTest@58cbafc2]" started-at="2026-04-23T13:52:07 IST" name="setUp" finished-at="2026-04-23T13:52:10 IST" duration-ms="3109" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,15 +31,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyInvalidUserRegistration()[pri:0, instance:com.automation.tests.RegistrationTest@1ca3b418]" started-at="2026-04-23T11:38:49 IST" name="verifyInvalidUserRegistration" description="Verify user registration fails when passwords do not match" finished-at="2026-04-23T11:38:50 IST" duration-ms="1060" status="PASS">
+        <test-method signature="verifyInvalidUserRegistration()[pri:0, instance:com.automation.tests.RegistrationTest@58cbafc2]" started-at="2026-04-23T13:52:10 IST" name="verifyInvalidUserRegistration" description="Verify user registration fails when passwords do not match" finished-at="2026-04-23T13:52:11 IST" duration-ms="932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidUserRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.RegistrationTest@1ca3b418]" started-at="2026-04-23T11:38:50 IST" name="tearDown" finished-at="2026-04-23T11:38:50 IST" duration-ms="164" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.RegistrationTest@58cbafc2]" started-at="2026-04-23T13:52:11 IST" name="tearDown" finished-at="2026-04-23T13:52:11 IST" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.RegistrationTest@1ca3b418]" started-at="2026-04-23T11:38:50 IST" name="setUp" finished-at="2026-04-23T11:38:54 IST" duration-ms="3426" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.RegistrationTest@58cbafc2]" started-at="2026-04-23T13:52:11 IST" name="setUp" finished-at="2026-04-23T13:52:14 IST" duration-ms="3199" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,7 +50,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyUserRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.tests.RegistrationTest@1ca3b418]" started-at="2026-04-23T11:38:54 IST" name="verifyUserRegistration" description="Verify successful user registration" data-provider="registrationData" finished-at="2026-04-23T11:38:56 IST" duration-ms="1895" status="PASS">
+        <test-method signature="verifyUserRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.tests.RegistrationTest@58cbafc2]" started-at="2026-04-23T13:52:14 IST" name="verifyUserRegistration" description="Verify successful user registration" data-provider="registrationData" finished-at="2026-04-23T13:52:16 IST" duration-ms="1923" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -70,7 +64,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Test1776924530842@gmail.com]]>
+                <![CDATA[Test1776932531330@gmail.com]]>
               </value>
             </param>
             <param index="3">
@@ -82,13 +76,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.RegistrationTest@1ca3b418]" started-at="2026-04-23T11:38:56 IST" name="tearDown" finished-at="2026-04-23T11:38:56 IST" duration-ms="144" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.RegistrationTest@58cbafc2]" started-at="2026-04-23T13:52:16 IST" name="tearDown" finished-at="2026-04-23T13:52:16 IST" duration-ms="143" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.automation.tests.RegistrationTest -->
       <class name="com.automation.tests.HomePageTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:38:56 IST" name="setUp" finished-at="2026-04-23T11:38:59 IST" duration-ms="3093" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:16 IST" name="setUp" finished-at="2026-04-23T13:52:19 IST" duration-ms="3257" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,15 +93,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCategoryNavigationFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:38:59 IST" name="verifyCategoryNavigationFunctionality" description="Verify page navigation on each category" finished-at="2026-04-23T11:39:06 IST" duration-ms="7101" status="PASS">
+        <test-method signature="verifyCategoryNavigationFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:19 IST" name="verifyCategoryNavigationFunctionality" description="Verify page navigation on each category" finished-at="2026-04-23T13:52:27 IST" duration-ms="7435" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCategoryNavigationFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:06 IST" name="tearDown" finished-at="2026-04-23T11:39:06 IST" duration-ms="153" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:27 IST" name="tearDown" finished-at="2026-04-23T13:52:27 IST" duration-ms="160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:06 IST" name="setUp" finished-at="2026-04-23T11:39:09 IST" duration-ms="3250" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:27 IST" name="setUp" finished-at="2026-04-23T13:52:30 IST" duration-ms="3104" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -118,15 +112,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyInvalidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:09 IST" name="verifyInvalidSearchFunctionality" description="Verify Invalid Search" finished-at="2026-04-23T11:39:10 IST" duration-ms="956" status="PASS">
+        <test-method signature="verifyInvalidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:30 IST" name="verifyInvalidSearchFunctionality" description="Verify Invalid Search" finished-at="2026-04-23T13:52:31 IST" duration-ms="1263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidSearchFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:10 IST" name="tearDown" finished-at="2026-04-23T11:39:10 IST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:31 IST" name="tearDown" finished-at="2026-04-23T13:52:31 IST" duration-ms="141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:10 IST" name="setUp" finished-at="2026-04-23T11:39:14 IST" duration-ms="3145" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:31 IST" name="setUp" finished-at="2026-04-23T13:52:35 IST" duration-ms="3101" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -137,15 +131,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifySearchWithBlankInput()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:14 IST" name="verifySearchWithBlankInput" description="Verify search with blank input shows alert" finished-at="2026-04-23T11:39:14 IST" duration-ms="294" status="PASS">
+        <test-method signature="verifySearchWithBlankInput()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:35 IST" name="verifySearchWithBlankInput" description="Verify search with blank input shows alert" finished-at="2026-04-23T13:52:35 IST" duration-ms="282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySearchWithBlankInput -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:14 IST" name="tearDown" finished-at="2026-04-23T11:39:14 IST" duration-ms="129" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:35 IST" name="tearDown" finished-at="2026-04-23T13:52:35 IST" duration-ms="138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:14 IST" name="setUp" finished-at="2026-04-23T11:39:17 IST" duration-ms="3250" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:35 IST" name="setUp" finished-at="2026-04-23T13:52:38 IST" duration-ms="3051" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -156,17 +150,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyValidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:17 IST" name="verifyValidSearchFunctionality" description="Verify Search Functionality" finished-at="2026-04-23T11:39:19 IST" duration-ms="1276" status="PASS">
+        <test-method signature="verifyValidSearchFunctionality()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:38 IST" name="verifyValidSearchFunctionality" description="Verify Search Functionality" finished-at="2026-04-23T13:52:39 IST" duration-ms="1018" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidSearchFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@58cbafc2]" started-at="2026-04-23T11:39:19 IST" name="tearDown" finished-at="2026-04-23T11:39:19 IST" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.HomePageTest@2034b64c]" started-at="2026-04-23T13:52:39 IST" name="tearDown" finished-at="2026-04-23T13:52:39 IST" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.automation.tests.HomePageTest -->
       <class name="com.automation.tests.LoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.LoginTest@2892d68]" started-at="2026-04-23T11:38:30 IST" name="setUp" finished-at="2026-04-23T11:38:34 IST" duration-ms="4055" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" started-at="2026-04-23T13:51:51 IST" name="setUp" finished-at="2026-04-23T13:51:55 IST" duration-ms="3761" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -177,15 +171,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyInvalidLogin()[pri:0, instance:com.automation.tests.LoginTest@2892d68]" started-at="2026-04-23T11:38:34 IST" name="verifyInvalidLogin" description="Invalid Login Test" finished-at="2026-04-23T11:38:35 IST" duration-ms="1402" status="PASS">
+        <test-method signature="verifyInvalidLogin()[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" started-at="2026-04-23T13:51:55 IST" name="verifyInvalidLogin" description="Invalid Login Test" finished-at="2026-04-23T13:51:56 IST" duration-ms="1143" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@2892d68]" started-at="2026-04-23T11:38:35 IST" name="tearDown" finished-at="2026-04-23T11:38:35 IST" duration-ms="134" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" started-at="2026-04-23T13:51:56 IST" name="tearDown" finished-at="2026-04-23T13:51:56 IST" duration-ms="162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.LoginTest@2892d68]" started-at="2026-04-23T11:38:35 IST" name="setUp" finished-at="2026-04-23T11:38:38 IST" duration-ms="3189" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" started-at="2026-04-23T13:51:56 IST" name="setUp" finished-at="2026-04-23T13:51:59 IST" duration-ms="2991" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -196,15 +190,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLogoutFunctionality()[pri:0, instance:com.automation.tests.LoginTest@2892d68]" started-at="2026-04-23T11:38:38 IST" name="verifyLogoutFunctionality" description="Verify Logout functionality" finished-at="2026-04-23T11:38:41 IST" duration-ms="2529" status="PASS">
+        <test-method signature="verifyLogoutFunctionality()[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" started-at="2026-04-23T13:51:59 IST" name="verifyLogoutFunctionality" description="Verify Logout functionality" finished-at="2026-04-23T13:52:02 IST" duration-ms="2346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogoutFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@2892d68]" started-at="2026-04-23T11:38:41 IST" name="tearDown" finished-at="2026-04-23T11:38:41 IST" duration-ms="148" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" started-at="2026-04-23T13:52:02 IST" name="tearDown" finished-at="2026-04-23T13:52:02 IST" duration-ms="153" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.LoginTest@2892d68]" started-at="2026-04-23T11:38:41 IST" name="setUp" finished-at="2026-04-23T11:38:44 IST" duration-ms="3219" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" started-at="2026-04-23T13:52:02 IST" name="setUp" finished-at="2026-04-23T13:52:05 IST" duration-ms="3010" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -215,17 +209,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyValidLogin()[pri:0, instance:com.automation.tests.LoginTest@2892d68]" started-at="2026-04-23T11:38:44 IST" name="verifyValidLogin" description="Valid Login Test" finished-at="2026-04-23T11:38:46 IST" duration-ms="1465" status="PASS">
+        <test-method signature="verifyValidLogin()[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" started-at="2026-04-23T13:52:05 IST" name="verifyValidLogin" description="Valid Login Test" finished-at="2026-04-23T13:52:06 IST" duration-ms="1499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@2892d68]" started-at="2026-04-23T11:38:46 IST" name="tearDown" finished-at="2026-04-23T11:38:46 IST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@5ab956d7]" started-at="2026-04-23T13:52:06 IST" name="tearDown" finished-at="2026-04-23T13:52:07 IST" duration-ms="163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.automation.tests.LoginTest -->
       <class name="com.automation.tests.ShoppingCartTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:19 IST" name="setUp" finished-at="2026-04-23T11:39:22 IST" duration-ms="3092" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:39 IST" name="setUp" finished-at="2026-04-23T13:52:42 IST" duration-ms="3031" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -236,15 +230,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyEmptyCartMessage()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:22 IST" name="verifyEmptyCartMessage" description="Verify cart is empty" finished-at="2026-04-23T11:39:23 IST" duration-ms="697" status="PASS">
+        <test-method signature="verifyEmptyCartMessage()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:42 IST" name="verifyEmptyCartMessage" description="Verify cart is empty" finished-at="2026-04-23T13:52:43 IST" duration-ms="662" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEmptyCartMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:23 IST" name="tearDown" finished-at="2026-04-23T11:39:23 IST" duration-ms="168" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:43 IST" name="tearDown" finished-at="2026-04-23T13:52:43 IST" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:23 IST" name="setUp" finished-at="2026-04-23T11:39:27 IST" duration-ms="4465" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:43 IST" name="setUp" finished-at="2026-04-23T13:52:46 IST" duration-ms="2934" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.tests.ShoppingCartTest.verifyProductAddedSuccessfully()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyProductAddedSuccessfully()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:46 IST" name="verifyProductAddedSuccessfully" description="Verify product added successfully" finished-at="2026-04-23T13:52:49 IST" duration-ms="2803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductAddedSuccessfully -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:49 IST" name="tearDown" finished-at="2026-04-23T13:52:49 IST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:49 IST" name="setUp" finished-at="2026-04-23T13:52:52 IST" duration-ms="2999" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -255,15 +268,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyProductPriceInCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:27 IST" name="verifyProductPriceInCart" description="Verify user can see correct price for product in Cart" finished-at="2026-04-23T11:39:30 IST" duration-ms="2909" status="PASS">
+        <test-method signature="verifyProductPriceInCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:52 IST" name="verifyProductPriceInCart" description="Verify product price calculation" finished-at="2026-04-23T13:52:54 IST" duration-ms="2266" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProductPriceInCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:30 IST" name="tearDown" finished-at="2026-04-23T11:39:30 IST" duration-ms="158" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:54 IST" name="tearDown" finished-at="2026-04-23T13:52:54 IST" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:30 IST" name="setUp" finished-at="2026-04-23T11:39:35 IST" duration-ms="4572" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:54 IST" name="setUp" finished-at="2026-04-23T13:52:57 IST" duration-ms="3038" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -274,15 +287,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRemoveMultipleProductsFromCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:35 IST" name="verifyRemoveMultipleProductsFromCart" description="Verify user can remove multiple products from Cart" finished-at="2026-04-23T11:39:40 IST" duration-ms="5606" status="PASS">
+        <test-method signature="verifyRemoveMultipleProductsFromCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:52:57 IST" name="verifyRemoveMultipleProductsFromCart" description="Verify user can remove multiple products from Cart" finished-at="2026-04-23T13:53:03 IST" duration-ms="5221" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRemoveMultipleProductsFromCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:40 IST" name="tearDown" finished-at="2026-04-23T11:39:41 IST" duration-ms="145" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:53:03 IST" name="tearDown" finished-at="2026-04-23T13:53:03 IST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:41 IST" name="setUp" finished-at="2026-04-23T11:39:46 IST" duration-ms="5005" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:53:03 IST" name="setUp" finished-at="2026-04-23T13:53:06 IST" duration-ms="2808" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -293,15 +306,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRemoveSingleProductFromCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:46 IST" name="verifyRemoveSingleProductFromCart" description="Verify user can remove single product from Cart" finished-at="2026-04-23T11:39:49 IST" duration-ms="3380" status="PASS">
+        <test-method signature="verifyRemoveSingleProductFromCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:53:06 IST" name="verifyRemoveSingleProductFromCart" description="Verify user can remove single product from Cart" finished-at="2026-04-23T13:53:08 IST" duration-ms="2948" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRemoveSingleProductFromCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:49 IST" name="tearDown" finished-at="2026-04-23T11:39:49 IST" duration-ms="155" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:53:08 IST" name="tearDown" finished-at="2026-04-23T13:53:09 IST" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:49 IST" name="setUp" finished-at="2026-04-23T11:39:53 IST" duration-ms="4373" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:53:09 IST" name="setUp" finished-at="2026-04-23T13:53:12 IST" duration-ms="2888" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -312,11 +325,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyUpdateProductQuantityInCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:53 IST" name="verifyUpdateProductQuantityInCart" description="Verify user can update product quantity in Cart" finished-at="2026-04-23T11:39:56 IST" duration-ms="2978" status="PASS">
+        <test-method signature="verifyUpdateProductQuantityInCart()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:53:12 IST" name="verifyUpdateProductQuantityInCart" description="Verify update product quantity" finished-at="2026-04-23T13:53:14 IST" duration-ms="2913" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUpdateProductQuantityInCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@2034b64c]" started-at="2026-04-23T11:39:56 IST" name="tearDown" finished-at="2026-04-23T11:39:57 IST" duration-ms="176" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ShoppingCartTest@75d3a5e0]" started-at="2026-04-23T13:53:14 IST" name="tearDown" finished-at="2026-04-23T13:53:15 IST" duration-ms="155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

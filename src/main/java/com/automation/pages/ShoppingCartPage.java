@@ -8,103 +8,163 @@ import com.automation.utils.ExtentTestManager;
 import java.util.List;
 
 public class ShoppingCartPage {
-    private WebDriver driver;
 
-    // ================= LOCATORS =================
+private WebDriver driver;
 
-    private String removeCheckboxByproduct = "//a[contains(text(),'%s')]/ancestor::tr//input[@name='removefromcart']";
-    private String productNameLocator = "//a[contains(@class,'product-name') and contains(text(),'%s')]";
-    private String quantityInputByProduct = "//a[contains(text(),'%s')]/ancestor::tr//input[contains(@class,'qty-input')]";
-    private By updateCartBtn = By.name("updatecart");
-    private By emptyCartMsg = By.cssSelector(".order-summary-content");
-    private By addToCartBtn = By.xpath("//input[@value='Add to cart']");
+// ================= LOCATORS =================
 
-    // ================= CONSTRUCTOR =================
-    public ShoppingCartPage(WebDriver driver) {
-        this.driver = driver;
+private String removeCheckboxByproduct = "//a[contains(text(),'%s')]/ancestor::tr//input[@name='removefromcart']";
+private String productNameLocator = "//a[contains(@class,'product-name') and contains(text(),'%s')]";
+private String quantityInputByProduct = "//a[contains(text(),'%s')]/ancestor::tr//input[contains(@class,'qty-input')]";
+
+private By updateCartBtn = By.name("updatecart");
+private By emptyCartMsg = By.cssSelector(".order-summary-content");
+private By successMessage = By.cssSelector(".bar-notification.success");
+private By productGrid = By.cssSelector(".product-grid");
+
+// ================= CONSTRUCTOR =================
+
+public ShoppingCartPage(WebDriver driver) {
+    this.driver = driver;
+}
+
+// ================= ADD TO CART =================
+
+public void addProductToCart(String productName) {
+
+    ExtentTestManager.logInfo("Adding product to cart: " + productName);
+
+    // Wait for product list to load
+    WaitUtils.waitForVisibility(driver, productGrid);
+
+    String addToCartXpath = String.format(
+        "//div[contains(@class,'product-item')]//a[contains(normalize-space(),'%s')]" +
+        "/ancestor::div[contains(@class,'product-item')]//input[@value='Add to cart']",
+        productName
+    );
+
+    By addToCartButton = By.xpath(addToCartXpath);
+
+    WebElement button = WaitUtils.waitForClickable(driver, addToCartButton);
+    button.click();
+
+    WaitUtils.waitForVisibility(driver, successMessage);
+}
+
+// ================= CART VALIDATIONS =================
+
+public boolean isProductAddedSuccessMessageDisplayed() {
+    String msg = WaitUtils.waitForVisibility(driver, successMessage).getText();
+    return msg.toLowerCase().contains("added");
+}
+
+public boolean isCartEmpty() {
+    String text = WaitUtils.waitForVisibility(driver, emptyCartMsg).getText();
+    return text.toLowerCase().contains("empty");
+}
+
+public boolean isProductPresentInCart(String productName) {
+    try {
+        return WaitUtils.waitForVisibility(
+            driver,
+            By.xpath(String.format(productNameLocator, productName))
+        ).isDisplayed();
+    } catch (Exception e) {
+        return false;
     }
+}
 
-    // ================= ACTIONS =================
-
-    // Add Product to Cart from Search Results
-    public void addProductToCart() {
-        ExtentTestManager.logInfo("Adding product to cart");
-        WaitUtils.clickWhenReady(driver, addToCartBtn);
-        // Wait for add to cart success notification
-        WaitUtils.waitForSuccessMessage(driver, By.cssSelector(".bar-notification.success"));
-    }
-
-    // Remove Products from Cart
-    public boolean isCartEmpty() {
-        String text = WaitUtils.waitForVisibility(driver, emptyCartMsg).getText();
-        return text.contains("Your Shopping Cart is empty!");
-    }
-
-    public void removeProductFromCart(String productName) {
-        String removeCheckboxXpath = String.format(removeCheckboxByproduct, productName);
-        WaitUtils.waitForClickable(driver, By.xpath(removeCheckboxXpath)).click();
-        WaitUtils.waitForClickable(driver, updateCartBtn).click();
-
-    }
-
-    public void removeMultipleProductsFromCart(String products) {
-        String[] productArray = products.split(",");
-        for (String product : productArray) {
-            String productName = product.trim();
-            String removeCheckboxXpath = String.format(removeCheckboxByproduct, productName);
-            WaitUtils.waitForClickable(driver, By.xpath(removeCheckboxXpath)).click();
+public boolean areMultipleProductsPresentInCart(String products) {
+    String[] productArray = products.split(",");
+    for (String product : productArray) {
+        if (!isProductPresentInCart(product.trim())) {
+            return false;
         }
-        WaitUtils.waitForClickable(driver, updateCartBtn).click();
-        WaitUtils.waitForPresence(driver, emptyCartMsg);
+    }
+    return true;
+}
+
+// ================= REMOVE =================
+
+public void removeProductFromCart(String productName) {
+    String xpath = String.format(removeCheckboxByproduct, productName);
+    WaitUtils.waitForClickable(driver, By.xpath(xpath)).click();
+    WaitUtils.clickWhenReady(driver, updateCartBtn);
+}
+
+public void removeMultipleProductsFromCart(String products) {
+    String[] productArray = products.split(",");
+
+    for (String product : productArray) {
+        String xpath = String.format(removeCheckboxByproduct, product.trim());
+        WaitUtils.waitForClickable(driver, By.xpath(xpath)).click();
     }
 
-    public boolean isProductPresentInCart(String productName) {
-        List<WebElement> products = driver.findElements(By.xpath(String.format(productNameLocator, productName)));
+    WaitUtils.clickWhenReady(driver, updateCartBtn);
+    WaitUtils.waitForVisibility(driver, emptyCartMsg);
+}
 
-        return !products.isEmpty(); // Returns true if product is found, false otherwise
-    }
+public void clearCartIfNotEmpty() {
 
-    public boolean areMultipleProductsPresentInCart(String products) {
-        String[] productArray = products.split(",");
-        for (String product : productArray) {
-            String productName = product.trim();
-            if (!isProductPresentInCart(productName)) {
-                return false;
-            }
+    List<WebElement> checkboxes = driver.findElements(By.name("removefromcart"));
+
+    if (!checkboxes.isEmpty()) {
+
+        ExtentTestManager.logInfo("Clearing cart before test");
+
+        for (WebElement checkbox : checkboxes) {
+            checkbox.click();
         }
-        return true;
-    }
 
-    // Update Quantity of a Product in Cart
-    public void updateProductQuantity(String productName, int quantity) {
-
-        WebElement quantityInput = WaitUtils.waitForVisibility(driver,
-                By.xpath(String.format(quantityInputByProduct, productName)));
-        quantityInput.clear();
-        quantityInput.sendKeys(String.valueOf(quantity));
-        WaitUtils.waitForClickable(driver, updateCartBtn).click();
+        WaitUtils.clickWhenReady(driver, updateCartBtn);
+        WaitUtils.waitForVisibility(driver, emptyCartMsg);
     }
+}
 
-    // get price of a product in cart
-    public double getProductPrice(String productName) {
-        String priceLocator = String
-                .format("//a[contains(text(),'%s')]/ancestor::tr//span[@class='product-unit-price']", productName);
-        String priceText = WaitUtils.waitForVisibility(driver, By.xpath(priceLocator)).getText();
-        return Double.parseDouble(priceText); // Convert price text to double for calculations
-    }
+// ================= QUANTITY =================
 
-    // get quantity of a product in cart
-    public int getProductQuantity(String productName) {
-        WebElement quantityInput = WaitUtils.waitForVisibility(driver,
-                By.xpath(String.format(quantityInputByProduct, productName)));
-        return Integer.parseInt(quantityInput.getAttribute("value")); // Get current quantity from input field
-    }
+public void updateProductQuantity(String productName, int quantity) {
 
-    // get total price of a product in cart
-    public double getProductTotalPrice(String productName) {
-        String totalLocator = String.format("//a[contains(text(),'%s')]/ancestor::tr//span[@class='product-subtotal']",
-                productName);
-        String totalText = WaitUtils.waitForVisibility(driver, By.xpath(totalLocator)).getText();
-        return Double.parseDouble(totalText); // Convert total price text to double for calculations
-    }
+    WebElement input = WaitUtils.waitForVisibility(driver,
+            By.xpath(String.format(quantityInputByProduct, productName)));
+
+    input.clear();
+    input.sendKeys(String.valueOf(quantity));
+
+    WaitUtils.clickWhenReady(driver, updateCartBtn);
+}
+
+public int getProductQuantity(String productName) {
+
+    WebElement input = WaitUtils.waitForVisibility(driver,
+            By.xpath(String.format(quantityInputByProduct, productName)));
+
+    return Integer.parseInt(input.getAttribute("value"));
+}
+
+// ================= PRICE =================
+
+public double getProductPrice(String productName) {
+
+    String xpath = String.format(
+        "//a[contains(text(),'%s')]/ancestor::tr//span[@class='product-unit-price']",
+        productName
+    );
+
+    String price = WaitUtils.waitForVisibility(driver, By.xpath(xpath)).getText();
+
+    return Double.parseDouble(price.replaceAll("[^0-9.]", ""));
+}
+
+public double getProductTotalPrice(String productName) {
+
+    String xpath = String.format(
+        "//a[contains(text(),'%s')]/ancestor::tr//span[@class='product-subtotal']",
+        productName
+    );
+
+    String total = WaitUtils.waitForVisibility(driver, By.xpath(xpath)).getText();
+
+    return Double.parseDouble(total.replaceAll("[^0-9.]", ""));
+}
 }
