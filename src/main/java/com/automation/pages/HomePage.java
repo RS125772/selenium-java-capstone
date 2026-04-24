@@ -43,6 +43,11 @@ public class HomePage {
     private By jewelryTitle = By.xpath("//h1[contains(text(),'Jewelry')]");
     private By giftCardsTitle = By.xpath("//h1[contains(text(),'Gift Cards')]");
 
+    private By productLink = By.xpath("//h2[@class='product-title']/a[contains(text(),'%s')]");
+    private By addToWishlistBtn = By.xpath("//input[@value='Add to wishlist']");
+    private String removeWishlistCheckboxByProduct = "//a[contains(text(),'%s')]/ancestor::tr//input[contains(@type,'checkbox') and contains(@name,'remove')]";
+    private By updateWishlistBtn = By.xpath("//input[@name='updatecart' or @name='updatewishlist' or @value='Update wishlist']");
+
     // ================= CONSTRUCTOR =================
     
     public HomePage(WebDriver driver) {
@@ -71,6 +76,21 @@ public class HomePage {
         WaitUtils.clickWhenReady(driver, wishlist);
     }
 
+    public void addProductsToWishlist(String products) {
+        ExtentTestManager.logInfo("Adding products to wishlist: " + products);
+        String[] productList = products.split(",");
+        for (String product : productList) {
+            String productName = product.trim();
+            searchProduct(productName);
+
+            By productLinkForName = By.xpath(String.format("//h2[@class='product-title']/a[contains(text(),'%s')]", productName));
+            //WaitUtils.waitForVisibility(driver, productLinkForName).isDisplayed();
+            WaitUtils.waitForClickable(driver, productLinkForName).click();
+            //WaitUtils.waitForVisibility(driver, addToWishlistBtn);
+            WaitUtils.waitForClickable(driver, addToWishlistBtn).click();
+            WaitUtils.waitForPageToLoad(driver);
+        }
+    }
     // ================= SEARCH FUNCTIONALITY =================
 
     public void enterSearchText(String product) {

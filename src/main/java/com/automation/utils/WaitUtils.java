@@ -35,6 +35,14 @@ public class WaitUtils {
         return wait(driver).until(ExpectedConditions.presenceOfElementLocated(locator)) != null;
     }
 
+    public static void waitForPageToLoad(WebDriver driver) {
+    new WebDriverWait(driver, Duration.ofSeconds(30)).until(
+        webDriver -> ((JavascriptExecutor) webDriver)
+                .executeScript("return document.readyState")
+                .equals("complete")
+    );
+}
+
     // ================= COMMON NOPCOMMERCE SCENARIOS =================
 
     // 1. Wait for success message (after add to cart / registration)
