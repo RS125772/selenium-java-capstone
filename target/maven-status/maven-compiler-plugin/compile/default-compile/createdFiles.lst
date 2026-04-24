@@ -11,3 +11,4 @@ com\automation\utils\CommonUtils.class
 com\automation\utils\ExtentManager.class
 com\automation\utils\WaitUtils.class
 com\automation\drivers\DriverFactory.class
+com\automation\pages\WishListPage.class

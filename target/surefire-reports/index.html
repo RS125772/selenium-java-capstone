@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Demo Web Shop Automation Suite</span>
+              <span class="suite-name border-passed">Demo Web Shop Automation Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods, 1 failed,   14 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" class="hide-methods failed suite-Demo_Web_Shop_Automation_Suite"> (hide)</a> <!-- hide-methods failed suite-Demo_Web_Shop_Automation_Suite -->
-                      <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" class="show-methods failed suite-Demo_Web_Shop_Automation_Suite"> (show)</a> <!-- show-methods failed suite-Demo_Web_Shop_Automation_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Demo_Web_Shop_Automation_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" title="com.automation.tests.ShoppingCartTest" class="method navigator-link" hash-for-method="verifyUpdateProductQuantityInCart">verifyUpdateProductQuantityInCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Demo_Web_Shop_Automation_Suite -->
+                    <span class="method-stats">15 methods,   15 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -172,7 +158,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" title="com.automation.tests.RegistrationTest" class="method navigator-link" hash-for-method="verifyUserRegistration(Rachit, Saurabh, Test1776941674256@gmail.com, Test@123)">verifyUserRegistration(Rachit, Saurabh, Test1776941674256@gmail.com, Test@123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" title="com.automation.tests.ShoppingCartTest" class="method navigator-link" hash-for-method="verifyUpdateProductQuantityInCart">verifyUpdateProductQuantityInCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Demo_Web_Shop_Automation_Suite" title="com.automation.tests.RegistrationTest" class="method navigator-link" hash-for-method="verifyUserRegistration(Rachit, Saurabh, Test1777005818744@gmail.com, Test@123)">verifyUserRegistration(Rachit, Saurabh, Test1777005818744@gmail.com, Test@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -197,91 +188,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Demo_Web_Shop_Automation_Suite" class="panel Demo_Web_Shop_Automation_Suite">
-          <div class="suite-Demo_Web_Shop_Automation_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.automation.tests.ShoppingCartTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUpdateProductQuantityInCart">
-                  </a> <!-- verifyUpdateProductQuantityInCart -->
-                  <span class="method-name">verifyUpdateProductQuantityInCart</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=147.0.7727.102)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2f574ed402ca05667d7be336232bc658, getElementAttribute {name=value, id=f.BA6156B52D0FF9E656A52C669F2B35D2.d.7CCA7D12D6B6732B9F714895E5809817.e.84}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56109}, goog:processID: 27024, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56109/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2f574ed402ca05667d7be336232bc658)] -&gt; xpath: //a[contains(text(),&apos;Smartphone&apos;)]/ancestor::tr//input[contains(@class,&apos;qty-input&apos;)]]
-Session ID: 2f574ed402ca05667d7be336232bc658
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:149)
-	at com.automation.pages.ShoppingCartPage.getProductQuantity(ShoppingCartPage.java:142)
-	at com.automation.tests.ShoppingCartTest.verifyUpdateProductQuantityInCart(ShoppingCartTest.java:73)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Verify update product quantity)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Demo_Web_Shop_Automation_Suite-class-failed -->
-          <div class="suite-Demo_Web_Shop_Automation_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.automation.tests.HomePageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCategoryNavigationFunctionality">
-                  </a> <!-- verifyCategoryNavigationFunctionality -->
-                  <span class="method-name">verifyCategoryNavigationFunctionality</span>
-                  <em>
-(Verify page navigation on each category)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyInvalidSearchFunctionality">
-                  </a> <!-- verifyInvalidSearchFunctionality -->
-                  <span class="method-name">verifyInvalidSearchFunctionality</span>
-                  <em>
-(Verify Invalid Search)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySearchWithBlankInput">
-                  </a> <!-- verifySearchWithBlankInput -->
-                  <span class="method-name">verifySearchWithBlankInput</span>
-                  <em>
-(Verify search with blank input shows alert)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyValidSearchFunctionality">
-                  </a> <!-- verifyValidSearchFunctionality -->
-                  <span class="method-name">verifyValidSearchFunctionality</span>
-                  <em>
-(Verify Search Functionality)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Demo_Web_Shop_Automation_Suite-class-passed -->
           <div class="suite-Demo_Web_Shop_Automation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -333,6 +239,59 @@ Session ID: 2f574ed402ca05667d7be336232bc658
 (Verify user can remove single product from Cart)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUpdateProductQuantityInCart">
+                  </a> <!-- verifyUpdateProductQuantityInCart -->
+                  <span class="method-name">verifyUpdateProductQuantityInCart</span>
+                  <em>
+(Verify update product quantity)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Demo_Web_Shop_Automation_Suite-class-passed -->
+          <div class="suite-Demo_Web_Shop_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.automation.tests.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCategoryNavigationFunctionality">
+                  </a> <!-- verifyCategoryNavigationFunctionality -->
+                  <span class="method-name">verifyCategoryNavigationFunctionality</span>
+                  <em>
+(Verify page navigation on each category)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidSearchFunctionality">
+                  </a> <!-- verifyInvalidSearchFunctionality -->
+                  <span class="method-name">verifyInvalidSearchFunctionality</span>
+                  <em>
+(Verify Invalid Search)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchWithBlankInput">
+                  </a> <!-- verifySearchWithBlankInput -->
+                  <span class="method-name">verifySearchWithBlankInput</span>
+                  <em>
+(Verify search with blank input shows alert)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyValidSearchFunctionality">
+                  </a> <!-- verifyValidSearchFunctionality -->
+                  <span class="method-name">verifyValidSearchFunctionality</span>
+                  <em>
+(Verify Search Functionality)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Demo_Web_Shop_Automation_Suite-class-passed -->
           <div class="suite-Demo_Web_Shop_Automation_Suite-class-passed">
@@ -352,10 +311,10 @@ Session ID: 2f574ed402ca05667d7be336232bc658
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserRegistration(Rachit, Saurabh, Test1776941674256@gmail.com, Test@123)">
-                  </a> <!-- verifyUserRegistration(Rachit, Saurabh, Test1776941674256@gmail.com, Test@123) -->
+                  <a name="verifyUserRegistration(Rachit, Saurabh, Test1777005818744@gmail.com, Test@123)">
+                  </a> <!-- verifyUserRegistration(Rachit, Saurabh, Test1777005818744@gmail.com, Test@123) -->
                   <span class="method-name">verifyUserRegistration</span>
-                  <span class="parameters">(Rachit,Saurabh,Test1776941674256@gmail.com,Test@123)</span>
+                  <span class="parameters">(Rachit,Saurabh,Test1777005818744@gmail.com,Test@123)</span>
                   <em>
 (Verify successful user registration)                  </em>
                 </div> <!-- method-content -->
@@ -535,68 +494,68 @@ data.addRows(15);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyRemoveSingleProductFromCart')
 data.setCell(0, 2, 'com.automation.tests.ShoppingCartTest')
-data.setCell(0, 3, 17827);
+data.setCell(0, 3, 17999);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyCategoryNavigationFunctionality')
 data.setCell(1, 2, 'com.automation.tests.HomePageTest')
-data.setCell(1, 3, 6278);
+data.setCell(1, 3, 7397);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyRemoveMultipleProductsFromCart')
 data.setCell(2, 2, 'com.automation.tests.ShoppingCartTest')
-data.setCell(2, 3, 5639);
+data.setCell(2, 3, 5675);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyUpdateProductQuantityInCart')
 data.setCell(3, 2, 'com.automation.tests.ShoppingCartTest')
-data.setCell(3, 3, 2801);
+data.setCell(3, 3, 3542);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyProductAddedSuccessfully')
 data.setCell(4, 2, 'com.automation.tests.ShoppingCartTest')
-data.setCell(4, 3, 2800);
+data.setCell(4, 3, 2706);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyLogoutFunctionality')
-data.setCell(5, 2, 'com.automation.tests.LoginTest')
-data.setCell(5, 3, 2575);
+data.setCell(5, 1, 'verifyProductPriceInCart')
+data.setCell(5, 2, 'com.automation.tests.ShoppingCartTest')
+data.setCell(5, 3, 2445);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyProductPriceInCart')
-data.setCell(6, 2, 'com.automation.tests.ShoppingCartTest')
-data.setCell(6, 3, 2328);
+data.setCell(6, 1, 'verifyLogoutFunctionality')
+data.setCell(6, 2, 'com.automation.tests.LoginTest')
+data.setCell(6, 3, 2362);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyUserRegistration')
 data.setCell(7, 2, 'com.automation.tests.RegistrationTest')
-data.setCell(7, 3, 1809);
+data.setCell(7, 3, 1784);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyValidLogin')
-data.setCell(8, 2, 'com.automation.tests.LoginTest')
-data.setCell(8, 3, 1596);
+data.setCell(8, 1, 'verifyInvalidSearchFunctionality')
+data.setCell(8, 2, 'com.automation.tests.HomePageTest')
+data.setCell(8, 3, 1779);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyInvalidLogin')
+data.setCell(9, 1, 'verifyValidLogin')
 data.setCell(9, 2, 'com.automation.tests.LoginTest')
-data.setCell(9, 3, 1185);
+data.setCell(9, 3, 1522);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyValidSearchFunctionality')
-data.setCell(10, 2, 'com.automation.tests.HomePageTest')
-data.setCell(10, 3, 1054);
+data.setCell(10, 1, 'verifyInvalidLogin')
+data.setCell(10, 2, 'com.automation.tests.LoginTest')
+data.setCell(10, 3, 1186);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyInvalidSearchFunctionality')
+data.setCell(11, 1, 'verifyValidSearchFunctionality')
 data.setCell(11, 2, 'com.automation.tests.HomePageTest')
-data.setCell(11, 3, 935);
+data.setCell(11, 3, 983);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'verifyInvalidUserRegistration')
 data.setCell(12, 2, 'com.automation.tests.RegistrationTest')
-data.setCell(12, 3, 918);
+data.setCell(12, 3, 939);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'verifyEmptyCartMessage')
 data.setCell(13, 2, 'com.automation.tests.ShoppingCartTest')
-data.setCell(13, 3, 665);
+data.setCell(13, 3, 786);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'verifySearchWithBlankInput')
 data.setCell(14, 2, 'com.automation.tests.HomePageTest')
-data.setCell(14, 3, 317);
+data.setCell(14, 3, 295);
 window.suiteTableData['Demo_Web_Shop_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Demo_Web_Shop_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 48 seconds</span>
+              <span class="suite-total-time">Total running time: 51 seconds</span>
               <div id="times-div-Demo_Web_Shop_Automation_Suite">
               </div> <!-- times-div-Demo_Web_Shop_Automation_Suite -->
             </div> <!-- times-div -->
@@ -629,190 +588,188 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyInvalidLogin</span>
-                <span class="method-start">3802 ms</span>
+                <span class="method-start">3729 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4989 ms</span>
+                <span class="method-start">4917 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.LoginTest.verifyLogoutFunctionality())</span>
-                <span class="method-start">5164 ms</span>
+                <span class="method-start">5097 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogoutFunctionality</span>
-                <span class="method-start">8033 ms</span>
+                <span class="method-start">8048 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10609 ms</span>
+                <span class="method-start">10411 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.LoginTest.verifyValidLogin())</span>
-                <span class="method-start">10773 ms</span>
+                <span class="method-start">10562 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyValidLogin</span>
-                <span class="method-start">14033 ms</span>
+                <span class="method-start">13670 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15631 ms</span>
+                <span class="method-start">15192 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.automation.tests.RegistrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.RegistrationTest.verifyInvalidUserRegistration())</span>
-                <span class="method-start">15789 ms</span>
+                <span class="method-start">15394 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyInvalidUserRegistration</span>
-                <span class="method-start">19098 ms</span>
+                <span class="method-start">18584 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">20016 ms</span>
+                <span class="method-start">19524 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.RegistrationTest.verifyUserRegistration(java.lang.String,java.lang....)</span>
-                <span class="method-start">20169 ms</span>
+                <span class="method-start">19676 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserRegistration(Rachit, Saurabh, Test1776941674256@gmail.com, Test@123)</span>
-                <span class="method-start">23129 ms</span>
+                <span class="method-name">verifyUserRegistration(Rachit, Saurabh, Test1777005818744@gmail.com, Test@123)</span>
+                <span class="method-start">22893 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">24938 ms</span>
+                <span class="method-start">24677 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.automation.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.HomePageTest.verifyCategoryNavigationFunctionality())</span>
-                <span class="method-start">25083 ms</span>
+                <span class="method-start">24823 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCategoryNavigationFunctionality</span>
-                <span class="method-start">28591 ms</span>
+                <span class="method-start">27842 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34869 ms</span>
+                <span class="method-start">35239 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.HomePageTest.verifyInvalidSearchFunctionality())</span>
-                <span class="method-start">35020 ms</span>
+                <span class="method-start">35391 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyInvalidSearchFunctionality</span>
-                <span class="method-start">37909 ms</span>
+                <span class="method-start">38352 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">38844 ms</span>
+                <span class="method-start">40132 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.HomePageTest.verifySearchWithBlankInput())</span>
-                <span class="method-start">38999 ms</span>
+                <span class="method-start">40296 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifySearchWithBlankInput</span>
-                <span class="method-start">42043 ms</span>
+                <span class="method-start">43742 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">42361 ms</span>
+                <span class="method-start">44038 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.HomePageTest.verifyValidSearchFunctionality())</span>
-                <span class="method-start">42488 ms</span>
+                <span class="method-start">44182 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyValidSearchFunctionality</span>
-                <span class="method-start">45516 ms</span>
+                <span class="method-start">47180 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">46570 ms</span>
+                <span class="method-start">48164 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.automation.tests.ShoppingCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.ShoppingCartTest.verifyEmptyCartMessage())</span>
-                <span class="method-start">46734 ms</span>
+                <span class="method-start">48323 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyEmptyCartMessage</span>
-                <span class="method-start">49770 ms</span>
+                <span class="method-start">51336 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">50436 ms</span>
+                <span class="method-start">52122 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.ShoppingCartTest.verifyProductAddedSuccessfully())</span>
-                <span class="method-start">50573 ms</span>
+                <span class="method-start">52270 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyProductAddedSuccessfully</span>
-                <span class="method-start">53369 ms</span>
+                <span class="method-start">55393 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">56170 ms</span>
+                <span class="method-start">58100 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.ShoppingCartTest.verifyProductPriceInCart())</span>
-                <span class="method-start">56310 ms</span>
+                <span class="method-start">58280 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyProductPriceInCart</span>
-                <span class="method-start">59157 ms</span>
+                <span class="method-start">61299 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">61485 ms</span>
+                <span class="method-start">63744 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.ShoppingCartTest.verifyRemoveMultipleProductsFromCart())</span>
-                <span class="method-start">61632 ms</span>
+                <span class="method-start">63906 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyRemoveMultipleProductsFromCart</span>
-                <span class="method-start">64614 ms</span>
+                <span class="method-start">67432 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">70253 ms</span>
+                <span class="method-start">73107 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.ShoppingCartTest.verifyRemoveSingleProductFromCart())</span>
-                <span class="method-start">70405 ms</span>
+                <span class="method-start">73258 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyRemoveSingleProductFromCart</span>
-                <span class="method-start">73264 ms</span>
+                <span class="method-start">76616 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">91092 ms</span>
+                <span class="method-start">94616 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.automation.tests.ShoppingCartTest.verifyUpdateProductQuantityInCart())</span>
-                <span class="method-start">91270 ms</span>
+                <span class="method-start">94795 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyUpdateProductQuantityInCart</span>
-                <span class="method-start">94143 ms</span>
+                <span class="method-start">98180 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">97052 ms</span>
+                <span class="method-start">101722 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

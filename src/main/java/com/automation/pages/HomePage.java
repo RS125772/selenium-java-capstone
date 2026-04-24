@@ -43,11 +43,8 @@ public class HomePage {
     private By jewelryTitle = By.xpath("//h1[contains(text(),'Jewelry')]");
     private By giftCardsTitle = By.xpath("//h1[contains(text(),'Gift Cards')]");
 
-    private By productLink = By.xpath("//h2[@class='product-title']/a[contains(text(),'%s')]");
     private By addToWishlistBtn = By.xpath("//input[@value='Add to wishlist']");
-    private String removeWishlistCheckboxByProduct = "//a[contains(text(),'%s')]/ancestor::tr//input[contains(@type,'checkbox') and contains(@name,'remove')]";
-    private By updateWishlistBtn = By.xpath("//input[@name='updatecart' or @name='updatewishlist' or @value='Update wishlist']");
-
+    
     // ================= CONSTRUCTOR =================
     
     public HomePage(WebDriver driver) {

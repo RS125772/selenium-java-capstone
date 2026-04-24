@@ -12,6 +12,7 @@
             <class name="com.automation.tests.RegistrationTest"/>
             <class name="com.automation.tests.HomePageTest"/>
             <class name="com.automation.tests.ShoppingCartTest"/>
+            <class name="com.automation.tests.WishListTest"/>
         </classes>
     </test>
 </suite>
