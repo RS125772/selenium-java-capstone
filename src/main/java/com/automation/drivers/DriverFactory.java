@@ -12,10 +12,13 @@ import org.openqa.selenium.UnexpectedAlertBehaviour;
 
 public class DriverFactory {
 
+    // ThreadLocal to support parallel execution (one driver per thread)
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
+    // Initialize WebDriver based on browser name
     public static WebDriver initDriver(String browser) {
 
+        // Switch based on browser type
         switch (browser.toLowerCase()) {
 
             case "chrome":
@@ -53,13 +56,16 @@ public class DriverFactory {
                 throw new RuntimeException("Browser not supported: " + browser);
         }
 
+        // Return the initialized driver instance for the current thread
         return getDriver();
     }
 
+    // Get current thread's WebDriver instance
     public static WebDriver getDriver() {
         return driver.get();
     }
 
+    // Quit driver and clean up ThreadLocal
     public static void quitDriver() {
         if (driver.get() != null) {
             driver.get().quit();

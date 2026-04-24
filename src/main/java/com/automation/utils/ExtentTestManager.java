@@ -5,36 +5,46 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 
 public class ExtentTestManager {
 
+    // ThreadLocal to store separate ExtentTest for each thread (parallel execution)
     private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
+    // Set ExtentTest instance for current thread
     public static void setTest(ExtentTest extentTest) {
         test.set(extentTest);
     }
 
+    // Get ExtentTest instance for current thread
     public static ExtentTest getTest() {
         return test.get();
     }
 
+    // Log informational message to report
     public static void logInfo(String message) {
+
         if (getTest() != null) {
-            getTest().info(message);
+            getTest().info(message); // Log info in Extent report
         } else {
+            // Fallback if ExtentTest not initialized
             System.out.println("ExtentTest is NULL → " + message);
         }
     }
 
     /**
-     * Attach a screenshot to the Extent report
-     * 
-     * @param screenshotPath Relative path to the screenshot (e.g.,
-     *                       "screenshots/test_123456.png")
-     * @param message        Description for the screenshot
+     * Attach screenshot to Extent report
+     * @param screenshotPath Path of screenshot file
+     * @param message Description for screenshot
      */
     public static void attachScreenshot(String screenshotPath, String message) {
+
         if (getTest() != null) {
             try {
-                getTest().info(message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+                // Attach screenshot with info log
+                getTest().info(
+                        message,
+                        MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()
+                );
             } catch (Exception e) {
+                // Handle failure in attaching screenshot
                 System.out.println("Failed to attach screenshot: " + e.getMessage());
                 e.printStackTrace();
             }
@@ -44,16 +54,21 @@ public class ExtentTestManager {
     }
 
     /**
-     * Pass a test with screenshot attached
-     * 
-     * @param screenshotPath Relative path to the screenshot
-     * @param message        Description for the screenshot
+     * Mark test as passed with screenshot
+     * @param screenshotPath Path of screenshot file
+     * @param message Description message
      */
     public static void passWithScreenshot(String screenshotPath, String message) {
+
         if (getTest() != null) {
             try {
-                getTest().pass(message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+                // Mark step as pass with screenshot
+                getTest().pass(
+                        message,
+                        MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()
+                );
             } catch (Exception e) {
+                // Handle failure in attaching screenshot
                 System.out.println("Failed to attach screenshot: " + e.getMessage());
                 e.printStackTrace();
             }
