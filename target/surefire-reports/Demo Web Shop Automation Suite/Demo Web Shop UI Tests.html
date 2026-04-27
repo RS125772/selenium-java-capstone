@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>TestNG:  Demo Web Shop UI Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Demo Web Shop UI Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Apr 24 17:16:22 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>119 seconds (119824 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.automation.tests.HomePageTest.verifyValidSearchFunctionality()'><b>verifyValidSearchFunctionality</b><br>Test class: com.automation.tests.HomePageTest<br>Test method: Verify Search Functionality</td>
+<td></td>
+<td>1</td>
+<td>com.automation.tests.HomePageTest@712625fd</td></tr>
+<tr>
+<td title='com.automation.tests.HomePageTest.verifySearchWithBlankInput()'><b>verifySearchWithBlankInput</b><br>Test class: com.automation.tests.HomePageTest<br>Test method: Verify search with blank input shows alert</td>
+<td></td>
+<td>0</td>
+<td>com.automation.tests.HomePageTest@712625fd</td></tr>
+<tr>
+<td title='com.automation.tests.ShoppingCartTest.verifyProductAddedSuccessfully()'><b>verifyProductAddedSuccessfully</b><br>Test class: com.automation.tests.ShoppingCartTest<br>Test method: Verify product added successfully</td>
+<td></td>
+<td>2</td>
+<td>com.automation.tests.ShoppingCartTest@7bba5817</td></tr>
+<tr>
+<td title='com.automation.tests.HomePageTest.verifyCategoryNavigationFunctionality()'><b>verifyCategoryNavigationFunctionality</b><br>Test class: com.automation.tests.HomePageTest<br>Test method: Verify page navigation on each category</td>
+<td></td>
+<td>6</td>
+<td>com.automation.tests.HomePageTest@712625fd</td></tr>
+<tr>
+<td title='com.automation.tests.ShoppingCartTest.verifyProductPriceInCart()'><b>verifyProductPriceInCart</b><br>Test class: com.automation.tests.ShoppingCartTest<br>Test method: Verify product price calculation</td>
+<td></td>
+<td>2</td>
+<td>com.automation.tests.ShoppingCartTest@7bba5817</td></tr>
+<tr>
+<td title='com.automation.tests.HomePageTest.verifyInvalidSearchFunctionality()'><b>verifyInvalidSearchFunctionality</b><br>Test class: com.automation.tests.HomePageTest<br>Test method: Verify Invalid Search</td>
+<td></td>
+<td>1</td>
+<td>com.automation.tests.HomePageTest@712625fd</td></tr>
+<tr>
+<td title='com.automation.tests.RegistrationTest.verifyUserRegistration()'><b>verifyUserRegistration</b><br>Test class: com.automation.tests.RegistrationTest<br>Test method: Verify successful user registration<br>Parameters: Rachit, Saurabh, Test1777031201386@gmail.com, Test@123</td>
+<td></td>
+<td>1</td>
+<td>com.automation.tests.RegistrationTest@33065d67</td></tr>
+<tr>
+<td title='com.automation.tests.RegistrationTest.verifyInvalidUserRegistration()'><b>verifyInvalidUserRegistration</b><br>Test class: com.automation.tests.RegistrationTest<br>Test method: Verify user registration fails when passwords do not match</td>
+<td></td>
+<td>0</td>
+<td>com.automation.tests.RegistrationTest@33065d67</td></tr>
+<tr>
+<td title='com.automation.tests.WishListTest.verifyRemoveProductFromWishlist()'><b>verifyRemoveProductFromWishlist</b><br>Test class: com.automation.tests.WishListTest<br>Test method: Verify user can remove product from wishlist</td>
+<td></td>
+<td>7</td>
+<td>com.automation.tests.WishListTest@742ff096</td></tr>
+<tr>
+<td title='com.automation.tests.ShoppingCartTest.verifyRemoveMultipleProductsFromCart()'><b>verifyRemoveMultipleProductsFromCart</b><br>Test class: com.automation.tests.ShoppingCartTest<br>Test method: Verify user can remove multiple products from Cart</td>
+<td></td>
+<td>4</td>
+<td>com.automation.tests.ShoppingCartTest@7bba5817</td></tr>
+<tr>
+<td title='com.automation.tests.LoginTest.verifyLogoutFunctionality()'><b>verifyLogoutFunctionality</b><br>Test class: com.automation.tests.LoginTest<br>Test method: Verify Logout functionality</td>
+<td></td>
+<td>2</td>
+<td>com.automation.tests.LoginTest@11392934</td></tr>
+<tr>
+<td title='com.automation.tests.WishListTest.verifyAddProductToWishlist()'><b>verifyAddProductToWishlist</b><br>Test class: com.automation.tests.WishListTest<br>Test method: Verify user can add product to wishlist</td>
+<td></td>
+<td>6</td>
+<td>com.automation.tests.WishListTest@742ff096</td></tr>
+<tr>
+<td title='com.automation.tests.ShoppingCartTest.verifyUpdateProductQuantityInCart()'><b>verifyUpdateProductQuantityInCart</b><br>Test class: com.automation.tests.ShoppingCartTest<br>Test method: Verify update product quantity</td>
+<td></td>
+<td>2</td>
+<td>com.automation.tests.ShoppingCartTest@7bba5817</td></tr>
+<tr>
+<td title='com.automation.tests.LoginTest.verifyInvalidLogin()'><b>verifyInvalidLogin</b><br>Test class: com.automation.tests.LoginTest<br>Test method: Invalid Login Test</td>
+<td></td>
+<td>1</td>
+<td>com.automation.tests.LoginTest@11392934</td></tr>
+<tr>
+<td title='com.automation.tests.LoginTest.verifyValidLogin()'><b>verifyValidLogin</b><br>Test class: com.automation.tests.LoginTest<br>Test method: Valid Login Test</td>
+<td></td>
+<td>1</td>
+<td>com.automation.tests.LoginTest@11392934</td></tr>
+<tr>
+<td title='com.automation.tests.ShoppingCartTest.verifyRemoveSingleProductFromCart()'><b>verifyRemoveSingleProductFromCart</b><br>Test class: com.automation.tests.ShoppingCartTest<br>Test method: Verify user can remove single product from Cart</td>
+<td></td>
+<td>18</td>
+<td>com.automation.tests.ShoppingCartTest@7bba5817</td></tr>
+<tr>
+<td title='com.automation.tests.ShoppingCartTest.verifyEmptyCartMessage()'><b>verifyEmptyCartMessage</b><br>Test class: com.automation.tests.ShoppingCartTest<br>Test method: Verify cart is empty</td>
+<td></td>
+<td>0</td>
+<td>com.automation.tests.ShoppingCartTest@7bba5817</td></tr>
+</table><p>
+</body>
+</html>
