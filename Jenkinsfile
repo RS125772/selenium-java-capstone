@@ -1,3 +1,30 @@
+// ================= HELPER METHOD =================
+def getTestSummary() {
+    def pass = 0
+    def fail = 0
+    def skip = 0
+
+    try {
+        def reports = findFiles(glob: '**/surefire-reports/testng-results.xml')
+
+        if (reports.length > 0) {
+            def xml = new XmlSlurper().parseText(readFile(reports[0].path))
+
+            pass = xml.@passed.toInteger()
+            fail = xml.@failed.toInteger()
+            skip = xml.@skipped.toInteger()
+        }
+    } catch (Exception e) {
+        echo "Unable to read test summary: ${e.getMessage()}"
+    }
+
+    def total = pass + fail + skip
+
+    return [pass: pass, fail: fail, skip: skip, total: total]
+}
+
+
+// ================= PIPELINE =================
 pipeline {
     agent any
 
@@ -11,6 +38,7 @@ pipeline {
     }
 
     stages {
+
         stage('Checkout Code') {
             steps {
                 git branch: 'feature_rachit13042026',
@@ -58,57 +86,59 @@ pipeline {
     }
 
     post {
+
         always {
-            archiveArtifacts artifacts: 'reports/**', allowEmptyArchive: true
+            script {
 
-            emailext(
-            subject: "Automation Report - ${currentBuild.currentResult}",
-            body: """
-            <html>
-            <body style="font-family: Arial; background-color:#f4f6f8;">
-                <div style="max-width:700px;margin:auto;background:#fff;padding:20px;border-radius:8px;">
+                def summary = getTestSummary()
 
-                    <h2 style="text-align:center;">Automation Execution Report</h2>
+                emailext(
+                    subject: "Automation Report - ${currentBuild.currentResult}",
+                    body: """
+                    <html>
+                    <body style="font-family: Arial;">
 
-                    <h3 style="color:${currentBuild.currentResult == 'SUCCESS' ? 'green' : 'red'};">
-                        Status: ${currentBuild.currentResult}
-                    </h3>
+                        <h2>Automation Execution Report</h2>
 
-                    <table border="1" cellpadding="10" cellspacing="0" width="100%" style="border-collapse:collapse;">
-                        <tr>
-                            <th>Total</th>
-                            <th style="color:green;">Passed</th>
-                            <th style="color:red;">Failed</th>
-                            <th style="color:orange;">Skipped</th>
-                        </tr>
-                        <tr align="center">
-                            <td>${summary.total}</td>
-                            <td>${summary.pass}</td>
-                            <td>${summary.fail}</td>
-                            <td>${summary.skip}</td>
-                        </tr>
-                    </table>
+                        <h3 style="color:${currentBuild.currentResult == 'SUCCESS' ? 'green' : 'red'};">
+                            Status: ${currentBuild.currentResult}
+                        </h3>
 
-                    <br>
+                        <table border="1" cellpadding="10" cellspacing="0" style="border-collapse:collapse;">
+                            <tr>
+                                <th>Total</th>
+                                <th style="color:green;">Passed</th>
+                                <th style="color:red;">Failed</th>
+                                <th style="color:orange;">Skipped</th>
+                            </tr>
+                            <tr align="center">
+                                <td>${summary.total}</td>
+                                <td>${summary.pass}</td>
+                                <td>${summary.fail}</td>
+                                <td>${summary.skip}</td>
+                            </tr>
+                        </table>
 
-                    <p><b>Job:</b> ${env.JOB_NAME}</p>
-                    <p><b>Build:</b> #${env.BUILD_NUMBER}</p>
+                        <br>
 
-                    <p>
-                        <a href="${env.BUILD_URL}artifact/${REPORT_PATH}"
-                        style="padding:10px 15px;background:#3498db;color:white;text-decoration:none;border-radius:5px;">
-                        View Extent Report
-                        </a>
-                    </p>
+                        <p><b>Job:</b> ${env.JOB_NAME}</p>
+                        <p><b>Build:</b> #${env.BUILD_NUMBER}</p>
 
-                </div>
-            </body>
-            </html>
-            """,
-            to: 'rahul.k4@zensar.com,rachit.saurabh@zensar.com,rachit.saurabh123@gmail.com',
-            mimeType: 'text/html',
-            attachmentsPattern: "${REPORT_PATH}"
-        )
+                        <p>
+                            <a href="${env.BUILD_URL}artifact/${REPORT_PATH}"
+                            style="padding:10px 15px;background:#3498db;color:white;text-decoration:none;border-radius:5px;">
+                            View Extent Report
+                            </a>
+                        </p>
+
+                    </body>
+                    </html>
+                    """,
+                    to: "rahul.k4@zensar.com,rachit.saurabh@zensar.com",
+                    mimeType: 'text/html',
+                    attachmentsPattern: "${REPORT_PATH}"
+                )
+            }
         }
 
         success {
