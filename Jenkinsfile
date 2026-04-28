@@ -5,24 +5,24 @@ def getTestSummary() {
     def skip = 0
 
     try {
-        def reports = findFiles(glob: '**/surefire-reports/testng-results.xml')
+        def filePath = 'target/surefire-reports/testng-results.xml'
 
-        if (reports.length > 0) {
-            def xml = new XmlSlurper().parseText(readFile(reports[0].path))
+        if (fileExists(filePath)) {
+            def xml = new XmlSlurper().parseText(readFile(filePath))
 
             pass = xml.@passed.toInteger()
             fail = xml.@failed.toInteger()
             skip = xml.@skipped.toInteger()
+        } else {
+            echo 'TestNG report not found!'
         }
     } catch (Exception e) {
-        echo "Unable to read test summary: ${e.getMessage()}"
+        echo "Error reading test summary: ${e.getMessage()}"
     }
 
     def total = pass + fail + skip
-
     return [pass: pass, fail: fail, skip: skip, total: total]
 }
-
 
 // ================= PIPELINE =================
 pipeline {
@@ -38,7 +38,6 @@ pipeline {
     }
 
     stages {
-
         stage('Checkout Code') {
             steps {
                 git branch: 'feature_rachit13042026',
@@ -52,7 +51,7 @@ pipeline {
                     try {
                         bat 'mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testng.xml -Dbrowser=chrome-headless'
                     } catch (Exception e) {
-                        echo 'Tests failed, continuing pipeline...'
+                        echo 'Tests failed, marking build as UNSTABLE...'
                         currentBuild.result = 'UNSTABLE'
                     }
                 }
@@ -86,55 +85,61 @@ pipeline {
     }
 
     post {
-
         always {
             script {
-
                 def summary = getTestSummary()
 
                 emailext(
                     subject: "Automation Report - ${currentBuild.currentResult}",
                     body: """
                     <html>
-                    <body style="font-family: Arial;">
+                    <body style="font-family: Arial; background-color:#f4f6f8;">
+                        <div style="max-width:700px;margin:auto;background:#fff;padding:20px;border-radius:8px;">
 
-                        <h2>Automation Execution Report</h2>
+                            <h2 style="text-align:center;">Automation Execution Report</h2>
 
-                        <h3 style="color:${currentBuild.currentResult == 'SUCCESS' ? 'green' : 'red'};">
-                            Status: ${currentBuild.currentResult}
-                        </h3>
+                            <h3 style="color:${currentBuild.currentResult == 'SUCCESS' ? 'green' : 'red'};">
+                                Status: ${currentBuild.currentResult}
+                            </h3>
 
-                        <table border="1" cellpadding="10" cellspacing="0" style="border-collapse:collapse;">
-                            <tr>
-                                <th>Total</th>
-                                <th style="color:green;">Passed</th>
-                                <th style="color:red;">Failed</th>
-                                <th style="color:orange;">Skipped</th>
-                            </tr>
-                            <tr align="center">
-                                <td>${summary.total}</td>
-                                <td>${summary.pass}</td>
-                                <td>${summary.fail}</td>
-                                <td>${summary.skip}</td>
-                            </tr>
-                        </table>
+                            <table border="1" cellpadding="10" cellspacing="0" width="100%" style="border-collapse:collapse;">
+                                <tr>
+                                    <th>Total</th>
+                                    <th style="color:green;">Passed</th>
+                                    <th style="color:red;">Failed</th>
+                                    <th style="color:orange;">Skipped</th>
+                                </tr>
+                                <tr align="center">
+                                    <td>${summary.total}</td>
+                                    <td>${summary.pass}</td>
+                                    <td>${summary.fail}</td>
+                                    <td>${summary.skip}</td>
+                                </tr>
+                            </table>
 
-                        <br>
+                            <br>
 
-                        <p><b>Job:</b> ${env.JOB_NAME}</p>
-                        <p><b>Build:</b> #${env.BUILD_NUMBER}</p>
+                            <p><b>Job:</b> ${env.JOB_NAME}</p>
+                            <p><b>Build:</b> #${env.BUILD_NUMBER}</p>
 
-                        <p>
-                            <a href="${env.BUILD_URL}artifact/${REPORT_PATH}"
-                            style="padding:10px 15px;background:#3498db;color:white;text-decoration:none;border-radius:5px;">
-                            View Extent Report
-                            </a>
-                        </p>
+                            <div style="text-align:center;">
+                                <a href="${env.BUILD_URL}artifact/${REPORT_PATH}"
+                                style="padding:10px 15px;background:#3498db;color:white;text-decoration:none;border-radius:5px;">
+                                View Extent Report
+                                </a>
+                            </div>
 
+                            <br>
+
+                            <div style="font-size:12px;color:#888;text-align:center;">
+                                This is an automated email from Jenkins
+                            </div>
+
+                        </div>
                     </body>
                     </html>
                     """,
-                    to: "rahul.k4@zensar.com,rachit.saurabh@zensar.com",
+                    to: 'rahul.k4@zensar.com,rachit.saurabh@zensar.com',
                     mimeType: 'text/html',
                     attachmentsPattern: "${REPORT_PATH}"
                 )
