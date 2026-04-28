@@ -77,7 +77,7 @@ pipeline {
                 </a>
                 </p>
                 """,
-                to: "rachit.saurabh123@gmail.com",
+                to: "rahul.k4@zensar.com,rachit.saurabh@zensar.com",
                 mimeType: 'text/html',
                 attachmentsPattern: "${REPORT_PATH}"
             )
