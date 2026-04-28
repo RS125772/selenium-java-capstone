@@ -200,7 +200,7 @@ pipeline {
                     </body>
                     </html>
                     """,
-                    to: "rahul.k4@zensar.com,rachit.saurabh@zensar.com",
+                    to: "rachit.saurabh123@gmail.com",
                     mimeType: 'text/html',
                     attachmentsPattern: "${REPORT_PATH}, reports/piechart.png"
                 )
