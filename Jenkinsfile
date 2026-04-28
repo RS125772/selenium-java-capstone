@@ -8,17 +8,14 @@ def getTestSummary() {
 
         if (fileExists(filePath)) {
 
-            def content = readFile(filePath)
-            echo "Reading TestNG results..."
+            def xml = new XmlSlurper().parse(filePath)
 
-            def xml = new XmlSlurper(false, false).parseText(content)
-
-            pass = xml.@passed.text().toInteger()
-            fail = xml.@failed.text().toInteger()
-            skip = xml.@skipped.text().toInteger()
+            pass = xml.attribute("passed").toString().toInteger()
+            fail = xml.attribute("failed").toString().toInteger()
+            skip = xml.attribute("skipped").toString().toInteger()
 
         } else {
-            echo "testng-results.xml NOT found in Jenkins workspace"
+            echo "testng-results.xml NOT found"
         }
 
     } catch (Exception e) {
@@ -27,7 +24,7 @@ def getTestSummary() {
 
     def total = pass + fail + skip
 
-    echo "SUMMARY => Total: ${total}, Pass: ${pass}, Fail: ${fail}, Skip: ${skip}"
+    echo "FINAL COUNT => Total: ${total}, Pass: ${pass}, Fail: ${fail}, Skip: ${skip}"
 
     return [pass: pass, fail: fail, skip: skip, total: total]
 }
@@ -99,7 +96,7 @@ pipeline {
                 def summary = getTestSummary()
 
                 emailext(
-                    subject: "Automation Report - ${currentBuild.currentResult}",
+                    subject: "Demo Web Shop Automation Report - ${currentBuild.currentResult}",
                     body: """
                     <html>
                     <body style="font-family: Arial; background-color:#f4f6f8;">
