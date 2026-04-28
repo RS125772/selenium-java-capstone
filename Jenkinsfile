@@ -7,19 +7,28 @@ def getTestSummary() {
         def filePath = 'target/surefire-reports/testng-results.xml'
 
         if (fileExists(filePath)) {
-            def xml = new XmlSlurper().parseText(readFile(filePath))
 
-            pass = xml.@passed.toInteger()
-            fail = xml.@failed.toInteger()
-            skip = xml.@skipped.toInteger()
+            def content = readFile(filePath)
+            echo "Reading TestNG results..."
+
+            def xml = new XmlSlurper(false, false).parseText(content)
+
+            pass = xml.@passed.text().toInteger()
+            fail = xml.@failed.text().toInteger()
+            skip = xml.@skipped.text().toInteger()
+
         } else {
-            echo 'TestNG report not found at: ' + filePath
+            echo "testng-results.xml NOT found in Jenkins workspace"
         }
+
     } catch (Exception e) {
-        echo "Error reading test summary: ${e.getMessage()}"
+        echo "Error parsing XML: ${e.getMessage()}"
     }
 
     def total = pass + fail + skip
+
+    echo "SUMMARY => Total: ${total}, Pass: ${pass}, Fail: ${fail}, Skip: ${skip}"
+
     return [pass: pass, fail: fail, skip: skip, total: total]
 }
 
