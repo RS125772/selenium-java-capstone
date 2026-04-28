@@ -82,7 +82,7 @@ pipeline {
             }
         }
 
-        // ✅ NEW: PIE CHART (SAFE, NON-BREAKING)
+        // ✅ FIXED PIE CHART (IMPORTANT CHANGE HERE)
         stage('Generate Pie Chart') {
             steps {
                 script {
@@ -91,23 +91,34 @@ pipeline {
 
                         bat "if not exist reports mkdir reports"
 
-                        def chartUrl = "https://quickchart.io/chart?c=" +
-                            URLEncoder.encode("""
-                            {
-                              type: 'pie',
-                              data: {
+                        // ✅ Proper JSON creation
+                        def chartJson = [
+                            type: 'pie',
+                            data: [
                                 labels: ['Passed', 'Failed', 'Skipped'],
-                                datasets: [{
-                                  data: [${summary.pass}, ${summary.fail}, ${summary.skip}],
-                                  backgroundColor: ['green','red','orange']
-                                }]
-                              }
-                            }
-                            """, "UTF-8")
+                                datasets: [[
+                                    data: [summary.pass, summary.fail, summary.skip],
+                                    backgroundColor: ['green', 'red', 'orange']
+                                ]]
+                            ],
+                            options: [
+                                plugins: [
+                                    legend: [position: 'bottom'],
+                                    title: [display: true, text: 'Test Summary']
+                                ]
+                            ]
+                        ]
+
+                        def encodedChart = URLEncoder.encode(
+                            groovy.json.JsonOutput.toJson(chartJson),
+                            "UTF-8"
+                        )
+
+                        def chartUrl = "https://quickchart.io/chart?c=${encodedChart}"
 
                         bat "curl -o reports/piechart.png \"${chartUrl}\""
 
-                        echo "✅ Pie chart generated"
+                        echo "✅ Pie chart generated successfully"
 
                     } catch (Exception e) {
                         echo "⚠️ Pie chart generation failed: ${e.getMessage()}"
