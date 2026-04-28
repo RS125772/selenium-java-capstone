@@ -3,29 +3,24 @@ def getTestSummary() {
     def fail = 0
     def skip = 0
 
-    def paths = [
-        'target/surefire-reports/testng-results.xml',
-        'target/test-output/testng-results.xml'
-    ]
+    try {
+        def filePath = 'target/surefire-reports/testng-results.xml'
 
-    for (path in paths) {
-        if (fileExists(path)) {
-            echo "Found test results at: ${path}"
+        if (fileExists(filePath)) {
+            def content = readFile(filePath)
 
-            def xml = new XmlSlurper().parse(path)
+            pass = (content =~ /passed="(\d+)"/)[0][1].toInteger()
+            fail = (content =~ /failed="(\d+)"/)[0][1].toInteger()
+            skip = (content =~ /skipped="(\d+)"/)[0][1].toInteger()
 
-            pass = xml.attribute("passed").toString().toInteger()
-            fail = xml.attribute("failed").toString().toInteger()
-            skip = xml.attribute("skipped").toString().toInteger()
-
-            break
+            echo "Parsed via regex → Pass: ${pass}, Fail: ${fail}, Skip: ${skip}"
         }
+
+    } catch (Exception e) {
+        echo "Error parsing: ${e.getMessage()}"
     }
 
     def total = pass + fail + skip
-
-    echo "FINAL => Total: ${total}, Pass: ${pass}, Fail: ${fail}, Skip: ${skip}"
-
     return [pass: pass, fail: fail, skip: skip, total: total]
 }
 
