@@ -32,9 +32,8 @@ def getTestSummary() {
         }
 
         if (!found) {
-            echo "No valid testng-results.xml found"
+            echo 'No valid testng-results.xml found'
         }
-
     } catch (Exception e) {
         echo "Error parsing test results: ${e.getMessage()}"
     }
@@ -42,7 +41,6 @@ def getTestSummary() {
     def total = pass + fail + skip
     return [pass: pass, fail: fail, skip: skip, total: total]
 }
-
 
 // ================= PIPELINE =================
 pipeline {
@@ -79,52 +77,6 @@ pipeline {
             }
         }
 
-        // ✅ FIXED PIE CHART GENERATION
-        stage('Generate Pie Chart') {
-            steps {
-                script {
-                    try {
-                        def summary = getTestSummary()
-
-                        bat "if not exist reports mkdir reports"
-
-                        // ✅ Strict JSON (no Groovy map)
-                        def chartJson = """
-{
-  "type": "pie",
-  "data": {
-    "labels": ["Passed", "Failed", "Skipped"],
-    "datasets": [{
-      "data": [${summary.pass}, ${summary.fail}, ${summary.skip}],
-      "backgroundColor": ["green", "red", "orange"]
-    }]
-  },
-  "options": {
-    "plugins": {
-      "legend": { "position": "bottom" },
-      "title": {
-        "display": true,
-        "text": "Test Summary"
-      }
-    }
-  }
-}
-"""
-
-                        def encodedChart = URLEncoder.encode(chartJson, "UTF-8")
-                        def chartUrl = "https://quickchart.io/chart?c=${encodedChart}"
-
-                        bat "curl -o reports/piechart.png \"${chartUrl}\""
-
-                        echo "Pie chart generated successfully"
-
-                    } catch (Exception e) {
-                        echo "Pie chart generation failed: ${e.getMessage()}"
-                    }
-                }
-            }
-        }
-
         stage('Publish Test Results') {
             steps {
                 junit '**/surefire-reports/*.xml'
@@ -156,61 +108,84 @@ pipeline {
             script {
 
                 def summary = getTestSummary()
+                def passPercent = summary.total > 0 ? ((summary.pass * 100) / summary.total) : 0
 
-                def statusColor = currentBuild.currentResult == 'SUCCESS' ? 'green' :
-                                  currentBuild.currentResult == 'UNSTABLE' ? 'orange' : 'red'
+                def statusColor = currentBuild.currentResult == 'SUCCESS' ? '#2ecc71' :
+                currentBuild.currentResult == 'UNSTABLE' ? '#f39c12' : '#e74c3c'
 
                 emailext(
                     subject: "Demo Web Shop Automation Report - ${currentBuild.currentResult}",
                     body: """
                     <html>
-                    <body style="font-family: Arial; background-color:#f4f6f8;">
-                        <div style="max-width:700px;margin:auto;background:#fff;padding:20px;border-radius:8px;">
+                    <body style="font-family: Arial; background:#f4f6f8;">
 
-                            <h2 style="text-align:center;">Automation Execution Report</h2>
+                    <div style="max-width:700px;margin:auto;background:white;padding:20px;border-radius:10px;">
 
-                            <div style="text-align:center;">
-                                <img src="cid:piechart.png" width="300"/>
-                            </div>
+                    <h2 style="text-align:center;">Automation Execution Report</h2>
 
-                            <h3 style="color:${statusColor};">
-                                Status: ${currentBuild.currentResult}
-                            </h3>
+                    <!-- STATUS BADGE -->
+                    <div style="text-align:center;margin:15px;">
+                    <span style="padding:10px 20px;background:${statusColor};color:white;border-radius:20px;font-weight:bold;">
+                    ${currentBuild.currentResult}
+                    </span>
+                    </div>
 
-                            <table border="1" cellpadding="10" cellspacing="0" width="100%">
-                                <tr>
-                                    <th>Total</th>
-                                    <th style="color:green;">Passed</th>
-                                    <th style="color:red;">Failed</th>
-                                    <th style="color:orange;">Skipped</th>
-                                </tr>
-                                <tr align="center">
-                                    <td>${summary.total}</td>
-                                    <td>${summary.pass}</td>
-                                    <td>${summary.fail}</td>
-                                    <td>${summary.skip}</td>
-                                </tr>
-                            </table>
+                    <!-- SUMMARY CARDS -->
+                    <table width="100%" style="text-align:center;">
+                    <tr>
+                        <td style="background:#ecf0f1;padding:10px;border-radius:8px;">
+                            <b>Total</b><br>${summary.total}
+                        </td>
 
-                            <br>
+                        <td style="background:#d4efdf;padding:10px;border-radius:8px;">
+                            <b style="color:green;">Passed</b><br>${summary.pass}
+                        </td>
 
-                            <p><b>Job:</b> ${env.JOB_NAME}</p>
-                            <p><b>Build:</b> #${env.BUILD_NUMBER}</p>
+                        <td style="background:#f5b7b1;padding:10px;border-radius:8px;">
+                            <b style="color:red;">Failed</b><br>${summary.fail}
+                        </td>
 
-                            <div style="text-align:center;">
-                                <a href="${env.BUILD_URL}artifact/${REPORT_PATH}"
-                                style="padding:10px 15px;background:#3498db;color:white;text-decoration:none;border-radius:5px;">
-                                View Extent Report
-                                </a>
-                            </div>
+                        <td style="background:#fdebd0;padding:10px;border-radius:8px;">
+                            <b style="color:orange;">Skipped</b><br>${summary.skip}
+                        </td>
+                    </tr>
+                    </table>
 
+                    <!-- PASS % -->
+                    <div style="margin-top:20px;">
+                        <b>Pass Percentage:</b> ${passPercent}%
+                    </div>
+
+                    <!-- PROGRESS BAR -->
+                    <div style="background:#ddd;border-radius:10px;margin-top:10px;">
+                        <div style="width:${passPercent}%;background:#2ecc71;color:white;
+                        padding:5px;border-radius:10px;text-align:center;">
+                        ${passPercent}%
                         </div>
+                    </div>
+
+                    <!-- DETAILS -->
+                    <div style="margin-top:20px;">
+                        <p><b>Job:</b> ${env.JOB_NAME}</p>
+                        <p><b>Build:</b> #${env.BUILD_NUMBER}</p>
+                        <p><b>Duration:</b> ${currentBuild.durationString}</p>
+                    </div>
+
+                    <!-- BUTTON -->
+                    <div style="text-align:center;margin-top:25px;">
+                        <a href="${env.BUILD_URL}artifact/${REPORT_PATH}"
+                        style="padding:12px 20px;background:#3498db;color:white;text-decoration:none;border-radius:6px;">
+                        View Detailed Report
+                        </a>
+                    </div>
+
+                    </div>
                     </body>
                     </html>
                     """,
-                    to: "rachit.saurabh123@gmail.com",
+                    to: 'rachit.saurabh123@gmail.com',
                     mimeType: 'text/html',
-                    attachmentsPattern: "${REPORT_PATH}, reports/piechart.png"
+                    attachmentsPattern: "${REPORT_PATH}"
                 )
             }
         }
