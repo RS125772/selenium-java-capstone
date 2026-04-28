@@ -4,10 +4,7 @@ def getTestSummary() {
     def fail = 0
     def skip = 0
 
-    def paths = [
-        'target/surefire-reports/testng-results.xml',
-        'target/test-output/testng-results.xml'
-    ]
+    def paths = ['target/surefire-reports/testng-results.xml','target/test-output/testng-results.xml']
 
     try {
         def found = false
@@ -183,7 +180,7 @@ pipeline {
                     </body>
                     </html>
                     """,
-                    to: 'rachit.saurabh123@gmail.com',
+                    to: 's.mujawar@zensar.com,garlapati.vinay@zensar.com,rahul.k4@zensar.com,rachit.saurabh@zensar.com',
                     mimeType: 'text/html',
                     attachmentsPattern: "${REPORT_PATH}"
                 )
