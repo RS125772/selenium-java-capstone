@@ -1,4 +1,3 @@
-// ================= HELPER METHOD =================
 def getTestSummary() {
     def pass = 0
     def fail = 0
@@ -14,7 +13,7 @@ def getTestSummary() {
             fail = xml.@failed.toInteger()
             skip = xml.@skipped.toInteger()
         } else {
-            echo 'TestNG report not found!'
+            echo 'TestNG report not found at: ' + filePath
         }
     } catch (Exception e) {
         echo "Error reading test summary: ${e.getMessage()}"
@@ -35,6 +34,7 @@ pipeline {
 
     environment {
         REPORT_PATH = 'reports/ExtentReport.html'
+        TESTNG_RESULTS = 'target/surefire-reports/testng-results.xml'
     }
 
     stages {
