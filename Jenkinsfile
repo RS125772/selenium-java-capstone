@@ -14,7 +14,7 @@ def getTestSummary() {
 
         for (p in paths) {
             if (fileExists(p)) {
-                echo "✅ Found test result file: ${p}"
+                echo "Found test result file: ${p}"
                 def content = readFile(p)
 
                 def passMatch = (content =~ /passed="(\d+)"/)
@@ -32,17 +32,14 @@ def getTestSummary() {
         }
 
         if (!found) {
-            echo "❌ No valid testng-results.xml found"
+            echo "No valid testng-results.xml found"
         }
 
     } catch (Exception e) {
-        echo "❌ Error parsing test results: ${e.getMessage()}"
+        echo "Error parsing test results: ${e.getMessage()}"
     }
 
     def total = pass + fail + skip
-
-    echo "📊 FINAL SUMMARY => Total: ${total}, Passed: ${pass}, Failed: ${fail}, Skipped: ${skip}"
-
     return [pass: pass, fail: fail, skip: skip, total: total]
 }
 
@@ -82,7 +79,7 @@ pipeline {
             }
         }
 
-        // ✅ FIXED PIE CHART (IMPORTANT CHANGE HERE)
+        // ✅ FIXED PIE CHART GENERATION
         stage('Generate Pie Chart') {
             steps {
                 script {
@@ -91,37 +88,38 @@ pipeline {
 
                         bat "if not exist reports mkdir reports"
 
-                        // ✅ Proper JSON creation
-                        def chartJson = [
-                            type: 'pie',
-                            data: [
-                                labels: ['Passed', 'Failed', 'Skipped'],
-                                datasets: [[
-                                    data: [summary.pass, summary.fail, summary.skip],
-                                    backgroundColor: ['green', 'red', 'orange']
-                                ]]
-                            ],
-                            options: [
-                                plugins: [
-                                    legend: [position: 'bottom'],
-                                    title: [display: true, text: 'Test Summary']
-                                ]
-                            ]
-                        ]
+                        // ✅ Strict JSON (no Groovy map)
+                        def chartJson = """
+{
+  "type": "pie",
+  "data": {
+    "labels": ["Passed", "Failed", "Skipped"],
+    "datasets": [{
+      "data": [${summary.pass}, ${summary.fail}, ${summary.skip}],
+      "backgroundColor": ["green", "red", "orange"]
+    }]
+  },
+  "options": {
+    "plugins": {
+      "legend": { "position": "bottom" },
+      "title": {
+        "display": true,
+        "text": "Test Summary"
+      }
+    }
+  }
+}
+"""
 
-                        def encodedChart = URLEncoder.encode(
-                            groovy.json.JsonOutput.toJson(chartJson),
-                            "UTF-8"
-                        )
-
+                        def encodedChart = URLEncoder.encode(chartJson, "UTF-8")
                         def chartUrl = "https://quickchart.io/chart?c=${encodedChart}"
 
                         bat "curl -o reports/piechart.png \"${chartUrl}\""
 
-                        echo "✅ Pie chart generated successfully"
+                        echo "Pie chart generated successfully"
 
                     } catch (Exception e) {
-                        echo "⚠️ Pie chart generation failed: ${e.getMessage()}"
+                        echo "Pie chart generation failed: ${e.getMessage()}"
                     }
                 }
             }
@@ -154,7 +152,6 @@ pipeline {
     }
 
     post {
-
         always {
             script {
 
