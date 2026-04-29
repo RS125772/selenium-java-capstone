@@ -5,10 +5,11 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import com.automation.base.BaseTest;
 import com.automation.utils.CommonUtils;
+import com.automation.utils.RetryAnalyzer;
 
 public class WishListTest extends BaseTest {
 
-    @Test(groups = "requiresLogin", description = "Verify user can add product to wishlist")
+    @Test(groups = "requiresLogin", description = "Verify user can add product to wishlist", retryAnalyzer = RetryAnalyzer.class)
     public void verifyAddProductToWishlist() {
         CommonUtils commonUtils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -23,7 +24,7 @@ public class WishListTest extends BaseTest {
         commonUtils.takeScreenshot("AddProductToWishlistTest");
     }
 
-    @Test(groups = "requiresLogin", description = "Verify user can remove product from wishlist")
+    @Test(groups = "requiresLogin", description = "Verify user can remove product from wishlist", retryAnalyzer = RetryAnalyzer.class)
     public void verifyRemoveProductFromWishlist() {
         CommonUtils commonUtils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);

@@ -1,6 +1,7 @@
 com\automation\tests\ShoppingCartTest.class
 com\automation\listeners\ExtentListener.class
 com\automation\tests\RegistrationTest.class
+com\automation\listeners\RetryListener.class
 com\automation\tests\LoginTest.class
 com\automation\tests\WishListTest.class
 com\automation\tests\HomePageTest.class

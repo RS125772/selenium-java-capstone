@@ -6,10 +6,11 @@ import com.automation.pages.ShoppingCartPage;
 import com.automation.utils.CommonUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import com.automation.utils.RetryAnalyzer;
 
 public class ShoppingCartTest extends BaseTest {
 
-    @Test(description = "Verify user can remove single product from Cart", groups = { "smoke", "regression" })
+    @Test(description = "Verify user can remove single product from Cart", groups = { "smoke", "regression" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyRemoveSingleProductFromCart() {
 
         CommonUtils utils = new CommonUtils(driver);
@@ -26,7 +27,7 @@ public class ShoppingCartTest extends BaseTest {
         utils.takeScreenshot("RemoveSingleProduct");
     }
 
-    @Test(description = "Verify user can remove multiple products from Cart", groups = { "regression" })
+    @Test(description = "Verify user can remove multiple products from Cart", groups = { "regression" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyRemoveMultipleProductsFromCart() {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -47,7 +48,7 @@ public class ShoppingCartTest extends BaseTest {
         utils.takeScreenshot("RemoveMultipleProducts");
     }
 
-    @Test(description = "Verify cart is empty", groups = { "smoke", "regression" })
+    @Test(description = "Verify cart is empty", groups = { "smoke", "regression" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyEmptyCartMessage() {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -58,7 +59,7 @@ public class ShoppingCartTest extends BaseTest {
         utils.takeScreenshot("EmptyCart");
     }
 
-    @Test(description = "Verify update product quantity", groups = { "smoke", "regression" })
+    @Test(description = "Verify update product quantity", groups = { "smoke", "regression" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyUpdateProductQuantityInCart() {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -75,7 +76,7 @@ public class ShoppingCartTest extends BaseTest {
         utils.takeScreenshot("UpdateQuantity");
     }
 
-    @Test(description = "Verify product price calculation", groups = { "regression" })
+    @Test(description = "Verify product price calculation", groups = { "regression" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyProductPriceInCart() {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -93,7 +94,7 @@ public class ShoppingCartTest extends BaseTest {
         utils.takeScreenshot("PriceValidation");
     }
 
-    @Test(description = "Verify product added successfully")
+    @Test(description = "Verify product added successfully", retryAnalyzer = RetryAnalyzer.class)
     public void verifyProductAddedSuccessfully() {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);

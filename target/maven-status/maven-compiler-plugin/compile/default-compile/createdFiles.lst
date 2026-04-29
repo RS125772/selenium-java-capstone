@@ -3,6 +3,7 @@ com\automation\config\TestDataReader.class
 com\automation\pages\LoginPage.class
 com\automation\utils\ExtentTestManager.class
 com\automation\pages\ShoppingCartPage.class
+com\automation\utils\RetryAnalyzer.class
 com\automation\utils\ScreenshotUtils.class
 com\automation\pages\HomePage.class
 com\automation\base\BaseTest.class

@@ -9,6 +9,7 @@ C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\src\main\java\com\automatio
 C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\src\main\java\com\automation\config\TestDataReader.java
 C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\src\main\java\com\automation\utils\ScreenshotUtils.java
 C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\src\main\java\com\automation\utils\ExtentTestManager.java
+C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\src\main\java\com\automation\utils\RetryAnalyzer.java
 C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\src\main\java\com\automation\pages\HomePage.java
 C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\src\main\java\com\automation\pages\LoginPage.java
 C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\src\main\java\com\automation\pages\RegistrationPage.java

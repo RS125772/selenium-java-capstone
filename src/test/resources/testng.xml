@@ -3,6 +3,7 @@
 <suite name="Demo Web Shop Automation Suite">
 
     <listeners>
+        <listener class-name="com.automation.listeners.RetryListener"/>
         <listener class-name="com.automation.listeners.ExtentListener"/>
     </listeners>
 

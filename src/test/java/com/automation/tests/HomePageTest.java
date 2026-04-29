@@ -7,10 +7,11 @@ import com.automation.utils.WaitUtils;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import com.automation.utils.RetryAnalyzer;
 
 public class HomePageTest extends BaseTest {
 
-    @Test(description = "Verify page navigation on each category", groups = { "smoke" })
+    @Test(description = "Verify page navigation on each category", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyCategoryNavigationFunctionality() {
         HomePage homePage = new HomePage(driver);
         CommonUtils commonUtils = new CommonUtils(driver);
@@ -40,7 +41,7 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("RegisterPage");
     }
 
-    @Test(description = "Verify Search Functionality", groups = { "smoke" })
+    @Test(description = "Verify Search Functionality", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyValidSearchFunctionality() {
         CommonUtils commonUtils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -49,7 +50,7 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("ValidSearchTest");
     }
 
-    @Test(description = "Verify Invalid Search", groups = { "smoke" })
+    @Test(description = "Verify Invalid Search", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyInvalidSearchFunctionality() {
         CommonUtils commonUtils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -59,7 +60,7 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("InvalidSearchTest");
     }
 
-    @Test(description = "Verify search with blank input shows alert", groups = { "smoke" })
+    @Test(description = "Verify search with blank input shows alert", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifySearchWithBlankInput() {
 
         HomePage homePage = new HomePage(driver);
