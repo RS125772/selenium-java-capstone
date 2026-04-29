@@ -4,7 +4,7 @@ def getTestSummary() {
     def fail = 0
     def skip = 0
 
-    def paths = ['target/surefire-reports/testng-results.xml','target/test-output/testng-results.xml']
+    def paths = ['target/surefire-reports/testng-results.xml', 'target/test-output/testng-results.xml']
 
     try {
         def found = false
@@ -105,8 +105,8 @@ pipeline {
             script {
 
                 def summary = getTestSummary()
-                def passPercent = summary.total > 0 ? String.format("%.2f", (summary.pass * 100.0 / summary.total)) : "0.00"
-                def duration = currentBuild.durationString.replace(" and counting", "")
+                def passPercent = summary.total > 0 ? String.format('%.2f', (summary.pass * 100.0 / summary.total)) : '0.00'
+                def duration = currentBuild.durationString.replace(' and counting', '')
 
                 def statusColor = currentBuild.currentResult == 'SUCCESS' ? '#2ecc71' :
                 currentBuild.currentResult == 'UNSTABLE' ? '#f39c12' : '#e74c3c'
