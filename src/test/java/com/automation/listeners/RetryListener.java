@@ -1,4 +1,3 @@
-
 package com.automation.listeners;
 
 import org.testng.IAnnotationTransformer;
@@ -17,4 +16,4 @@ public class RetryListener implements IAnnotationTransformer {
             annotation.setRetryAnalyzer(RetryAnalyzer.class);
         }
     }
-} 
+}
