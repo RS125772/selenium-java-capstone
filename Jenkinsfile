@@ -105,7 +105,8 @@ pipeline {
             script {
 
                 def summary = getTestSummary()
-                def passPercent = summary.total > 0 ? ((summary.pass * 100) / summary.total) : 0
+                def passPercent = summary.total > 0 ? String.format("%.2f", (summary.pass * 100.0 / summary.total)) : "0.00"
+                def duration = currentBuild.durationString.replace(" and counting", "")
 
                 def statusColor = currentBuild.currentResult == 'SUCCESS' ? '#2ecc71' :
                 currentBuild.currentResult == 'UNSTABLE' ? '#f39c12' : '#e74c3c'
@@ -165,7 +166,7 @@ pipeline {
                     <div style="margin-top:20px;">
                         <p><b>Job:</b> ${env.JOB_NAME}</p>
                         <p><b>Build:</b> #${env.BUILD_NUMBER}</p>
-                        <p><b>Duration:</b> ${currentBuild.durationString}</p>
+                        <p><b>Duration:</b> ${duration}</p>
                     </div>
 
                     <!-- BUTTON -->
