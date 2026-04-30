@@ -15,11 +15,20 @@ public class RetryAnalyzer implements IRetryAnalyzer {
         
         if (currentRetry < maxRetryCount) {
             retryCountMap.put(testKey, currentRetry + 1);
-            return true;
+            
+            // Log retry attempt to console for visibility
+            System.out.println("\n⚠️  TEST RETRY ATTEMPT");
+            System.out.println("Test: " + testKey);
+            System.out.println("Current Retry: " + (currentRetry + 1) + "/" + maxRetryCount);
+            System.out.println("Failure: " + result.getThrowable().getMessage());
+            System.out.println("================================\n");
+            
+            return true;  // Retry the test
         }
         
+        // Clean up after final failure
         retryCountMap.remove(testKey);
-        return false;
+        return false;  // Don't retry anymore
     }   
 }
  
