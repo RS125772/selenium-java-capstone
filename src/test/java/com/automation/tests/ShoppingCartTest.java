@@ -23,7 +23,7 @@ public class ShoppingCartTest extends BaseTest {
         homePage.clickOnShoppingCart();
         Assert.assertTrue(cartPage.isProductPresentInCart(productName), "Product not found in cart");
         cartPage.removeProductFromCart(productName);
-        Assert.assertFalse(cartPage.isProductPresentInCart(productName), "Product not removed");
+        Assert.assertTrue(cartPage.isCartEmpty(),"Cart not empty after removal");
         utils.takeScreenshot("RemoveSingleProduct");
     }
 
@@ -43,8 +43,7 @@ public class ShoppingCartTest extends BaseTest {
         homePage.clickOnShoppingCart();
         Assert.assertTrue(cartPage.areMultipleProductsPresentInCart(products), "Products missing in cart");
         cartPage.removeMultipleProductsFromCart(products);
-        Assert.assertTrue(cartPage.isCartEmpty(),
-                "Cart not empty after removal");
+        Assert.assertTrue(cartPage.isCartEmpty(),"Cart not empty after removal");
         utils.takeScreenshot("RemoveMultipleProducts");
     }
 
