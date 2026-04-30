@@ -89,6 +89,10 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <listeners>
+                        <listener class-name="com.automation.listeners.RetryListener"/>
+                        <listener class-name="com.automation.listeners.ExtentListener"/>
+                    </listeners>
                 </configuration>
             </plugin>
 

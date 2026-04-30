@@ -28,12 +28,58 @@ public class WaitUtils {
 
     // Wait until element is visible on page
     public static WebElement waitForVisibility(WebDriver driver, By locator) {
-        return wait(driver).until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return waitForVisibility(driver, locator, 3);
+    }
+
+    // Wait until element is visible with retry logic for stale elements
+    public static WebElement waitForVisibility(WebDriver driver, By locator, int maxRetries) {
+        int attempts = 0;
+
+        while (attempts < maxRetries) {
+            try {
+                return wait(driver).until(ExpectedConditions.visibilityOfElementLocated(locator));
+            } catch (StaleElementReferenceException | TimeoutException e) {
+                attempts++;
+                if (attempts == maxRetries) {
+                    throw e;
+                }
+                // Wait before retry
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
+        return null;
     }
 
     // Wait until element is clickable
     public static WebElement waitForClickable(WebDriver driver, By locator) {
-        return wait(driver).until(ExpectedConditions.elementToBeClickable(locator));
+        return waitForClickable(driver, locator, 3);
+    }
+
+    // Wait until element is clickable with retry logic
+    public static WebElement waitForClickable(WebDriver driver, By locator, int maxRetries) {
+        int attempts = 0;
+
+        while (attempts < maxRetries) {
+            try {
+                return wait(driver).until(ExpectedConditions.elementToBeClickable(locator));
+            } catch (StaleElementReferenceException | TimeoutException e) {
+                attempts++;
+                if (attempts == maxRetries) {
+                    throw e;
+                }
+                // Wait before retry
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
+        return null;
     }
 
     // Wait until element is present in DOM
@@ -93,15 +139,33 @@ public class WaitUtils {
     // Click element with retry (handles stale element issues)
     public static void clickWhenReady(WebDriver driver, By locator) {
         int attempts = 0;
+        int maxRetries = 3;
 
-        while (attempts < 3) {
+        while (attempts < maxRetries) {
             try {
-                waitForClickable(driver, locator).click();
+                WebElement element = waitForClickable(driver, locator);
+                element.click();
                 return;
             } catch (StaleElementReferenceException e) {
                 attempts++;
-                if (attempts == 3) {
-                    throw e; // throw if max retries reached
+                if (attempts == maxRetries) {
+                    throw new RuntimeException("Failed to click element after " + maxRetries + " retries: " + e.getMessage(), e);
+                }
+                // Wait before retry to allow DOM to stabilize
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                }
+            } catch (NoSuchElementException e) {
+                attempts++;
+                if (attempts == maxRetries) {
+                    throw new RuntimeException("Element not found after " + maxRetries + " retries: " + e.getMessage(), e);
+                }
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
                 }
             }
         }
