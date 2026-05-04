@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="59.064" tests="17" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="45.436" tests="17" errors="0" skipped="0" failures="0">
   <properties>
     <property name="surefire.suiteXmlFiles" value="C://Users//Lenovo//vsc-workspace//selenium-java-capstone//src//test//resources//testng.xml"/>
     <property name="java.specification.version" value="25"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25\bin"/>
-    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire18168768466183742829\surefirebooter-20260430123852869_3.jar C:\Users\Lenovo\AppData\Local\Temp\surefire18168768466183742829 2026-04-30T12-38-52_727-jvmRun1 surefire-20260430123852869_1tmp surefire_0-20260430123852869_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire6707784289128172906\surefirebooter-20260504131209308_3.jar C:\Users\Lenovo\AppData\Local\Temp\surefire6707784289128172906 2026-05-04T13-12-09_175-jvmRun1 surefire-20260504131209308_1tmp surefire_0-20260504131209308_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\target\test-classes;C:\Users\Lenovo\vsc-workspace\selenium-java-capstone\target\classes;C:\Users\Lenovo\.m2\repository\com\squareup\okhttp3\okhttp\4.12.0\okhttp-4.12.0.jar;C:\Users\Lenovo\.m2\repository\com\squareup\okio\okio\3.6.0\okio-3.6.0.jar;C:\Users\Lenovo\.m2\repository\com\squareup\okio\okio-jvm\3.6.0\okio-jvm-3.6.0.jar;C:\Users\Lenovo\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.9.10\kotlin-stdlib-common-1.9.10.jar;C:\Users\Lenovo\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.8.21\kotlin-stdlib-jdk8-1.8.21.jar;C:\Users\Lenovo\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.8.21\kotlin-stdlib-1.8.21.jar;C:\Users\Lenovo\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\Lenovo\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.8.21\kotlin-stdlib-jdk7-1.8.21.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-java\4.21.0\selenium-java-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-api\4.21.0\selenium-api-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.21.0\selenium-chrome-driver-4.21.0.jar;C:\Users\Lenovo\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.21.0\selenium-chromium-driver-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-json\4.21.0\selenium-json-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.21.0\selenium-manager-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.21.0\selenium-devtools-v123-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.21.0\selenium-devtools-v124-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.21.0\selenium-devtools-v125-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.21.0\selenium-devtools-v85-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.21.0\selenium-edge-driver-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.21.0\selenium-firefox-driver-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-http\4.21.0\selenium-http-4.21.0.jar;C:\Users\Lenovo\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.21.0\selenium-ie-driver-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.21.0\selenium-remote-driver-4.21.0.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\guava\33.2.0-jre\guava-33.2.0-jre.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Lenovo\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Lenovo\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\Lenovo\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\Lenovo\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-api\1.38.0\opentelemetry-api-1.38.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-context\1.38.0\opentelemetry-context-1.38.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.38.0\opentelemetry-exporter-logging-1.38.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.38.0\opentelemetry-sdk-common-1.38.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.38.0\opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.38.0\opentelemetry-sdk-extension-autoconfigure-1.38.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.38.0-alpha\opentelemetry-api-incubator-1.38.0-alpha.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.38.0\opentelemetry-sdk-trace-1.38.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.38.0\opentelemetry-sdk-1.38.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.38.0\opentelemetry-sdk-metrics-1.38.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.38.0\opentelemetry-sdk-logs-1.38.0.jar;C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-os\4.21.0\selenium-os-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.21.0\selenium-safari-driver-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-support\4.21.0\selenium-support-4.21.0.jar;C:\Users\Lenovo\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Lenovo\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Lenovo\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Lenovo\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\Lenovo\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\Lenovo\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\Lenovo\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\Lenovo\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\Lenovo\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Lenovo\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\Lenovo\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\Lenovo\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\rest-assured\5.4.0\rest-assured-5.4.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\groovy\groovy\4.0.16\groovy-4.0.16.jar;C:\Users\Lenovo\.m2\repository\org\apache\groovy\groovy-xml\4.0.16\groovy-xml-4.0.16.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Lenovo\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Lenovo\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\json-path\5.4.0\json-path-5.4.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\groovy\groovy-json\4.0.16\groovy-json-4.0.16.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\rest-assured-common\5.4.0\rest-assured-common-5.4.0.jar;C:\Users\Lenovo\.m2\repository\io\rest-assured\xml-path\5.4.0\xml-path-5.4.0.jar;C:\Users\Lenovo\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\Lenovo\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Lenovo\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Lenovo\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Lenovo\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-dbcp2\2.7.0\commons-dbcp2-2.7.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-pool2\2.7.0\commons-pool2-2.7.0.jar;C:\Users\Lenovo\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Lenovo\.m2\repository\eu\scasefp7\scase-wp5-asset-registry-it\1.1.0\scase-wp5-asset-registry-it-1.1.0.jar;C:\Users\Lenovo\.m2\repository\org\wildfly\checkstyle\wildfly-checkstyle-config\1.0.1.Final\wildfly-checkstyle-config-1.0.1.Final.jar;C:\Users\Lenovo\.m2\repository\mysql\mysql-connector-java\5.1.37\mysql-connector-java-5.1.37.jar;C:\Users\Lenovo\.m2\repository\org\elasticsearch\elasticsearch\1.6.0\elasticsearch-1.6.0.jar;C:\Users\Lenovo\.m2\repository\org\antlr\antlr-runtime\3.5\antlr-runtime-3.5.jar;C:\Users\Lenovo\.m2\repository\org\ow2\asm\asm\4.1\asm-4.1.jar;C:\Users\Lenovo\.m2\repository\org\ow2\asm\asm-commons\4.1\asm-commons-4.1.jar;C:\Users\Lenovo\.m2\repository\org\yaml\snakeyaml\1.12\snakeyaml-1.12.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-core\4.10.4\lucene-core-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-analyzers-common\4.10.4\lucene-analyzers-common-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-queries\4.10.4\lucene-queries-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-memory\4.10.4\lucene-memory-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-highlighter\4.10.4\lucene-highlighter-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-queryparser\4.10.4\lucene-queryparser-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-sandbox\4.10.4\lucene-sandbox-4.10.4.jar;C:\Users\Lenovo\.m2\repository\jakarta-regexp\jakarta-regexp\1.4\jakarta-regexp-1.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-suggest\4.10.4\lucene-suggest-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-misc\4.10.4\lucene-misc-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-join\4.10.4\lucene-join-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-grouping\4.10.4\lucene-grouping-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-spatial\4.10.4\lucene-spatial-4.10.4.jar;C:\Users\Lenovo\.m2\repository\com\spatial4j\spatial4j\0.4.1\spatial4j-0.4.1.jar;C:\Users\Lenovo\.m2\repository\org\apache\lucene\lucene-expressions\4.10.4\lucene-expressions-4.10.4.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\slf4j-simple\1.7.7\slf4j-simple-1.7.7.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.4\jackson-annotations-2.4.4.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.4.4\jackson-core-2.4.4.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.4.4\jackson-databind-2.4.4.jar;C:\Users\Lenovo\.m2\repository\eu\scasefp7\scase-base\1.0.24\scase-base-1.0.24.jar;C:\Users\Lenovo\.m2\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar;C:\Users\Lenovo\.m2\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="name" value="value"/>
-    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire18168768466183742829\surefirebooter-20260430123852869_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire6707784289128172906\surefirebooter-20260504131209308_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25+37-LTS-3491"/>
@@ -62,188 +62,190 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="verifyInvalidUserRegistration" classname="com.automation.tests.RegistrationTest" time="1.132">
+  <testcase name="verifyEmptyCartMessage" classname="com.automation.tests.ShoppingCartTest" time="0.964">
     <system-out><![CDATA[Starting Test Suite: Demo Web Shop UI Tests
-Thread ID: 48
 Thread ID: 47
+Thread ID: 51
+ExtentTest is NULL → Clicking on Login button
+Thread ID: 50
+Thread ID: 49
+Thread ID: 48
+ExtentTest is NULL → Logging in with email: admin0205@gmail.com
+ExtentTest is NULL → Entered email: admin0205@gmail.com
+ExtentTest is NULL → Entered password
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/C:/Users/Lenovo/.m2/repository/org/slf4j/slf4j-simple/1.7.7/slf4j-simple-1.7.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/C:/Users/Lenovo/.m2/repository/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
-[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+[TestNG-test-Demo Web Shop UI Tests-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
 [TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
 [TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:38:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+May 04, 2026 1:12:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:38:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 04, 2026 1:12:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:38:56 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 04, 2026 1:12:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:15 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Apr 30, 2026 12:38:56 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 04, 2026 1:12:15 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 04, 2026 1:12:15 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 04, 2026 1:12:15 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 04, 2026 1:12:15 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="verifyUserRegistration[Rachit, Saurabh, Test1777532939684@gmail.com, Test@123](1)" classname="com.automation.tests.RegistrationTest" time="1.528">
-    <system-out><![CDATA[Thread ID: 48
+  <testcase name="verifyProductAddedSuccessfully" classname="com.automation.tests.ShoppingCartTest" time="1.668">
+    <system-out><![CDATA[Thread ID: 50
 Thread ID: 47
-]]></system-out>
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:01 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Apr 30, 2026 12:39:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:01 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="verifyInvalidLogin" classname="com.automation.tests.LoginTest" time="1.476">
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-]]></system-err>
-  </testcase>
-  <testcase name="verifyLogoutFunctionality" classname="com.automation.tests.LoginTest" time="2.698">
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:06 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="verifyValidLogin" classname="com.automation.tests.LoginTest" time="1.685">
-    <system-out><![CDATA[Thread ID: 48
-Thread ID: 47
-]]></system-out>
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:07 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="verifyCategoryNavigationFunctionality" classname="com.automation.tests.HomePageTest" time="0.575">
-    <system-out><![CDATA[Thread ID: 47
-]]></system-out>
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:12 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="verifyInvalidSearchFunctionality" classname="com.automation.tests.HomePageTest" time="0.691">
-    <system-out><![CDATA[Thread ID: 48
-Thread ID: 47
-]]></system-out>
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:17 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Apr 30, 2026 12:39:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:17 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="verifySearchWithBlankInput" classname="com.automation.tests.HomePageTest" time="0.616">
-    <system-out><![CDATA[Thread ID: 48
-]]></system-out>
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:23 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="verifyValidSearchFunctionality" classname="com.automation.tests.HomePageTest" time="1.169">
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-]]></system-err>
-  </testcase>
-  <testcase name="verifyEmptyCartMessage" classname="com.automation.tests.ShoppingCartTest" time="0.78">
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-]]></system-err>
-  </testcase>
-  <testcase name="verifyProductAddedSuccessfully" classname="com.automation.tests.ShoppingCartTest" time="3.161">
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:21 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
-  </testcase>
-  <testcase name="verifyProductPriceInCart" classname="com.automation.tests.ShoppingCartTest" time="0.828">
-    <system-out><![CDATA[Thread ID: 47
 Thread ID: 48
 ]]></system-out>
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[May 04, 2026 1:12:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:25 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 04, 2026 1:12:20 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+May 04, 2026 1:12:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:21 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 04, 2026 1:12:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:22 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="verifyRemoveMultipleProductsFromCart" classname="com.automation.tests.ShoppingCartTest" time="3.155">
-    <system-out><![CDATA[Thread ID: 47
-Thread ID: 48
+  <testcase name="verifyProductPriceInCart" classname="com.automation.tests.ShoppingCartTest" time="2.438">
+    <system-out><![CDATA[Thread ID: 51
 ]]></system-out>
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[May 04, 2026 1:12:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:30 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Apr 30, 2026 12:39:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:30 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 04, 2026 1:12:33 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="verifyRemoveSingleProductFromCart" classname="com.automation.tests.ShoppingCartTest" time="3.291">
-    <system-out><![CDATA[Thread ID: 47
-Thread ID: 48
+  <testcase name="verifyRemoveMultipleProductsFromCart" classname="com.automation.tests.ShoppingCartTest" time="2.555"/>
+  <testcase name="verifyRemoveSingleProductFromCart" classname="com.automation.tests.ShoppingCartTest" time="2.837">
+    <system-out><![CDATA[Thread ID: 50
 ]]></system-out>
-    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
-[TestNG-test-Demo Web Shop UI Tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[May 04, 2026 1:12:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:41 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 04, 2026 1:12:42 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="verifyUpdateProductQuantityInCart" classname="com.automation.tests.ShoppingCartTest" time="3.013">
-    <system-out><![CDATA[Thread ID: 47
+  <testcase name="verifyUpdateProductQuantityInCart" classname="com.automation.tests.ShoppingCartTest" time="3.355">
+    <system-out><![CDATA[Thread ID: 50
+]]></system-out>
+    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+May 04, 2026 1:12:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:48 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="verifyInvalidLogin" classname="com.automation.tests.LoginTest" time="1.522">
+    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+]]></system-err>
+  </testcase>
+  <testcase name="verifyLogoutFunctionality" classname="com.automation.tests.LoginTest" time="1.949">
+    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+]]></system-err>
+  </testcase>
+  <testcase name="verifyValidLogin" classname="com.automation.tests.LoginTest" time="1.603">
+    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+]]></system-err>
+  </testcase>
+  <testcase name="verifyInvalidUserRegistration" classname="com.automation.tests.RegistrationTest" time="0.563">
+    <system-out><![CDATA[ExtentTest is NULL → Clicked on Login button
 ]]></system-out>
     <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
 [TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:45 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="verifyAddProductToWishlist" classname="com.automation.tests.WishListTest" time="5.875">
+  <testcase name="verifyUserRegistration[Rachit, Saurabh, Test1777880540921@gmail.com, Test@123](1)" classname="com.automation.tests.RegistrationTest" time="2.53"/>
+  <testcase name="verifyCategoryNavigationFunctionality" classname="com.automation.tests.HomePageTest" time="2.529">
     <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
 [TestNG-test-Demo Web Shop UI Tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
-Apr 30, 2026 12:39:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+]]></system-err>
+  </testcase>
+  <testcase name="verifyInvalidSearchFunctionality" classname="com.automation.tests.HomePageTest" time="1.133">
+    <system-out><![CDATA[Thread ID: 50
+Thread ID: 47
+Thread ID: 49
+]]></system-out>
+    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+May 04, 2026 1:12:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 147
-Apr 30, 2026 12:39:38 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 04, 2026 1:12:31 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="verifyRemoveProductFromWishlist" classname="com.automation.tests.WishListTest" time="3.981"/>
+  <testcase name="verifySearchWithBlankInput" classname="com.automation.tests.HomePageTest" time="0.366">
+    <system-out><![CDATA[Thread ID: 49
+]]></system-out>
+    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+May 04, 2026 1:12:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:34 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="verifyValidSearchFunctionality" classname="com.automation.tests.HomePageTest" time="1.22">
+    <system-out><![CDATA[Thread ID: 50
+Thread ID: 49
+]]></system-out>
+    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+May 04, 2026 1:12:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:37 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="verifyAddProductToWishlist" classname="com.automation.tests.WishListTest" time="5.022">
+    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+May 04, 2026 1:12:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:27 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 04, 2026 1:12:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:28 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 04, 2026 1:12:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 147
+May 04, 2026 1:12:28 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 147.0.7727.102. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="verifyRemoveProductFromWishlist" classname="com.automation.tests.WishListTest" time="2.811">
+    <system-err><![CDATA[[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 147.0.7727.117 (resolved driver for Chrome 147)
+[TestNG-test-Demo Web Shop UI Tests-4] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Lenovo\.cache\selenium\chromedriver\win64\147.0.7727.117\chromedriver.exe
+]]></system-err>
+  </testcase>
 </testsuite>
