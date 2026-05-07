@@ -25,7 +25,8 @@ public class HomePage {
     // Search Locators
     private By searchBox = By.id("small-searchterms");
     private By searchBtn = By.xpath("//input[@value='Search']");
-    private By noSearchResultMsg = By.xpath("//strong[contains(text(),'No products were found that matched your criteria.')]");
+    private By noSearchResultMsg = By
+            .xpath("//strong[contains(text(),'No products were found that matched your criteria.')]");
 
     // Newsletter subscription locators
     private By newsletterEmailInput = By.id("newsletter-email");
@@ -41,7 +42,7 @@ public class HomePage {
     private By jewelryMenu = By.xpath("//a[contains(text(),'Jewelry')]");
     private By giftCardsMenu = By.xpath("//a[contains(text(),'Gift Cards')]");
 
-    //Page Validation locators
+    // Page Validation locators
     private By booksPageTitle = By.xpath("//h1[contains(text(),'Books')]");
     private By registerTitle = By.xpath("//h1[contains(text(),'Register')]");
     private By computersPageTitle = By.xpath("//h1[contains(text(),'Computers')]");
@@ -55,9 +56,14 @@ public class HomePage {
     private By addToWishlistBtn = By.xpath("//input[@value='Add to wishlist']");
 
     private By footerLinks = By.cssSelector(".footer a");
-    
+
+    // Community Poll
+    private By goodOptionRadioBtn = By.id("pollanswers-2");
+    private By voteButton = By.id("vote-poll-1");
+    private By pollResults = By.cssSelector(".poll-results");
+
     // ================= CONSTRUCTOR =================
-    
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -91,24 +97,26 @@ public class HomePage {
             String productName = product.trim();
             searchProduct(productName);
 
-            By productLinkForName = By.xpath(String.format("//h2[@class='product-title']/a[contains(text(),'%s')]", productName));
-            //WaitUtils.waitForVisibility(driver, productLinkForName).isDisplayed();
+            By productLinkForName = By
+                    .xpath(String.format("//h2[@class='product-title']/a[contains(text(),'%s')]", productName));
+            // WaitUtils.waitForVisibility(driver, productLinkForName).isDisplayed();
             WaitUtils.waitForClickable(driver, productLinkForName).click();
-            //WaitUtils.waitForVisibility(driver, addToWishlistBtn);
+            // WaitUtils.waitForVisibility(driver, addToWishlistBtn);
             WaitUtils.waitForClickable(driver, addToWishlistBtn).click();
             WaitUtils.waitForPageToLoad(driver);
         }
     }
 
     public List<String> getAllFooterOptions() {
-    ExtentTestManager.logInfo("Fetching all footer options");
-    List<WebElement> footerElements = driver.findElements(footerLinks);
-    List<String> actualFooterOptions = new ArrayList<>();
-    for (WebElement element : footerElements) {
-        actualFooterOptions.add(element.getText().trim());
+        ExtentTestManager.logInfo("Fetching all footer options");
+        List<WebElement> footerElements = driver.findElements(footerLinks);
+        List<String> actualFooterOptions = new ArrayList<>();
+        for (WebElement element : footerElements) {
+            actualFooterOptions.add(element.getText().trim());
+        }
+        return actualFooterOptions;
     }
-    return actualFooterOptions;
-}
+
     // ================= SEARCH FUNCTIONALITY =================
 
     public void enterSearchText(String product) {
@@ -122,7 +130,7 @@ public class HomePage {
         WaitUtils.waitForClickable(driver, searchBtn).click();
     }
 
-    //Business Method
+    // Business Method
     public void searchProduct(String product) {
         ExtentTestManager.logInfo("Searching for product: " + product);
         enterSearchText(product);
@@ -130,12 +138,12 @@ public class HomePage {
     }
 
     public void searchWithBlankInput() {
-    ExtentTestManager.logInfo("Performing blank search");
-    WaitUtils.waitForVisibility(driver, searchBox).clear();
+        ExtentTestManager.logInfo("Performing blank search");
+        WaitUtils.waitForVisibility(driver, searchBox).clear();
 
-    ExtentTestManager.logInfo("Clicking on Search button");
-    WaitUtils.waitForClickable(driver, searchBtn).click();
-}
+        ExtentTestManager.logInfo("Clicking on Search button");
+        WaitUtils.waitForClickable(driver, searchBtn).click();
+    }
 
     // ================= NEWSLETTER ACTIONS =================
 
@@ -151,11 +159,11 @@ public class HomePage {
     }
 
     public void subscribeToNewsletter(String email) {
-    ExtentTestManager.logInfo("Subscribing to newsletter with email: " + email);
-    enterNewsletterEmail(email);
-    clickSubscribeNewsletter();
-    WaitUtils.waitForTextToBePresent(driver, newsletterSuccessMsg, "Thank");
-}
+        ExtentTestManager.logInfo("Subscribing to newsletter with email: " + email);
+        enterNewsletterEmail(email);
+        clickSubscribeNewsletter();
+        WaitUtils.waitForTextToBePresent(driver, newsletterSuccessMsg, "Thank");
+    }
 
     public String getNewsletterSubscriptionSuccessMessage() {
         ExtentTestManager.logInfo("Getting newsletter subscription success message");
@@ -257,7 +265,7 @@ public class HomePage {
     }
 
     public void waitForSearchResults() {
-    By productGrid = By.cssSelector(".product-grid");
-    WaitUtils.waitForVisibility(driver, productGrid);
-}
+        By productGrid = By.cssSelector(".product-grid");
+        WaitUtils.waitForVisibility(driver, productGrid);
+    }
 }
