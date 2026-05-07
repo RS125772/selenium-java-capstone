@@ -16,6 +16,13 @@ public class LoginPage {
     private By loginButton = By.cssSelector("input.login-button");
     private By logoutLink = By.className("ico-logout");
     private By errorMessage = By.cssSelector(".validation-summary-errors");
+    // Forgot Password
+private By forgotPasswordLink = By.linkText("Forgot password?");
+private By forgotPasswordEmailField = By.id("Email");
+private By recoverButton = By.name("send-email");
+private By recoverSuccessMessage =
+        By.cssSelector(".result");
+    
 
     // ================= CONSTRUCTOR =================
 
@@ -40,6 +47,18 @@ public class LoginPage {
         WaitUtils.clickWhenReady(driver, logoutLink);
     }
 
+    public void clickForgotPassword() {
+    ExtentTestManager.logInfo("Clicking Forgot Password link");
+    WaitUtils.clickWhenReady(driver, forgotPasswordLink);
+    }
+
+    public void recoverPassword(String email) {
+    ExtentTestManager.logInfo("Entering email for password recovery: " + email);
+    WaitUtils.waitForVisibility(driver,forgotPasswordEmailField).sendKeys(email);
+    WaitUtils.clickWhenReady(driver, recoverButton);
+    ExtentTestManager.logInfo("Clicked Recover button");
+    }
+
     // ================= VALIDATIONS =================
 
     public boolean isLoginSuccessful() {
@@ -53,6 +72,15 @@ public class LoginPage {
     public boolean isLogoutSuccessful() {
         ExtentTestManager.logInfo("Verifying logout successful (Login button visible)");
         return WaitUtils.waitForVisibility(driver, By.className("ico-login")).isDisplayed();
-}
+    }
+
+    public boolean isRecoverPasswordMessageDisplayed() {
+    return WaitUtils.waitForVisibility(driver, recoverSuccessMessage).isDisplayed();
+    }
+
+    public String getRecoverPasswordMessage() {
+
+    return WaitUtils.waitForVisibility(driver, recoverSuccessMessage).getText();
+    }
 
 }
