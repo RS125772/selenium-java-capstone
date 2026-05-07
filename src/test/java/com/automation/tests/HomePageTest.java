@@ -92,7 +92,6 @@ public void verifyFooterOptionsDisplayedCorrectly() {
     CommonUtils commonUtils = new CommonUtils(driver);
     HomePage homePage = new HomePage(driver);
     List<String> expectedFooterOptions = Arrays.asList(
-
             "Sitemap",
             "Shipping & Returns",
             "Privacy Notice",
