@@ -184,4 +184,9 @@ public class WaitUtils {
     public static Alert waitForAlert(WebDriver driver) {
         return wait(driver).until(ExpectedConditions.alertIsPresent());
     }
+
+    public static void waitForTextToBePresent(WebDriver driver, By locator, String text) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+    wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
+}
 }

@@ -1,7 +1,11 @@
 package com.automation.pages;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.automation.utils.ExtentTestManager;
 import com.automation.utils.WaitUtils;
@@ -22,6 +26,11 @@ public class HomePage {
     private By searchBox = By.id("small-searchterms");
     private By searchBtn = By.xpath("//input[@value='Search']");
     private By noSearchResultMsg = By.xpath("//strong[contains(text(),'No products were found that matched your criteria.')]");
+
+    // Newsletter subscription locators
+    private By newsletterEmailInput = By.id("newsletter-email");
+    private By newsletterSubscribeBtn = By.id("newsletter-subscribe-button");
+    private By newsletterSuccessMsg = By.id("newsletter-result-block");
 
     // Navigation Menu categories
     private By booksMenu = By.xpath("//a[contains(text(),'Books')]");
@@ -44,6 +53,8 @@ public class HomePage {
     private By giftCardsTitle = By.xpath("//h1[contains(text(),'Gift Cards')]");
 
     private By addToWishlistBtn = By.xpath("//input[@value='Add to wishlist']");
+
+    private By footerLinks = By.cssSelector(".footer a");
     
     // ================= CONSTRUCTOR =================
     
@@ -88,6 +99,16 @@ public class HomePage {
             WaitUtils.waitForPageToLoad(driver);
         }
     }
+
+    public List<String> getAllFooterOptions() {
+    ExtentTestManager.logInfo("Fetching all footer options");
+    List<WebElement> footerElements = driver.findElements(footerLinks);
+    List<String> actualFooterOptions = new ArrayList<>();
+    for (WebElement element : footerElements) {
+        actualFooterOptions.add(element.getText().trim());
+    }
+    return actualFooterOptions;
+}
     // ================= SEARCH FUNCTIONALITY =================
 
     public void enterSearchText(String product) {
@@ -115,6 +136,36 @@ public class HomePage {
     ExtentTestManager.logInfo("Clicking on Search button");
     WaitUtils.waitForClickable(driver, searchBtn).click();
 }
+
+    // ================= NEWSLETTER ACTIONS =================
+
+    public void enterNewsletterEmail(String email) {
+        ExtentTestManager.logInfo("Entering newsletter email: " + email);
+        WaitUtils.waitForVisibility(driver, newsletterEmailInput).clear();
+        driver.findElement(newsletterEmailInput).sendKeys(email);
+    }
+
+    public void clickSubscribeNewsletter() {
+        ExtentTestManager.logInfo("Clicking Newsletter Subscribe button");
+        WaitUtils.clickWhenReady(driver, newsletterSubscribeBtn);
+    }
+
+    public void subscribeToNewsletter(String email) {
+    ExtentTestManager.logInfo("Subscribing to newsletter with email: " + email);
+    enterNewsletterEmail(email);
+    clickSubscribeNewsletter();
+    WaitUtils.waitForTextToBePresent(driver, newsletterSuccessMsg, "Thank");
+}
+
+    public String getNewsletterSubscriptionSuccessMessage() {
+        ExtentTestManager.logInfo("Getting newsletter subscription success message");
+        return WaitUtils.waitForVisibility(driver, newsletterSuccessMsg).getText().trim();
+    }
+
+    public boolean isNewsletterSubscriptionSuccessDisplayed() {
+        ExtentTestManager.logInfo("Verifying newsletter subscription success message");
+        return WaitUtils.waitForVisibility(driver, newsletterSuccessMsg).isDisplayed();
+    }
 
     // ================= NAVIGATION ACTIONS =================
 

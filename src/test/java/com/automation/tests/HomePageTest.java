@@ -4,7 +4,8 @@ import com.automation.base.BaseTest;
 import com.automation.pages.HomePage;
 import com.automation.utils.CommonUtils;
 import com.automation.utils.WaitUtils;
-
+import java.util.Arrays;
+import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.automation.utils.RetryAnalyzer;
@@ -60,6 +61,20 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("InvalidSearchTest");
     }
 
+    @Test(description = "Verify Newsletter subscription functionality", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
+    public void verifyNewsletterSubscriptionFunctionality() {
+        CommonUtils commonUtils = new CommonUtils(driver);
+        HomePage homePage = new HomePage(driver);
+        String newsletterEmail = "automation" + System.currentTimeMillis() + "@example.com";
+        homePage.subscribeToNewsletter(newsletterEmail);
+        Assert.assertTrue(homePage.isNewsletterSubscriptionSuccessDisplayed(),
+                "Newsletter subscription success message was not displayed");
+        String actualMessage = homePage.getNewsletterSubscriptionSuccessMessage();
+Assert.assertTrue(actualMessage.contains("Thank you for signing up"),"Unexpected newsletter message: " + actualMessage
+);
+        commonUtils.takeScreenshot("NewsletterSubscriptionTest");
+    }
+
     @Test(description = "Verify search with blank input shows alert", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifySearchWithBlankInput() {
 
@@ -72,4 +87,41 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("BlankSearch_Alert");
     }
 
+    @Test(description = "Verify all footer options are displayed correctly", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
+public void verifyFooterOptionsDisplayedCorrectly() {
+    CommonUtils commonUtils = new CommonUtils(driver);
+    HomePage homePage = new HomePage(driver);
+    List<String> expectedFooterOptions = Arrays.asList(
+
+            "Sitemap",
+            "Shipping & Returns",
+            "Privacy Notice",
+            "Conditions of Use",
+            "About us",
+            "Contact us",
+
+            "Search",
+            "News",
+            "Blog",
+            "Recently viewed products",
+            "Compare products list",
+            "New products",
+
+            "My account",
+            "Orders",
+            "Addresses",
+            "Shopping cart",
+            "Wishlist",
+
+            "Facebook",
+            "Twitter",
+            "RSS",
+            "YouTube",
+            "Google+"
+    );
+
+    List<String> actualFooterOptions = homePage.getAllFooterOptions();
+    Assert.assertTrue(actualFooterOptions.containsAll(expectedFooterOptions),"Some footer options are missing");
+    commonUtils.takeScreenshot("FooterValidation_" + System.currentTimeMillis());
+    }
 }
