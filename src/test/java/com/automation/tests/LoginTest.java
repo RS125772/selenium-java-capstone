@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         CommonUtils commonUtils = new CommonUtils(driver);
         loginPage.login(testData.getProperty("validUsername"), testData.getProperty("validPassword"));
-        Assert.assertFalse(loginPage.isLoginSuccessful(), "Login failed!");
+        Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed!");
         commonUtils.takeScreenshot("ValidLoginTest");
     }
 
