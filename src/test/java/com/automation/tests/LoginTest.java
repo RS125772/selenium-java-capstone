@@ -13,7 +13,6 @@ public class LoginTest extends BaseTest {
 
     @Test(description = "Valid Login Test", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyValidLogin() {
-
         HomePage homePage = new HomePage(driver);
         homePage.clickOnLogin();
         LoginPage loginPage = new LoginPage(driver);
@@ -48,8 +47,7 @@ public class LoginTest extends BaseTest {
         commonUtils.takeScreenshot("LogoutTest");
     }
 
-    @Test(description = "Verify Forgot Password functionality", groups = {
-            "smoke" }, retryAnalyzer = RetryAnalyzer.class)
+    @Test(description = "Verify Forgot Password functionality", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyForgotPasswordFunctionality() {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
@@ -57,10 +55,8 @@ public class LoginTest extends BaseTest {
         homePage.clickOnLogin();
         loginPage.clickForgotPassword();
         loginPage.recoverPassword(testData.getProperty("forgotPasswordEmail"));
-        Assert.assertTrue(loginPage.isRecoverPasswordMessageDisplayed(),
-                "Forgot password success message not displayed");
-        Assert.assertEquals(loginPage.getRecoverPasswordMessage(), "Email with instructions has been sent to you.",
-                "Forgot password confirmation message mismatch");
+        Assert.assertTrue(loginPage.isRecoverPasswordMessageDisplayed(), "Forgot password success message not displayed");
+        Assert.assertEquals(loginPage.getRecoverPasswordMessage(), "Email with instructions has been sent to you.", "Forgot password confirmation message mismatch");
         commonUtils.takeScreenshot("ForgotPasswordTest");
     }
 }

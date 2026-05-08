@@ -23,11 +23,11 @@ public class RetryAnalyzer implements IRetryAnalyzer {
             System.out.println("Failure: " + result.getThrowable().getMessage());
             System.out.println("================================\n");
             
-            return true;  // Retry the test
+            return true;  // Retry the failed test
         }
         
         // Clean up after final failure
-        retryCountMap.remove(testKey);
+        retryCountMap.remove(testKey); // Remove entry after max retries reached
         return false;  // Don't retry anymore
     }   
 }
