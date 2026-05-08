@@ -57,11 +57,6 @@ public class HomePage {
 
     private By footerLinks = By.cssSelector(".footer a");
 
-    // Community Poll
-    private By goodOptionRadioBtn = By.id("pollanswers-2");
-    private By voteButton = By.id("vote-poll-1");
-    private By pollResults = By.cssSelector(".poll-results");
-
     // ================= CONSTRUCTOR =================
 
     public HomePage(WebDriver driver) {

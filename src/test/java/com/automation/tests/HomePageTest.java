@@ -12,7 +12,8 @@ import com.automation.utils.RetryAnalyzer;
 
 public class HomePageTest extends BaseTest {
 
-    @Test(description = "Verify page navigation on each category", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
+    @Test(description = "Verify page navigation on each category", groups = {
+            "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyCategoryNavigationFunctionality() {
         HomePage homePage = new HomePage(driver);
         CommonUtils commonUtils = new CommonUtils(driver);
@@ -61,7 +62,8 @@ public class HomePageTest extends BaseTest {
         commonUtils.takeScreenshot("InvalidSearchTest");
     }
 
-    @Test(description = "Verify Newsletter subscription functionality", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
+    @Test(description = "Verify Newsletter subscription functionality", groups = {
+            "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifyNewsletterSubscriptionFunctionality() {
         CommonUtils commonUtils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
@@ -70,12 +72,13 @@ public class HomePageTest extends BaseTest {
         Assert.assertTrue(homePage.isNewsletterSubscriptionSuccessDisplayed(),
                 "Newsletter subscription success message was not displayed");
         String actualMessage = homePage.getNewsletterSubscriptionSuccessMessage();
-Assert.assertTrue(actualMessage.contains("Thank you for signing up"),"Unexpected newsletter message: " + actualMessage
-);
+        Assert.assertTrue(actualMessage.contains("Thank you for signing up"),
+                "Unexpected newsletter message: " + actualMessage);
         commonUtils.takeScreenshot("NewsletterSubscriptionTest");
     }
 
-    @Test(description = "Verify search with blank input shows alert", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
+    @Test(description = "Verify search with blank input shows alert", groups = {
+            "smoke" }, retryAnalyzer = RetryAnalyzer.class)
     public void verifySearchWithBlankInput() {
 
         HomePage homePage = new HomePage(driver);
@@ -87,40 +90,40 @@ Assert.assertTrue(actualMessage.contains("Thank you for signing up"),"Unexpected
         commonUtils.takeScreenshot("BlankSearch_Alert");
     }
 
-    @Test(description = "Verify all footer options are displayed correctly", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
-public void verifyFooterOptionsDisplayedCorrectly() {
-    CommonUtils commonUtils = new CommonUtils(driver);
-    HomePage homePage = new HomePage(driver);
-    List<String> expectedFooterOptions = Arrays.asList(
-            "Sitemap",
-            "Shipping & Returns",
-            "Privacy Notice",
-            "Conditions of Use",
-            "About us",
-            "Contact us",
+    @Test(description = "Verify all footer options are displayed correctly", groups = {
+            "smoke" }, retryAnalyzer = RetryAnalyzer.class)
+    public void verifyFooterOptionsDisplayedCorrectly() {
+        CommonUtils commonUtils = new CommonUtils(driver);
+        HomePage homePage = new HomePage(driver);
+        List<String> expectedFooterOptions = Arrays.asList(
+                "Sitemap",
+                "Shipping & Returns",
+                "Privacy Notice",
+                "Conditions of Use",
+                "About us",
+                "Contact us",
 
-            "Search",
-            "News",
-            "Blog",
-            "Recently viewed products",
-            "Compare products list",
-            "New products",
+                "Search",
+                "News",
+                "Blog",
+                "Recently viewed products",
+                "Compare products list",
+                "New products",
 
-            "My account",
-            "Orders",
-            "Addresses",
-            "Shopping cart",
-            "Wishlist",
+                "My account",
+                "Orders",
+                "Addresses",
+                "Shopping cart",
+                "Wishlist",
 
-            "Facebook",
-            "Twitter",
-            "RSS",
-            "YouTube",
-            "Google+"
-    );
+                "Facebook",
+                "Twitter",
+                "RSS",
+                "YouTube",
+                "Google+");
 
-    List<String> actualFooterOptions = homePage.getAllFooterOptions();
-    Assert.assertTrue(actualFooterOptions.containsAll(expectedFooterOptions),"Some footer options are missing");
-    commonUtils.takeScreenshot("FooterValidation_" + System.currentTimeMillis());
+        List<String> actualFooterOptions = homePage.getAllFooterOptions();
+        Assert.assertTrue(actualFooterOptions.containsAll(expectedFooterOptions), "Some footer options are missing");
+        commonUtils.takeScreenshot("FooterValidation_" + System.currentTimeMillis());
     }
 }

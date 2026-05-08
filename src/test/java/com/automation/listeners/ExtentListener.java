@@ -17,25 +17,25 @@ public class ExtentListener implements ITestListener {
 
     private static final ExtentReports extent = ExtentManager.getInstance();
 
-    @Override
+    @Override //This method executes before test suite execution starts. Used to log execution start information.
     public void onStart(ITestContext context) {
         System.out.println("Execution started : " + context.getName());
     }
 
-    @Override
+    @Override //This method executes before every test method starts. Creates a new Extent Test entry for current test case.
     public void onTestStart(ITestResult result) {
         String testName = result.getMethod().getMethodName();
         ExtentTestManager.setTest(extent.createTest(testName));
     }
 
-    @Override
+    @Override //This method executes when test case passes successfully. Updates PASS status in Extent Report.
     public void onTestSuccess(ITestResult result) {
 
         ExtentTestManager.getTest()
                 .log(Status.PASS, "Test passed successfully");
     }
 
-    @Override
+    @Override //This method executes when test case fails. Captures failure reason and attaches screenshot into Extent Report for debugging.
     public void onTestFailure(ITestResult result) {
         ExtentTestManager.getTest()
                 .log(Status.FAIL, result.getThrowable());
@@ -63,7 +63,7 @@ public class ExtentListener implements ITestListener {
         }
     }
 
-    @Override
+    @Override //This method executes when test case is skipped. Updates SKIP status in Extent Report.
     public void onTestSkipped(ITestResult result) {
 
         ExtentTestManager.getTest()
