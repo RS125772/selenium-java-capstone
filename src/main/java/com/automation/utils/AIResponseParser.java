@@ -46,8 +46,13 @@ public class AIResponseParser {
             testCase.setPreconditions(
                     columns[3].trim());
 
-            testCase.setTestSteps(
-                    columns[4].trim());
+            String formattedSteps =
+        columns[4]
+                .trim()
+                .replaceAll("(\\d+\\.)", "\n$1")
+                .trim();
+
+testCase.setTestSteps(formattedSteps);
 
             testCase.setExpectedResult(
                     columns[5].trim());
