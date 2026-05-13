@@ -1,5 +1,6 @@
 package com.automation.tests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.automation.utils.RetryAnalyzer;
@@ -20,6 +21,8 @@ public class LoginTest extends BaseTest {
         loginPage.login(testData.getProperty("validUsername"), testData.getProperty("validPassword"));
         Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed!");
         commonUtils.takeScreenshot("ValidLoginTest");
+        String html = driver.findElement(By.tagName("body")).getAttribute("innerHTML");
+        System.out.println("HTML: " + html);
     }
 
     @Test(description = "Invalid Login Test", groups = { "smoke" }, retryAnalyzer = RetryAnalyzer.class)
