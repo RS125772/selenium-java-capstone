@@ -1,5 +1,6 @@
 package com.automation.tests;
 
+import com.automation.config.TestDataReader;
 import com.automation.base.BaseTest;
 import com.automation.pages.HomePage;
 import com.automation.pages.ShoppingCartPage;
@@ -16,7 +17,7 @@ public class ShoppingCartTest extends BaseTest {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
         ShoppingCartPage cartPage = new ShoppingCartPage(driver);
-        String productName = testData.getProperty("productName");
+        String productName = TestDataReader.getProperty("productName");
         homePage.searchProduct(productName);
         homePage.waitForSearchResults();
         cartPage.addProductToCart(productName);
@@ -32,7 +33,7 @@ public class ShoppingCartTest extends BaseTest {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
         ShoppingCartPage cartPage = new ShoppingCartPage(driver);
-        String products = testData.getProperty("products");
+        String products = TestDataReader.getProperty("products");
         String[] productArray = products.split(",");
         for (String product : productArray) {
             String productName = product.trim();
@@ -63,8 +64,8 @@ public class ShoppingCartTest extends BaseTest {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
         ShoppingCartPage cartPage = new ShoppingCartPage(driver);
-        String productName = testData.getProperty("productName");
-        int quantity = Integer.parseInt(testData.getProperty("quantity"));
+        String productName = TestDataReader.getProperty("productName");
+        int quantity = Integer.parseInt(TestDataReader.getProperty("quantity"));
         homePage.searchProduct(productName);
         homePage.waitForSearchResults();
         cartPage.addProductToCart(productName);
@@ -80,7 +81,7 @@ public class ShoppingCartTest extends BaseTest {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
         ShoppingCartPage cartPage = new ShoppingCartPage(driver);
-        String productName = testData.getProperty("productName");
+        String productName = TestDataReader.getProperty("productName");
         homePage.searchProduct(productName);
         homePage.waitForSearchResults();
         cartPage.addProductToCart(productName);
@@ -98,7 +99,7 @@ public class ShoppingCartTest extends BaseTest {
         CommonUtils utils = new CommonUtils(driver);
         HomePage homePage = new HomePage(driver);
         ShoppingCartPage cartPage = new ShoppingCartPage(driver);
-        String productName = testData.getProperty("productName");
+        String productName = TestDataReader.getProperty("productName");
         homePage.searchProduct(productName);
         homePage.waitForSearchResults();
         cartPage.addProductToCart(productName);

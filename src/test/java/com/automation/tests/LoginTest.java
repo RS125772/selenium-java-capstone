@@ -1,5 +1,6 @@
 package com.automation.tests;
 
+import com.automation.config.TestDataReader;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,7 +19,7 @@ public class LoginTest extends BaseTest {
         homePage.clickOnLogin();
         LoginPage loginPage = new LoginPage(driver);
         CommonUtils commonUtils = new CommonUtils(driver);
-        loginPage.login(testData.getProperty("validUsername"), testData.getProperty("validPassword"));
+        loginPage.login(TestDataReader.getProperty("validUsername"), TestDataReader.getProperty("validPassword"));
         Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed!");
         commonUtils.takeScreenshot("ValidLoginTest");
         String html = driver.findElement(By.tagName("body")).getAttribute("innerHTML");
@@ -31,7 +32,7 @@ public class LoginTest extends BaseTest {
         homePage.clickOnLogin();
         LoginPage loginPage = new LoginPage(driver);
         CommonUtils commonUtils = new CommonUtils(driver);
-        loginPage.login(testData.getProperty("invalidUsername"), testData.getProperty("invalidPassword"));
+        loginPage.login(TestDataReader.getProperty("invalidUsername"), TestDataReader.getProperty("invalidPassword"));
         String error = loginPage.getErrorMessage();
         Assert.assertTrue(error.contains("Login was unsuccessful"), "Error message not displayed!");
         commonUtils.takeScreenshot("InvalidLoginTest");
@@ -43,7 +44,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         CommonUtils commonUtils = new CommonUtils(driver);
         homePage.clickOnLogin();
-        loginPage.login(testData.getProperty("validUsername"), testData.getProperty("validPassword"));
+        loginPage.login(TestDataReader.getProperty("validUsername"), TestDataReader.getProperty("validPassword"));
         Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed!");
         loginPage.clickLogout();
         Assert.assertTrue(loginPage.isLogoutSuccessful(), "Logout failed!");
@@ -57,7 +58,7 @@ public class LoginTest extends BaseTest {
         CommonUtils commonUtils = new CommonUtils(driver);
         homePage.clickOnLogin();
         loginPage.clickForgotPassword();
-        loginPage.recoverPassword(testData.getProperty("forgotPasswordEmail"));
+        loginPage.recoverPassword(TestDataReader.getProperty("forgotPasswordEmail"));
         Assert.assertTrue(loginPage.isRecoverPasswordMessageDisplayed(), "Forgot password success message not displayed");
         Assert.assertEquals(loginPage.getRecoverPasswordMessage(), "Email with instructions has been sent to you.", "Forgot password confirmation message mismatch");
         commonUtils.takeScreenshot("ForgotPasswordTest");

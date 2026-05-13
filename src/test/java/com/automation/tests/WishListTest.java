@@ -1,4 +1,6 @@
 package com.automation.tests;
+
+import com.automation.config.TestDataReader;
 import com.automation.pages.HomePage;
 import com.automation.pages.WishListPage;
 import org.testng.annotations.Test;
@@ -15,7 +17,7 @@ public class WishListTest extends BaseTest {
         HomePage homePage = new HomePage(driver);
         WishListPage wishListPage = new WishListPage(driver);
 
-        String productName = testData.getProperty("products");
+        String productName = TestDataReader.getProperty("products");
         homePage.addProductsToWishlist(productName);
 
         homePage.clickOnWishlist();
@@ -30,7 +32,7 @@ public class WishListTest extends BaseTest {
         HomePage homePage = new HomePage(driver);
         WishListPage wishListPage = new WishListPage(driver);
 
-        String productName = testData.getProperty("products");
+        String productName = TestDataReader.getProperty("products");
         homePage.addProductsToWishlist(productName);
         homePage.clickOnWishlist();
         wishListPage.removeProductsFromWishlist(productName);

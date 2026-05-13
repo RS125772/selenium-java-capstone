@@ -1,5 +1,6 @@
 package com.automation.tests;
 
+import com.automation.config.TestDataReader;
 import com.automation.base.BaseTest;
 import com.automation.pages.HomePage;
 import com.automation.pages.RegistrationPage;
@@ -36,8 +37,8 @@ public class RegistrationTest extends BaseTest {
         homePage.clickOnRegisterButton();
         RegistrationPage registerPage = new RegistrationPage(driver);
         String email = "test" + System.currentTimeMillis() + "@gmail.com";
-        registerPage.registerUserWithDifferentPasswords(testData.getProperty("firstName"), testData.getProperty("lastName"),
-                email, testData.getProperty("password"), testData.getProperty("confirmPassword"));
+        registerPage.registerUserWithDifferentPasswords(TestDataReader.getProperty("firstName"), TestDataReader.getProperty("lastName"),
+                email, TestDataReader.getProperty("password"), TestDataReader.getProperty("confirmPassword"));
         Assert.assertTrue(registerPage.getConfirmPasswordError().contains("The password and confirmation password do not match"),
                 "Error message not displayed for mismatched passwords");
         commonUtils.takeScreenshot("InvalidUserRegistrationTest");

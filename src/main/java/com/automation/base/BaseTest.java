@@ -91,8 +91,8 @@ public class BaseTest {
 
         // Perform login using test data from properties file (valid username and password)
         loginPage.login(
-                testData.getProperty("validUsername"),
-                testData.getProperty("validPassword"));
+                TestDataReader.getProperty("validUsername"),
+                TestDataReader.getProperty("validPassword"));
 
         // Validate login success by checking presence of logout button or user profile element (you can implement isLoginSuccessful() method in LoginPage to check this)
         if (!loginPage.isLoginSuccessful()) {
