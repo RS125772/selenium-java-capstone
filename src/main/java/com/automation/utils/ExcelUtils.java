@@ -7,6 +7,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileOutputStream;
 import java.util.List;
+import java.io.File;
 
 public class ExcelUtils {
 
@@ -107,7 +108,19 @@ public class ExcelUtils {
             }
 
             // Save File
-            FileOutputStream fileOut = new FileOutputStream(storyId + "_AI_TestCases.xlsx");
+            File directory =
+        new File("reports/ai-output");
+
+if(!directory.exists()) {
+
+    directory.mkdirs();
+}
+
+FileOutputStream fileOut =
+        new FileOutputStream(
+                "reports/ai-output/"
+                + storyId
+                + "_AI_TestCases.xlsx");
 
             workbook.write(fileOut);
 
