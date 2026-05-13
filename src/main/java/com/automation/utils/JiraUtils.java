@@ -44,8 +44,22 @@ public class JiraUtils {
         JSONObject json =
                 new JSONObject(response.asString());
 
-        JSONObject fields =
-                json.getJSONObject("fields");
+        if (response.statusCode() != 200) {
+            String message = "Failed to fetch JIRA story " + storyId + " (status=" + response.statusCode() + ")";
+            if (json.has("errorMessages")) {
+                message += ": " + json.getJSONArray("errorMessages").toString();
+            } else if (json.has("errors")) {
+                message += ": " + json.getJSONObject("errors").toString();
+            }
+            throw new RuntimeException(message);
+        }
+
+        JSONObject fields = json.optJSONObject("fields");
+        if (fields == null) {
+            throw new RuntimeException(
+                    "JIRA issue response did not contain 'fields'. Response: "
+                            + response.asString());
+        }
 
         UserStory story =
                 new UserStory();

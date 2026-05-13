@@ -20,7 +20,11 @@ public class GenerateAITestCases {
     public static void generateAITestCases() {
 
         // Fetch JIRA Story
-        String storyId = TestDataReader.getProperty("story.ids");
+        String storyIds = TestDataReader.getProperty("story.ids");
+        String storyId = storyIds.split(",")[0].trim();
+        if (storyIds.contains(",")) {
+            System.out.println("Using first configured JIRA story ID: " + storyId);
+        }
         UserStory story = JiraUtils.getStory(storyId);
 
         // Build AI Prompt
