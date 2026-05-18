@@ -3,19 +3,15 @@
 <!-- TestNG suite file -->
 <suite name="Demo Web Shop Automation Suite">
 
-    <test name="Demo Web Shop Application Test Generation"
-          parallel="classes"
-          thread-count="3">
+    <test name="Demo Web Shop Application Test Generation" parallel="classes" thread-count="4">
 
         <classes>
-
             <class name="com.automation.tests.GenerateAITestCases"/>
-            <class name="com.automation.tests.LoginTest"/>
+            <!-- <class name="com.automation.tests.LoginTest"/>
             <class name="com.automation.tests.RegistrationTest"/>
             <class name="com.automation.tests.HomePageTest"/>
             <class name="com.automation.tests.ShoppingCartTest"/>
-            <class name="com.automation.tests.WishListTest"/>
-
+            <class name="com.automation.tests.WishListTest"/> -->
         </classes>
 
     </test>

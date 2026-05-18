@@ -54,5 +54,13 @@ public class GenerateAITestCases {
 
         // Save Excel
         ExcelUtils.saveToExcel(testCases, story.getStoryId());
+
+                // Create JIRA Sub-tasks under the story for each generated test case
+                try {
+                        java.util.List<String> createdKeys = JiraUtils.createTestSubTasks(story, testCases);
+                        System.out.println("Created JIRA sub-tasks: " + createdKeys);
+                } catch(Exception e) {
+                        System.out.println("Failed to create JIRA sub-tasks: " + e.getMessage());
+                }
     }
 }
