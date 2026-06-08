@@ -25,7 +25,14 @@ public class GenerateAITestCases {
         if (storyIds.contains(",")) {
             System.out.println("Using first configured JIRA story ID: " + storyId);
         }
-        UserStory story = JiraUtils.getStory(storyId);
+
+        UserStory story;
+        try {
+            story = JiraUtils.getStory(storyId);
+        } catch (RuntimeException e) {
+            System.out.println("Skipping AI test generation due to JIRA fetch failure: " + e.getMessage());
+            return;
+        }
 
         // Build AI Prompt
         String prompt =

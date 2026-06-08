@@ -29,6 +29,7 @@ public class PromptBuilder {
                 - Include browser/session checks
                 - Include security scenarios
                 - Use concise and business-friendly language.
+                - Add Steps with clear actions and expected results starting from Launching the application to closing it.
 
                 IMPORTANT:
                 Return response ONLY in markdown table format.
